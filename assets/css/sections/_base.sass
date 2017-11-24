@@ -1,0 +1,55 @@
+*
+  text-rendering: optimizeLegibility
+  -moz-osx-font-smoothing: grayscale
+  -webkit-font-smoothing: antialiased
+
+*, *::before, *::after
+  box-sizing: border-box
+
+html
+  font-size: 20px
+
+body
+  font-family: "Poppins", "Helvetica Neue", "Helvetica", "Arial", sans-serif
+
+/* Fix Classes */
+.no-decoration
+  text-decoration: none
+
+/* Universal Classes */
+.home-section
+  width: 100vw
+  padding: 40px
+  max-width: 100%
+
+.title
+  font-size: 70px
+  font-weight: bold
+  margin-bottom: 20px
+  @media only screen and (max-width: 800px)
+    font-size: 2.2rem
+
+.see-more
+  text-align: center
+  max-width: 300px
+  padding: 8px 50px
+  color: #4fcdc4
+  border: 3px solid #4fcdc4
+  border-radius: 20px
+  font-weight: bold
+  display: block
+  margin: 0 auto
+  transition: all .3s ease-in-out
+  &:hover
+    background-color: #4fcdc4
+    color: #fff
+  &.dark
+    color: #161629
+    border: 3px solid #161629
+    &:hover
+      background-color: #161629
+      color: #fff
+
+.particles-js-canvas-el
+  position: absolute
+  top: 0

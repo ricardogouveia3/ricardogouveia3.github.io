@@ -1,0 +1,102 @@
+.about
+  background-color: #FAFAFA
+  display: flex
+  flex-wrap: wrap
+  align-content: center
+  justify-content: center
+
+  .main
+    max-width: 1200px
+
+  .text-content
+    display: flex
+    flex-wrap: wrap
+    align-content: center
+    justify-content: center
+    @media only screen and (max-width: 800px)
+      display: block
+
+  .title
+    color: #161629
+    margin-top: 0
+    display: block
+    width: 100%
+    span
+      color: #4fcdc4
+    @media only screen and (max-width: 800px)
+      text-align: center
+
+  .info
+    font-weight: 300
+    color: #161629
+    flex-grow: 1
+    max-width: 40%
+    word-break: break-all
+    @media only screen and (max-width: 800px)
+      max-width: 100%
+      margin: 0 auto
+      text-align: center
+      width: 100%
+
+    .location,
+    .mail
+      display: block
+      margin: 20px 0
+      @media only screen and (max-width: 800px)
+        display: inline-block
+        margin: 0 20px 10px 0
+        font-size: .9em
+      .icon
+        margin-right: 20px
+        @media only screen and (max-width: 800px)
+          margin-right: 10px
+
+    .location
+      margin-top: 0
+      .icon
+        margin-right: 20px
+
+    .social
+      display: block
+      justify-content: space-around
+      margin-top: 30px
+      @media only screen and (max-width: 800px)
+        margin: 10px 0 20px 0
+
+      .social-icon
+        display: inline-block
+        font-size: 1.5em
+        text-decoration: none
+        margin-left: 15px
+        transition: all .2s ease-in-out
+        &:first-child
+          margin-left: 0
+
+      .twitter
+        color: #161629
+        &:hover
+          color: #55acee
+      .github
+        color: #161629
+        &:hover
+          color: #000000
+      .linkedin
+        color: #161629
+        &:hover
+          color: #007bb5
+
+  .biograph
+    font-weight: 300
+    flex-grow: 2
+    max-width: 60%
+    @media only screen and (max-width: 800px)
+      max-width: 100%
+    p
+      color: #4A4A4A
+      text-align: justify
+      line-height: 1.4
+      padding-left: 10px
+      @media only screen and (max-width: 800px)
+        padding: 0
+      &:first-child
+        margin-top: 0

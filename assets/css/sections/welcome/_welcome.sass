@@ -1,0 +1,152 @@
+.welcome
+  height: 100vh
+  background-color: #161629
+  position: relative
+  padding: 0
+  padding-top: 40px
+  @media only screen and (max-width: 800px)
+    min-height: 500px
+    min-width: 320px
+
+  .main
+    background-image: url('../img/photo2.png')
+    background-position: top 10vh right
+    background-repeat: no-repeat
+    width: 90%
+    height: 100%
+    margin: 0 auto
+    max-width: 1200px
+    position: relative
+    z-index: 10
+    @media only screen and (max-width: 1000px)
+      width: 100%
+      padding: 0 5%
+      background-image: url('../img/photo2.png')
+      background-position: top 10vh center
+      background-repeat: no-repeat
+      background-size: cover
+
+  .header
+    display: flex
+    justify-content: space-between
+
+  .logo
+    width: 90px
+    @media only screen and (max-width: 800px)
+      max-width: 90px
+      min-width: 30px
+
+  .nav
+    color: white
+    align-self: center
+
+  .nav.large
+    display: block
+    @media only screen and (max-width: 800px)
+      display: none
+    .nav-list
+      list-style: none
+      text-decoration: none
+    .nav-list-item
+      float: left
+      margin: 0 20px
+    .nav-list-item:last-child
+      margin-right: 0
+    .nav-link
+      text-decoration: none
+      color: #fff
+      transition: color .5s ease-in-out
+      &.active
+        font-weight: bold
+      &:hover
+        color: #4fcdc4
+        padding-bottom: 2px
+        border-bottom: 1px solid #4fcdc4
+
+  .nav.small
+    display: none
+    @media only screen and (max-width: 800px)
+      display: block
+      position: relative
+    .icon
+      width: 55px
+      float: right
+    .content
+      display: none
+      position: absolute
+      top: 40px
+      right: 15px
+      z-index: 1
+      padding: 0
+      .nav-list-item
+        background-color: #fff
+        float: none
+        width: 150px
+        margin: 0
+        text-align: center
+        padding: 8px 5px
+        color: #161629
+        &:hover
+          background-color: #4fcdc4
+          transition: all .2s ease-in-out
+        .nav-link
+          display: inline-block
+          text-decoration: none
+          border-bottom: none
+          color: #161629
+          height: 100%
+          width: 100%
+          &:hover
+            color: #fff
+            border: none
+
+  .text-content
+    display: block
+    margin: 150px 0 0 90px
+    @media only screen and (max-width: 800px)
+      text-align: center
+      margin: 0
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+
+  .title
+    color: #fff
+
+  .title span
+    color: #4fcdc4
+
+  .description
+    font-size: 30px
+    font-weight: 300
+    color: #fff
+    @media only screen and (max-width: 800px)
+      font-size: 1.3em
+
+  .arrow-down
+    position: absolute
+    bottom: 0
+    margin: 0 0 10px 90px
+    color: #fff
+    width: 15px
+    @media only screen and (max-width: 800px)
+      position: absolute
+      bottom: 0
+      left: 0
+      right: 0
+      margin: auto
+      margin-bottom: 10px
+
+  .up-n-down
+    animation: up-n-down ease-in-out 3s
+    animation-iteration-count: infinite
+    transform-origin: 50% 50%
+
+@keyframes up-n-down
+  0%
+    transform:  translate(0px,0px)
+  50%
+    transform:  translate(0px,-30px)
+  100%
+    transform:  translate(0px,0px)

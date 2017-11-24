@@ -1,0 +1,198 @@
+doctype html
+html(lang='pt-br')
+  head
+    title Ricardo Gouveia - Desenvolvedor front-end &amp; UI designer
+    meta(name='description', content='Site de um desenvolvedor front-end jr e UI designer que abre o Sketch só pra se distrair.')
+    meta(charset='utf-8')
+    link(rel='stylesheet' type='text/css' href='css/normalize.css')
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    script(src='https://use.fontawesome.com/b7da4b8514.js')
+
+    link(rel='stylesheet' type='text/css' href='css/style.css')
+    link(rel='icon' type='image/ico' href='img/favicon.ico')
+
+    link(href='https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700' rel='stylesheet')
+
+    include includes/meta_social.pug
+
+  body
+    //- Welcome Section
+    section#welcome.home-section.welcome
+      div.main
+        header.header
+          a(href="#")
+            img.logo(alt="Logotipo do site: quadrado com as letras R,C,R,D" src="img/logo.png")
+
+          .nav.large
+            ul.nav-list
+              li.nav-list-item
+                a.nav-link.active(href="#") Home
+              li.nav-list-item
+                a.nav-link(href="#about") Sobre
+              li.nav-list-item
+                a.nav-link(href="#portfolio") Portfolio
+              li.nav-list-item
+                a.nav-link(href="#posts") Posts
+
+          .nav.small
+            a#dropdown-button(onclick="dropdownToggle()" href="javascript:void(0)")
+              img.icon(alt="Indicativo de menu: link para menu do site em telas médias e pequenas" src="img/dropdown-icon.svg")
+            ul#dropdown-content.content(style="display: none;")
+              li.nav-list-item
+                a.nav-link.active(href="#") Home
+              li.nav-list-item
+                a.nav-link(href="#about") Sobre
+              li.nav-list-item
+                a.nav-link(href="#portfolio") Portfolio
+              li.nav-list-item
+                a.nav-link(href="#posts") Posts
+
+        div.text-content
+          h1.title Oi, eu sou&nbsp;
+            span Ricardo
+            |.
+          span.description Desenvolvedor front-end &amp; UI designer
+
+        a(href="#about")
+          img.arrow-down.up-n-down(src="img/arrow-down.svg" alt="Seta para baixo, link para a proxima seção")
+
+  //- About Section
+  section#about.home-section.about
+    div.main
+      div.text-content
+        h2.title Sobre&nbsp;
+          span mim
+          |.
+
+        div.info
+          span.location
+            span.icon
+              i.fa.fa-map-marker(aria-hidden="true")
+            | Santarém - PA
+          span.mail
+            span.icon
+              i.fa.fa-envelope(aria-hidden="true")
+            | ricardogouveia3_@hotmail.com
+
+          div.social
+            a.social-icon.twitter(target="_blank" href="http://twitter.com/ricardogouveia3")
+              span
+                i.fa.fa-twitter(aria-hidden="true")
+            a.social-icon.github(target="_blank" href="http://github.com/ricardogouveia3")
+              span
+                i.fa.fa-github-alt(aria-hidden="true")
+            a.social-icon.linkedin(target="_blank" href="https://www.linkedin.com/in/ricardogouveia3/")
+              span
+                i.fa.fa-linkedin(aria-hidden="true")
+
+        div.biograph
+          p Nasci em Recife-PE. Tenho&nbsp;
+            span#years-old myAge
+            | &nbsp;anos e desde 2014 estou na área de front-end.
+          p Estudo ciência da computação na UFOPA. Tenho interesse por design de interfaces e programação, especialmente de sites e apps, e por design de apresentações de slide (presentation design).
+          p No front-end, foco em responsividade e acessibilidade da interface, manutenabilidade e reusabilidade do código. Em design, procuro adotar a simplicidade, sobretudo no estilo flat e minimalista, na construção de uma experiência de uso focada no objetivo principal do produto.
+
+  //- Portfolio Section
+  section#portfolio.home-section.portfolio
+    div.main
+      h2.title Port
+        span folio
+        |.
+
+      //- Cards
+      ul.grid
+
+        li.item
+          a.link(target="_blank" href="http://devinsanta.github.io")
+            div.card
+              div.image(style="background-image: url(img/portfolio/devinsanta.png)")
+              div.content
+                h3.title DevInSanta
+                span.project-link http://devinsanta.github.io
+                div.tags-container
+                  span.tag.html HTML
+                  span.tag.css CSS
+                  span.tag.ui UI
+
+        li.item
+          a.link(target="_blank" href="#")
+            div.card
+              div.image(style="background-image: url(img/portfolio/soon.png)")
+              div.content
+                h3.title Em breve
+                span.project-link about:blank
+                div.tags-container
+                  span.tag.html HTML
+                  span.tag.css CSS
+                  span.tag.js JS
+                  span.tag.ui UI
+                  span.tag.branding Branding
+                  span.tag.seo SEO
+
+        li.item
+          a.link(target="_blank" href="#")
+            div.card
+              div.image(style="background-image: url(img/portfolio/soon.png)")
+              div.content
+                h3.title Em breve
+                span.project-link about:blank
+                div.tags-container
+                  span.tag.html HTML
+                  span.tag.css CSS
+                  span.tag.js JS
+                  span.tag.ui UI
+                  span.tag.branding Branding
+                  span.tag.seo SEO
+
+        li.item
+          a.link(target="_blank" href="#")
+            div.card
+              div.image(style="background-image: url(img/portfolio/soon.png)")
+              div.content
+                h3.title Em breve
+                span.project-link about:blank
+                div.tags-container
+                  span.tag.html HTML
+                  span.tag.css CSS
+                  span.tag.js JS
+                  span.tag.ui UI
+                  span.tag.branding Branding
+                  span.tag.seo SEO
+
+      a.no-decoration.see-more(href="https://www.gitshowcase.com/ricardogouveia3" target="_blank") Ver + projetos
+
+  //- Posts Section
+  section#posts.home-section.posts
+    div.main
+      h2.title Pos
+        span ts
+        |.
+
+      ul.posts-wrapper
+
+        li.list-item
+          a.single-post.no-decoration(href="" target="_blank")
+              span.date 11/04/2016
+              span.title Leituras obrigatórias para front-ends iniciantes
+              span.headline Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis mauris dui. Donec convallis tempus neque. Donec ultrices fringilla tincidunt.
+
+        li.list-item
+          a.single-post.no-decoration(href="" target="_blank")
+              span.date 19/08/2016
+              span.title Síndrome do impostor e seus efeitos sobre os iniciantes
+              span.headline Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis mauris dui. Donec convallis tempus neque. Donec ultrices fringilla tincidunt.
+
+        li.list-item
+          a.single-post.no-decoration(href="" target="_blank")
+              span.date 20/12/2016
+              span.title Por que o macOS é o preferido pelos desenvolvedores Front end?
+              span.headline Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis mauris dui. Donec convallis tempus neque. Donec ultrices fringilla tincidunt.
+
+      a.no-decoration.see-more.dark(href="https://medium.com/@ricardogouveia3" target="_blank") Ir pro blog
+
+  //- Footer
+  footer#footer.footer
+    span.text Feito com 🍕 e ❤️️
+
+  script(src="js/index.js" type="text/javascript")
+

@@ -1,0 +1,131 @@
+.portfolio
+  background-color: #161629
+  position: relative
+  overflow: hidden
+  @media only screen and (max-width: 800px)
+    padding: 40px 15px
+  .main
+    //width: 90%
+    max-width: 1200px
+    margin: 0 auto
+    position: relative
+    z-index: 10
+    @media only screen and (max-width: 800px)
+      padding: 0 20px
+  .title
+    color: #fff
+    margin: 0
+    letter-spacing: 3px
+    span
+      color: #4fcdc4
+    @media only screen and (max-width: 800px)
+      text-align: center
+      margin-left: 0
+
+  /*  start cards */
+  .grid
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    margin-top: 15px
+    padding: 1.5% 0
+
+  .item
+    display: flex
+    width: 25%
+    @media (max-width: 80rem) // Card queries
+      width: 50%
+      margin-bottom: 1rem
+    @media (max-width: 45rem) // Card queries
+      width: 100%
+      min-width: 250px
+
+    .link
+      text-decoration: none
+      display: block
+      width: 100%
+      height: 100%
+
+  .card
+    width: 270px
+    border-radius: 1px
+    background-color: white
+    box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25)
+    height: 380px
+    display: flex
+    flex-direction: column
+    overflow: hidden
+    &:hover
+      .image
+        filter: contrast(100%)
+      .project-link
+        color: #4fcdc4
+    @media (max-width: 80rem) // Card queries
+      width: 96%
+      margin: 0 auto
+      min-width: 250px
+
+    .image
+      min-height: 50%
+      width: 100%
+      overflow: hidden
+      border-top-left-radius: 1px
+      border-top-right-radius: 1px
+      position: relative
+      background-position: center center
+      background-repeat: no-repeat
+      background-size: cover
+      filter: contrast(70%)
+      transition: filter 0.5s cubic-bezier(0.43, 0.41, 0.22, 0.91)
+      &::before
+        content: ""
+        display: block
+        padding-top: 56.25%
+
+    .content
+      display: block
+      //flex: 1 1 auto
+      //flex-direction: column
+      padding: 1rem
+
+    .title
+      text-align: left
+      color: #696969
+      font-size: 1.25rem
+      font-weight: 300
+      letter-spacing: 2px
+      text-transform: uppercase
+      margin: 0 0 10px 0
+
+    .project-link
+      font-size: .7em
+      color: #2980b9
+      transition: color .3s ease-in-out
+
+    .tags-container
+      margin-top: 15px
+      display: flex
+      flex-wrap: wrap
+      width: 100%
+
+    .tag
+      padding: 5px 10px
+      font-size: 15px
+      font-weight: 500
+      border-radius: 2px
+      color: #fff
+      margin-right: 10px
+      margin-bottom: 10px
+    .html
+      background-color: #F26629
+    .css
+      background-color: #2BA8E0
+    .js
+      background-color: #F0C029
+    .ui
+      background-color: #8E44AD
+    .branding
+      background-color: #16A085
+    .seo
+      background-color: #E74C3C
+/* end cards */

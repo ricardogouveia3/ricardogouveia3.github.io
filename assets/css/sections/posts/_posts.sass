@@ -1,0 +1,59 @@
+.posts
+  background-color: #FAFAFA
+  .main
+    margin: 0 90px
+    max-width: 1200px
+    margin: 0 auto
+    @media only screen and (max-width: 800px)
+      margin: 0 auto
+  .title
+    color: #161629
+    margin-top: 0
+    span
+      color: #4fcdc4
+    @media only screen and (max-width: 800px)
+      text-align: center
+      margin-left: 0
+  .posts-wrapper
+    width: 100%
+    padding-left: 0
+    margin-bottom: 50px
+  .list-item
+    list-style: none
+
+  .single-post
+    width: 100%
+    display: block
+    border: 1px solid #e8e8e8
+    border-radius: 1px
+    position: relative
+    margin-bottom: 35px
+    transition: all .3s ease-in-out
+    padding: 1em
+    &:hover
+      border: 1px solid #d6d6d6
+      .date
+        color: #a1a1a1
+      .title
+        color: #757575
+      .headline
+        color: #939393
+    .date
+      font-size: .7em
+      color: #818181
+      display: block
+      margin-bottom: 1em
+      transition: all .3s ease-in-out
+    .title
+      display: block
+      font-size: 1.2em
+      color: #535353
+      transition: all .3s ease-in-out
+      font-weight: 500
+      margin-bottom: .5em
+    .headline
+      display: block
+      font-size: .8em
+      color: #737373
+      transition: all .3s ease-in-out
+      letter-spacing: .5px
