@@ -67,7 +67,6 @@ module.exports = function(grunt) {
       },
       style: {
         files: ['assets/css/style.sass'],
-        files: ['assets/css/sections/**/*.sass'],
         tasks: ['sass'],
       },
       js: {

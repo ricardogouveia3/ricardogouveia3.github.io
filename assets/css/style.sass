@@ -1,17 +1,119 @@
-/*   Base styles       */
-@import sections/base
+*, :after, :before, html
+  box-sizing: border-box
 
-/*   Welcome Section   */
-@import sections/welcome/welcome
+body
+  width: 100vw
+  height: 100vh
+  overflow: hidden
+  max-width: 100%
+  background-color: #ffffff
+  position: relative
 
-/*   About Section     */
-@import sections/about/about
+.logo
+  position: absolute
+  top: 0
+  left: 0
+  width: 30%
+  height: 60vh
+  background-color: #4A4A4A
+  clip-path: polygon(100% 0%, 0 0, 0 100%)
 
-/*   Portfolio Section */
-@import sections/portfolio/portfolio
+  .logo-link
+    display: block
+    margin: 3em 0 0 3em
 
-/*   Posts Sections    */
-@import sections/posts/posts
+  .logo-icon
+    width: 6em
 
-/*   Footer            */
-@import sections/footer/footer
+.menu-container
+  position: absolute
+  bottom: 0
+  left: 0
+  margin: 0 0 3em 3em
+
+  .menu-list
+    list-style-type: none
+    margin: 0
+    padding: 0
+
+  .menu-list-item
+    margin-top: 1em
+    display: block
+
+  .menu-link
+    text-decoration: none
+    font-weight: bold
+    font-family: "Poppins", sans-serif
+    color: #4A4A4A
+    transition: color .3s ease-in-out
+    .fa
+      opacity: .5
+      font-size: .8em
+    &:hover
+      color: #4ECDC4
+
+  .active::after
+    content: " "
+    position: absolute
+    width: 100%
+    left: 0
+    top: 18%
+    background: #4ECDC4
+    height: 2px
+
+.main-text
+  height: 65%
+  width: 60%
+  margin: auto
+  padding-left: 50px
+  position: absolute
+  top: 0
+  left: 0
+  bottom: 0
+  right: 0
+  z-index: 10
+  font-family: "Poppins", sans-serif
+  color: #4A4A4A
+  .name
+    display: block
+    font-weight: 500
+    font-size: 1.3em
+    padding-left: 5px
+
+  .title
+    font-size: 5em
+    margin: 0
+
+  .description::before
+    content: " "
+    display: block
+    position: absolute
+    margin: 12px 0 0 5px
+    width: 5%
+    min-width: 40px
+    background: #4ECDC4
+    height: 5px
+
+  .description p
+    font-size: 1.1em
+    letter-spacing: .5px
+    line-height: 32px
+    margin-bottom: 25px
+    padding-left: 60px
+    a
+      color: #4A4A4A
+      text-decoration: underline
+      transition: color .3s ease-in-out
+      &:hover
+        color: #307671
+
+.photo
+  position: absolute
+  top: 0
+  right: 0
+  width: 70%
+  height: 100vh
+  display: inline-block
+  background: linear-gradient(rgba(78,205,196,.82), rgba(78,205,196,.82)), url("../img/bg.jpg") no-repeat 70px
+  background-size: cover
+  clip-path: polygon(50% 0, 100% 0, 100% 100%, 15% 100%)
