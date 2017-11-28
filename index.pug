@@ -23,10 +23,10 @@ html(lang='pt-br')
     div.menu-container
       nav.menu
         ul.menu-list
-          li.menu-list-item
+          li.menu-list-item.sobre
             a.menu-link.active(href="#")
               | Sobre
-          li.menu-list-item
+          li.menu-list-item.portfolio
             a.menu-link(href="#")
               | Portfolio
           li.menu-list-item
@@ -54,8 +54,16 @@ html(lang='pt-br')
               | Reator Digital
             |, uma agência de infoprodutos.
           p No meu tempo livre, em geral estou pesquisando sobre fotografia, aviação, arquitetura ou apenas jogando minecraft.
+      div.social
+        a.social-link(href="https://twitter.com/ricardogouveia3" target="_blank")
+          i.fa.fa-twitter(aria-hidden="true")
+        a.social-link(href="https://github.com/ricardogouveia3" target="_blank")
+          i.fa.fa-github-alt(aria-hidden="true")
+        a.social-link(href="https://www.linkedin.com/in/ricardogouveia3" target="_blank")
+          i.fa.fa-linkedin(aria-hidden="true")
 
-    div.photo
+    div.photo-container
+      div.photo
 
   script(src="js/index.js" type="text/javascript")
 
