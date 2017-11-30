@@ -16,27 +16,47 @@ html(lang='pt-br')
     include includes/meta_social.pug
 
   body
+    div#closeMenu.close-menu(onClick="dropdownClose()")
     div.logo
       a.logo-link(href="http://rcrd.me")
-        img.logo-icon(src="img/logo.png")
+        img.logo-icon(src="img/logo.svg")
 
-    div.menu-container
-      nav.menu
-        ul.menu-list
-          li.menu-list-item.sobre
-            a.menu-link.active(href="#")
-              | Sobre
-          li.menu-list-item.portfolio
-            a.menu-link(href="#")
-              | Portfolio
-          li.menu-list-item
-            a.menu-link(href="https://medium.com/@ricardogouveia3" target="_blank")
-              | Blog &nbsp;
-              i.fa.fa-external-link(aria-hidden="true")
-          li.menu-list-item
-            a.menu-link(href="mailto:contato@rcrd.me")
-              | Contato &nbsp;
-              i.fa.fa-envelope-o(aria-hidden="true")
+    nav.menu-container.menu
+      ul.menu-list
+        li.menu-list-item.sobre
+          a.menu-link.active(href="#")
+            | Sobre
+        li.menu-list-item.portfolio
+          a.menu-link(href="#")
+            | Portfolio
+        li.menu-list-item
+          a.menu-link(href="https://medium.com/@ricardogouveia3" target="_blank")
+            | Blog &nbsp;
+            i.fa.fa-external-link(aria-hidden="true")
+        li.menu-list-item
+          a.menu-link(href="mailto:contato@rcrd.me")
+            | Contato &nbsp;
+            i.fa.fa-envelope-o(aria-hidden="true")
+
+    nav.dropdown-container
+      ul.menu
+        li.main-list
+          img.icon(src="img/menu-indicator.svg" onClick="dropdownOpen()")
+          ul#menuList.menu-list
+            li.menu-list-item.sobre
+              a.menu-link.active(href="#")
+                | Sobre
+            li.menu-list-item.portfolio
+              a.menu-link(href="#")
+                | Portfolio
+            li.menu-list-item
+              a.menu-link(href="https://medium.com/@ricardogouveia3" target="_blank")
+                | Blog &nbsp;
+                i.fa.fa-external-link(aria-hidden="true")
+            li.menu-list-item
+              a.menu-link(href="mailto:contato@rcrd.me")
+                | Contato &nbsp;
+                i.fa.fa-envelope-o(aria-hidden="true")
 
     div.main-text
       span.name
@@ -45,7 +65,10 @@ html(lang='pt-br')
         | Front end Jr. Dev &amp; UI/UX Designer
       div.description-container
         span.description
-          p Sou natural de Recife-PE e moro em Santarém - PA. Tenho 22 anos e desde 2014 estou na área de front-end. Também sou estudante de ciência da computação e tenho interesse por presentation design.
+          p Sou natural de Recife-PE e moro em Santarém - PA. Tenho&nbsp;
+            span#years-old
+              | 22
+            | &nbsp;anos e desde 2014 estou na área de front-end. Também sou estudante de ciência da computação e tenho interesse por presentation design.
           p Anteriormente, trabalhei na&nbsp;
             a(href="http://www.hoolyn.com.br/" target="_blank")
               | Hoolyn
