@@ -19,15 +19,15 @@ html(lang='pt-br')
     div#closeMenu.close-menu(onClick="dropdownClose()")
     div.logo
       a.logo-link(href="http://rcrd.me")
-        img.logo-icon(src="img/logo.svg")
+        img.logo-icon(src="img/logo.svg" alt="Logotipo do site: quadrado com letras R, C, R, e D")
 
     nav.menu-container.menu
       ul.menu-list
         li.menu-list-item.sobre
-          a.menu-link.active(href="#")
+          a#menuAbout.menu-link.active(href="javascript:void(0)" onClick="closePortfolio()")
             | Sobre
         li.menu-list-item.portfolio
-          a.menu-link(href="#")
+          a#menuPortfolio.menu-link(href="javascript:void(0)" onClick="openPortfolio()")
             | Portfolio
         li.menu-list-item
           a.menu-link(href="https://medium.com/@ricardogouveia3" target="_blank")
@@ -41,13 +41,13 @@ html(lang='pt-br')
     nav.dropdown-container
       ul.menu
         li.main-list
-          img.icon(src="img/menu-indicator.svg" onClick="dropdownOpen()")
+          img.icon(src="img/menu-indicator.svg" onClick="dropdownOpen()" alt="Link para o menu")
           ul#menuList.menu-list
             li.menu-list-item.sobre
-              a.menu-link.active(href="#")
+              a#menuAboutDrop.menu-link.active(href="javascript:void(0)" onClick="closePortfolioDrop()")
                 | Sobre
             li.menu-list-item.portfolio
-              a.menu-link(href="#")
+              a#menuPortfolioDrop.menu-link(href="javascript:void(0)"  onClick="openPortfolioDrop()")
                 | Portfolio
             li.menu-list-item
               a.menu-link(href="https://medium.com/@ricardogouveia3" target="_blank")
@@ -64,7 +64,7 @@ html(lang='pt-br')
       h1.title
         | Front end Jr. Dev &amp; UI/UX Designer
       div.description-container
-        span.description
+        div.description
           p Sou natural de Recife-PE e moro em Santarém - PA. Tenho&nbsp;
             span#years-old
               | 22
@@ -85,8 +85,16 @@ html(lang='pt-br')
         a.social-link(href="https://www.linkedin.com/in/ricardogouveia3" target="_blank")
           i.fa.fa-linkedin(aria-hidden="true")
 
+    div#portfolioModal.portfolio-modal
+      div.project.first
+      div.project.second
+      div.project.third
+      div.project.fourth
+      div.project.fifth
+      div.project.sixth
+
     div.photo-container
       div.photo
 
-  script(src="js/index.js" type="text/javascript")
+    script(src="js/index.js")
 
