@@ -9,8 +9,8 @@ module.exports = function(grunt) {
         separator: ';',
       },
       dist: {
-        src: ['assets/js/jquery-3.2.1.min.js', 'assets/js/particles.min.js', 'assets/js/index.min.js'],
-        dest: 'build/js/index.js',
+        src: ['assets/js/index.min.js'],
+        dest: 'assets/js/index.js',
       },
     },
 
@@ -20,7 +20,7 @@ module.exports = function(grunt) {
       },
       my_target: {
         files: {
-          'assets/js/index.min.js': ['assets/js/index.js']
+          'assets/js/index.min.js': ['assets/js/raw.js']
         }
       }
     },
@@ -31,7 +31,7 @@ module.exports = function(grunt) {
             style: 'compressed' //Seems to be the same as minified
           },
         files: {
-          'build/css/style.css': 'assets/css/style.sass',
+          'assets/css/style.css': 'assets/css/style.sass',
         }
       }
     },
@@ -39,24 +39,8 @@ module.exports = function(grunt) {
     pug: {
       compile: {
         files: {
-          'build/index.html':'index.pug'
+          'index.html':'index.pug'
         }
-      },
-    },
-
-    imagemin: {
-      png: {
-        options: {
-          optimizationLevel: 7
-        },
-        files: [
-          {
-            expand: true,
-            src: ['assets/img/*.png'],
-            dest: 'build/img',
-            ext: '.png'
-          }
-        ]
       },
     },
 
@@ -83,15 +67,15 @@ module.exports = function(grunt) {
       dev: {
         bsFiles: {
           src : [
-            'build/css/*.css',
-            'build/js/*.js',
-            'build/index.html'
+            'assets/css/*.css',
+            'assets/js/*.js',
+            'index.html'
           ]
         },
         options: {
           watchTask: true,
           server: {
-            baseDir: "./build"
+            baseDir: "./"
           }
         }
       }
@@ -103,7 +87,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-pug');
-  grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-browser-sync');
 
