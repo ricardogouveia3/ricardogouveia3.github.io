@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://i.imgur.com/erv3eR9.png" width="100">
+</p>
+
 # RCRD Portfolio
 
 [Access the website](http://rcrd.me/)
