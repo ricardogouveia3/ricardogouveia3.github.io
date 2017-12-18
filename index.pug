@@ -1,69 +1,98 @@
 doctype html
 html(lang='pt-br')
   head
-    title Ricardo Gouveia - Desenvolvedor front-end &amp; UI designer
-    meta(name='description', content='Site de um desenvolvedor front-end jr e UI designer que abre o Sketch só pra se distrair.')
     meta(charset='utf-8')
-    link(rel='stylesheet' type='text/css' href='assets/css/normalize.css')
-    meta(name='viewport' content='width=device-width, initial-scale=1')
+    meta(name='description', content='Site de um desenvolvedor front-end jr e UI designer que abre o Sketch só pra se distrair')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0, user-scalable=no')
+    meta(name='format-detection', content='telephone=no')
+
+    //- Title
+    //- ===================================
+    title Ricardo Gouveia - Desenvolvedor front-end &amp; UI designer
+
+    //- Favicon and SVG logo
+    //- ===================================
+    link(rel='shortcut icon', href='assets/img/favicon.ico')
+    link(rel='logo', type='image/svg', href='svg/logo/logo.svg')
+
+    //- Stylesheet and fonts
+    //- ===================================
+    link(rel='stylesheet', href='assets/css/normalize.css')
+    link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700')
+    link(rel='stylesheet', href='assets/css/style.css')
+
+    //- Third-part script (that needs to be put before body)
+    //- ===================================
     script(src='https://use.fontawesome.com/b7da4b8514.js')
 
-    link(rel='stylesheet' type='text/css' href='assets/css/style.css')
-    link(rel='icon' type='image/ico' href='assets/img/favicon.ico')
-
-    link(href='https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700' rel='stylesheet')
-
+    //- Head includes
+    //- ===================================
     include includes/_social.pug
     include includes/_analytics.pug
 
   body
-    div#closeMenu.close-menu(onClick="dropdownClose()")
+    //- Logo Section
+    //- ===================================
     div.logo
-      a.logo-link(href="http://rcrd.me")
-        img.logo-icon(src="assets/img/logo.svg" alt="Logotipo do site: quadrado com letras R, C, R, e D")
+      a.logo-link(href='http://rcrd.me')
+        img.logo-icon(src='assets/img/logo.svg', alt='Logotipo do site: quadrado com letras R, C, R, e D')
 
+
+    //- Menu (Big screen resolutions)
+    //- ===================================
     nav.menu-container.menu
       ul.menu-list
         li.menu-list-item.sobre
-          a#menuAbout.menu-link.active(href="javascript:void(0)" onClick="closePortfolio()")
+          a.menu-link.active#menuAbout(href='javascript:void(0)', onClick='closePortfolio()')
             | Sobre
         li.menu-list-item.portfolio
-          a#menuPortfolio.menu-link(href="javascript:void(0)" onClick="openPortfolio()")
+          a.menu-link#menuPortfolio(href='javascript:void(0)', onClick='openPortfolio()')
             | Portfolio
         li.menu-list-item
-          a.menu-link(href="https://medium.com/@ricardogouveia3" target="_blank")
+          a.menu-link(href='https://medium.com/@ricardogouveia3', target='_blank')
             | Posts &nbsp;
-            i.fa.fa-external-link(aria-hidden="true")
+            i.fa.fa-external-link(aria-hidden='true')
         li.menu-list-item
-          a.menu-link(href="mailto:contato@rcrd.me")
+          a.menu-link(href='mailto:contato@rcrd.me')
             | Contato &nbsp;
-            i.fa.fa-envelope-o(aria-hidden="true")
+            i.fa.fa-envelope-o(aria-hidden='true')
 
+
+    //- Dropdown menu (small screen resolutions)
+    //- ===================================
     nav.dropdown-container
       ul.menu
         li.main-list
-          img.icon(src="assets/img/menu-indicator.svg" onClick="dropdownOpen()" alt="Link para o menu")
-          ul#menuList.menu-list
+          img.icon(src='assets/img/menu-indicator.svg', onClick='dropdownOpen()', alt='Link para o menu')
+          ul.menu-list#menuList
             li.menu-list-item.sobre
-              a#menuAboutDrop.menu-link.active(href="javascript:void(0)" onClick="closePortfolioDrop()")
+              a.menu-link.active#menuAboutDrop(href='javascript:void(0)', onClick='closePortfolioDrop()')
                 | Sobre
             li.menu-list-item.portfolio
-              a#menuPortfolioDrop.menu-link(href="javascript:void(0)"  onClick="openPortfolioDrop()")
+              a.menu-link#menuPortfolioDrop(href='javascript:void(0)',  onClick='openPortfolioDrop()')
                 | Portfolio
             li.menu-list-item
-              a.menu-link(href="https://medium.com/@ricardogouveia3" target="_blank")
+              a.menu-link(href='https://medium.com/@ricardogouveia3', target='_blank')
                 | Posts &nbsp;
-                i.fa.fa-external-link(aria-hidden="true")
+                i.fa.fa-external-link(aria-hidden='true')
             li.menu-list-item
-              a.menu-link(href="mailto:contato@rcrd.me")
+              a.menu-link(href='mailto:contato@rcrd.me')
                 | Contato &nbsp;
-                i.fa.fa-envelope-o(aria-hidden="true")
+                i.fa.fa-envelope-o(aria-hidden='true')
+    div.close-menu#closeMenu(onClick='dropdownClose()')
 
+
+    //- Big text (name and role)
+    //- ===================================
     div.main-text
       span.name
         | Ricardo Gouveia
       h1.title
         | Front end Jr. Dev &amp; UI/UX Designer
+
+
+      //- Description text (paragraphs)
+      //- ===================================
       div.description-container
         div.description
           p Sou natural de Recife-PE e moro em Santarém - PA. Tenho&nbsp;
@@ -71,23 +100,30 @@ html(lang='pt-br')
               | 22
             | &nbsp;anos e desde 2014 estou na área de front-end. Também sou estudante de ciência da computação e tenho interesse por presentation design.
           p Anteriormente, trabalhei na&nbsp;
-            a(href="http://www.hoolyn.com.br/" target="_blank")
+            a(href='http://www.hoolyn.com.br/', target='_blank')
               | Hoolyn
             |, startup de turismo compartilhado, e&nbsp;
-            a(href="http://reatordigital.com.br/" target="_blank")
+            a(href='http://reatordigital.com.br/', target='_blank')
               | Reator Digital
             |, uma agência de infoprodutos.
           p No meu tempo livre, em geral estou pesquisando sobre fotografia, aviação, arquitetura ou apenas jogando minecraft.
-      div.social
-        a.social-link(href="https://twitter.com/ricardogouveia3" target="_blank")
-          i.fa.fa-twitter(aria-hidden="true")
-        a.social-link(href="https://github.com/ricardogouveia3" target="_blank")
-          i.fa.fa-github-alt(aria-hidden="true")
-        a.social-link(href="https://www.linkedin.com/in/ricardogouveia3" target="_blank")
-          i.fa.fa-linkedin(aria-hidden="true")
 
-    div#portfolioModal.portfolio-modal
-      a.project-link(href="http://devinsanta.github.io/" target="_blank")
+
+      //- Social icon links
+      //- ===================================
+      div.social
+        a.social-link(href='https://twitter.com/ricardogouveia3', target='_blank')
+          i.fa.fa-twitter(aria-hidden='true')
+        a.social-link(href='https://github.com/ricardogouveia3', target='_blank')
+          i.fa.fa-github-alt(aria-hidden='true')
+        a.social-link(href='https://www.linkedin.com/in/ricardogouveia3', target='_blank')
+          i.fa.fa-linkedin(aria-hidden='true')
+
+
+    //- Portfolio modal
+    //- ===================================
+    div.portfolio-modal#portfolioModal
+      a.project-link(href='http://devinsanta.github.io/', target='_blank')
         div.project.first
           div.text
             h3.title
@@ -95,8 +131,7 @@ html(lang='pt-br')
             span.role
               | UI/UX &amp; Development
           div.background
-
-      a.project-link(href="javascript:void(0)" target="_blank")
+      a.project-link(href='javascript:void(0)', target='_blank')
         div.project.second
           div.text
             h3.title
@@ -104,8 +139,7 @@ html(lang='pt-br')
             span.role
               | Projeto em desenvolvimento
           div.background
-
-      a.project-link(href="javascript:void(0)" target="_blank")
+      a.project-link(href='javascript:void(0)', target='_blank')
         div.project.third
           div.text
             h3.title
@@ -113,8 +147,7 @@ html(lang='pt-br')
             span.role
               | Projeto em desenvolvimento
           div.background
-
-      a.project-link(href="javascript:void(0)" target="_blank")
+      a.project-link(href='javascript:void(0)', target='_blank')
         div.project.fourth
           div.text
             h3.title
@@ -122,8 +155,7 @@ html(lang='pt-br')
             span.role
               | Projeto em desenvolvimento
           div.background
-
-      a.project-link(href="javascript:void(0)" target="_blank")
+      a.project-link(href='javascript:void(0)', target='_blank')
         div.project.fifth
           div.text
             h3.title
@@ -131,8 +163,7 @@ html(lang='pt-br')
             span.role
               | Projeto em desenvolvimento
           div.background
-
-      a.project-link(href="javascript:void(0)" target="_blank")
+      a.project-link(href='javascript:void(0)', target='_blank')
         div.project.sixth
           div.text
             h3.title
@@ -141,8 +172,10 @@ html(lang='pt-br')
               | Projeto em desenvolvimento
           div.background
 
+
+    //- Photo section
+    //- ===================================
     div.photo-container
       div.photo
 
-    script(src="assets/js/index.js")
-
+    script(src='assets/js/index.js')

@@ -45,10 +45,13 @@ After that, you should be good to go :)
 │   │   └── *.png
 │   │   └── *.jpg
 │   │   └── *.svg
+│   │   └── favicon.ico
+│   │   ├── portfolio/
+│   │   │   └── *.jpg
 │   ├── js/
 │   │   └── *.js
 ├── includes/
-│   ├── meta_social.pug
+│   ├── _*.pug
 ├── Gruntfile.js
 ├── index.html
 ├── index.pug
@@ -60,7 +63,7 @@ These structure will change during the project.
 
 ### Code Standarts
 
-This project it's not using any code standarts **yet**.
+The code for this project is being migrated to [LFeh's Coding Style](https://github.com/LFeh/coding-style)
 
 
 ### Tasks
