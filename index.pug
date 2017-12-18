@@ -13,13 +13,10 @@ html(lang='pt-br')
     //- Favicon and SVG logo
     //- ===================================
     link(rel='shortcut icon', href='assets/img/favicon.ico')
-    link(rel='logo', type='image/svg', href='svg/logo/logo.svg')
+    link(rel='logo', type='image/svg', href='assets/img/logo.svg')
 
-    //- Stylesheet and fonts
-    //- ===================================
-    link(rel='stylesheet', href='assets/css/normalize.css')
-    link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700')
-    link(rel='stylesheet', href='assets/css/style.css')
+    //- Stylesheet and fonts are placed after body for performance reasons
+    //- Scripts are places at the end of body for performance reasons
 
     //- Head includes
     //- ===================================
@@ -174,5 +171,13 @@ html(lang='pt-br')
     div.photo-container
       div.photo
 
+    //- JS scripts
+    //- ===================================
     script(async, src='https://use.fontawesome.com/b7da4b8514.js')
     script(async, src='assets/js/index.js')
+
+//- Stylesheet and fonts
+//- ===================================
+link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css')
+link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700')
+link(rel='stylesheet', href='assets/css/style.css')
