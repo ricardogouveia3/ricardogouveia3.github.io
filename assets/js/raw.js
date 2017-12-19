@@ -66,4 +66,3 @@ function calcAge(dateString) {
 }
 var age = calcAge("Wed Aug 02 1995 09:00:00 GMT-0300 (BRT)");
 document.getElementById("years-old").innerHTML = age.toString();
-

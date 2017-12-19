@@ -9,7 +9,7 @@ module.exports = function(grunt) {
         separator: ';',
       },
       dist: {
-        src: ['assets/js/index.min.js'],
+        src: ['assets/js/uglyfied.js'],
         dest: 'assets/js/index.js',
       },
     },
@@ -20,7 +20,7 @@ module.exports = function(grunt) {
       },
       my_target: {
         files: {
-          'assets/js/index.min.js': ['assets/js/raw.js']
+          'assets/js/uglyfied.js': ['assets/js/raw.js']
         }
       }
     },
@@ -54,11 +54,11 @@ module.exports = function(grunt) {
         tasks: ['sass'],
       },
       js: {
-        files: ['assets/js/index.js'],
+        files: ['assets/js/raw.js'],
         tasks: ['uglify'],
       },
       scripts: {
-        files: ['assets/js/*.min.js'],
+        files: ['assets/js/uglyfied.js'],
         tasks: ['concat'],
       },
     },
