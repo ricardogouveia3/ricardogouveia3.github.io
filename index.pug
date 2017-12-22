@@ -47,7 +47,7 @@ html(lang='pt-br')
         img.logo__link__icon(src='assets/img/logo.svg', alt='Logotipo do site: quadrado com letras R, C, R, e D')
 
 
-    //- Menu (Big screen resolutions)
+    //- Menu
     //- ===================================
     nav.menu.menu_display-none#menu
       ul.menu__list
@@ -74,38 +74,37 @@ html(lang='pt-br')
     //- Big text (name and role)
     //- ===================================
     div.main-text
-      span.name
+      span.main-text__name
         | Ricardo Gouveia
-      h1.title
+      h1.main-text__role
         | Front end Jr. Dev &amp; UI/UX Designer
 
 
       //- Description text (paragraphs)
       //- ===================================
-      div.description-container
-        div.description
-          p Sou natural de Recife-PE e moro em Santarém - PA. Tenho&nbsp;
-            span#years-old
-              | 22
-            | &nbsp;anos e desde 2014 estou na área de front-end. Também sou estudante de ciência da computação e tenho interesse por presentation design.
-          p Anteriormente, trabalhei na&nbsp;
-            a(href='http://www.hoolyn.com.br/', target='_blank')
-              | Hoolyn
-            |, startup de turismo compartilhado, e&nbsp;
-            a(href='http://reatordigital.com.br/', target='_blank')
-              | Reator Digital
-            |, uma agência de infoprodutos.
-          p No meu tempo livre, em geral estou pesquisando sobre fotografia, aviação, arquitetura ou apenas jogando minecraft.
+      div.main-text__description
+        p.main-text__description__paragraph Sou natural de Recife-PE e moro em Santarém - PA. Tenho&nbsp;
+          span#years-old
+            | 22
+          | &nbsp;anos e desde 2014 estou na área de front-end. Também sou estudante de ciência da computação e tenho interesse por presentation design.
+        p.main-text__description__paragraph Anteriormente, trabalhei na&nbsp;
+          a.main-text__description__paragraph__link(href='http://www.hoolyn.com.br/', target='_blank')
+            | Hoolyn
+          |, startup de turismo compartilhado, e&nbsp;
+          a.main-text__description__paragraph__link(href='http://reatordigital.com.br/', target='_blank')
+            | Reator Digital
+          |, uma agência de infoprodutos.
+        p.main-text__description__paragraph No meu tempo livre, em geral estou pesquisando sobre arquitetura, aviação, fotografia, liberalismo, ou apenas jogando minecraft.
 
 
       //- Social icon links
       //- ===================================
-      div.social
-        a.social-link(href='https://twitter.com/ricardogouveia3', target='_blank')
+      div.main-text__social
+        a.main-text__social__link(href='https://twitter.com/ricardogouveia3', target='_blank')
           i.fa.fa-twitter(aria-hidden='true')
-        a.social-link(href='https://github.com/ricardogouveia3', target='_blank')
+        a.main-text__social__link(href='https://github.com/ricardogouveia3', target='_blank')
           i.fa.fa-github-alt(aria-hidden='true')
-        a.social-link(href='https://www.linkedin.com/in/ricardogouveia3', target='_blank')
+        a.main-text__social__link(href='https://www.linkedin.com/in/ricardogouveia3', target='_blank')
           i.fa.fa-linkedin(aria-hidden='true')
 
 
