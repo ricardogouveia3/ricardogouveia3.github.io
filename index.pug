@@ -18,17 +18,33 @@ html(lang='pt-br')
     //- Stylesheet and fonts are placed after body for performance reasons
     //- Scripts are places at the end of body for performance reasons
 
-    //- Head includes
+    //- Twitter card
     //- ===================================
-    include includes/_social.pug
-    include includes/_analytics.pug
+    meta(name="twitter:card" content="summary_large_image")
+    meta(name="twitter:creator" content="@ricardogouveia3")
+    meta(name="twitter:domain" content="ricardogouveia3.github.io")
+    meta(name="twitter:title" content="Ricardo Gouveia - Desenvolvedor front-end & UI designer")
+    meta(name="twitter:description" content="Site de um desenvolvedor front-end jr e UI designer que abre o Sketch só pra se distrair.")
+
+    //- OpenGraph
+    //- ===================================
+    meta(property="og:image" content="https://ricardogouveia3.github.io/assets/img/card-opengraph.jpg")
+    meta(property="og:title" content="Ricardo Gouveia - Desenvolvedor front-end & UI designer")
+    meta(property="og:url" content="https://ricardogouveia3.github.io/")
+    meta(property="og:type" content="website")
+    meta(property="og:site_name" content="rcrd.me")
+    meta(property="og:description" content="Site de um desenvolvedor front-end jr e UI designer que abre o Sketch só pra se distrair.")
+
+    //- Google Site Verification
+    //- ===================================
+    meta(name="google-site-verification" content="bu8jWg3PkRWa2GeQxmi3S089gNfySWQd16gy5Rde8M8")
 
   body
     //- Logo Section
     //- ===================================
     div.logo
-      a.logo-link(href='http://rcrd.me')
-        img.logo-icon(src='assets/img/logo.svg', alt='Logotipo do site: quadrado com letras R, C, R, e D')
+      a.logo__link(href='http://rcrd.me')
+        img.logo__link__icon(src='assets/img/logo.svg', alt='Logotipo do site: quadrado com letras R, C, R, e D')
 
 
     //- Menu (Big screen resolutions)

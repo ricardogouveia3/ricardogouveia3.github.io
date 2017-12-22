@@ -50,7 +50,7 @@ module.exports = function(grunt) {
         tasks: ['pug'],
       },
       style: {
-        files: ['assets/css/style.sass'],
+        files: ['assets/css/style.sass', 'assets/css/_partials/*.sass'],
         tasks: ['sass'],
       },
       js: {

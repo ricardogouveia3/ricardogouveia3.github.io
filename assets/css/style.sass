@@ -1,206 +1,12 @@
-*,
-*:after,
-*:before,
-html
-  -moz-osx-font-smoothing: grayscale
-  -webkit-font-smoothing: antialiased
-  box-sizing: border-box
-  text-rendering: optimizeLegibility
+@import _partials/variables
+@import _partials/base
 
-html
-  font-size: 16px
+@import _partials/logo
 
-body
-  background-color: #ffffff
-  display: flex
-  height: 100%
-  max-width: 100%
-  min-height: 100vh
-  overflow-x: hidden
-  overflow-y: auto
-  position: relative
-  width: 100vw
-
-  @media (max-width: 350px)
-    padding-bottom: 1em
-
-.logo
-  -webkit-clip-path: polygon(100% 0%, 0 0, 0 100%)
-  background-color: #4A4A4A
-  clip-path: polygon(100% 0%, 0 0, 0 100%)
-  height: 60vh
-  left: 0
-  position: absolute
-  top: 0
-  width: 30%
-
-  @media (max-width: 1000px)
-    height: 30vh
-    min-height: 220px
-    width: 30%
-  @media (max-width: 580px)
-    height: 25%
-    min-height: 100px
-    width: 40%
-  @media (max-width: 500px)
-    height: 20%
-    width: 50%
-
-  .logo-link
-    display: block
-    margin: 3em 0 0 3em
-    @media (max-width: 1000px)
-      margin: 2em 0 0 2em
-    @media (max-width: 500px)
-      margin: 1.3em 0 0 1.3em
-
-  .logo-icon
-    width: 6em
-    @media (max-width: 1000px)
-      width: 4em
-    @media (max-width: 580px)
-      width: 3.3em
-
-
-// Menu //
-.menu
-  .menu-list
-    list-style-type: none
-    margin: 0
-    padding: 0
-
-  .menu-list-item
-    display: block
-    margin-top: 1em
-
-  .menu-link
-    color: #4A4A4A
-    font-family: "Poppins", sans-serif
-    font-weight: bold
-    text-decoration: none
-    transition: color .3s ease-in-out
-    &:hover, &:focus
-      color: #4ECDC4
-    &.active:hover, &.active:focus
-      color: #4A4A4A
-
-
-  .fa
-    font-size: .8em
-    opacity: .5
-
-
-  .active::after
-    background: #4ECDC4
-    content: " "
-    height: 3px
-    position: absolute
-
-// Close dropdown via JS
-.close-menu
-  background-color: #000
-  cursor: pointer
-  display: none
-  height: 100%
-  left: 0
-  min-height: 100vh
-  min-width: 100vw
-  opacity: .1
-  position: absolute
-  top: 0
-  width: 100%
-  z-index: 11
-
-
-.menu-container
-  bottom: 0
-  left: 0
-  margin: 0 0 3em 3em
-  position: absolute
-  z-index: 12
-  @media (max-width: 1000px)
-    margin: 0 0 2em 2em
-  @media (max-width: 600px)
-    display: none
-
-  // Handling ::after size in a bad way. Remove ASAP
-  .menu-list-item.sobre
-
-    .active::after
-      left: 0
-      top: 23px
-      width: 49px
-
-  .menu-list-item.portfolio
-
-    .active::after
-      left: 0
-      top: 57px
-      width: 71px
-
-
-.dropdown-container
-  display: none
-  margin: 2em 2em 0 0
-  position: absolute
-  right: 0
-  top: 0
-  z-index: 12
-  @media (max-width: 600px)
-    display: block
-  @media (max-width: 500px)
-    margin: 1.3em 1.3em 0 0
-
-  .menu
-    margin: 0
-    padding: 0
-
-  .main-list
-    list-style-type: none
-
-  .icon
-    cursor: pointer
-    position: absolute
-    right: 0
-    top: 0
-    width: 4em
-    @media (max-width: 580px)
-      width: 3.3em
-
-  .menu-list
-    background-color: #fff
-    display: none
-    min-width: 128px
-    position: absolute
-    right: 0px
-    top: 0px
-    z-index: 20
-
-  .menu-list-item
-    margin: 0
-    padding: .6em
-    text-align: center
-
-  // Handling ::after size in a bad way. Remove ASAP
-  .menu-list-item.sobre
-
-    .active::after
-      left: 40px
-      top: 17px
-      width: 49px
-
-  .menu-list-item.portfolio
-
-    .active::after
-      left: 29px
-      top: 55px
-      width: 71px
-
+@import _partials/menu/list
 
 .main-text
   align-self: center
-  color: #4A4A4A
-  font-family: "Poppins", sans-serif
   margin: 0 auto
   max-width: 60%
   padding-left: 50px
@@ -236,7 +42,7 @@ body
       padding-left: 5px
 
   .description::before
-    background: #4ECDC4
+    background: $medium-turquoise
     content: " "
     display: block
     height: 5px
@@ -263,12 +69,11 @@ body
       padding-left: 6px
 
     a
-      color: #4A4A4A
       text-decoration: underline
       transition: color .3s ease-in-out
 
       &:hover, &:focus
-        color: #307671
+        color: $genoa
 
   .social
     margin-left: 60px
@@ -279,7 +84,6 @@ body
       padding-left: 5px
 
     .social-link
-      color: #4A4A4A
       font-size: 2em
       margin-right: 1em
       text-decoration: none
@@ -288,12 +92,12 @@ body
         font-size: 1.5em
 
       &:hover
-        color: #307671
+        color: $genoa
 
 
 .portfolio-modal
   align-self: center
-  background-color: #fff
+  background-color: $white
   box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.2)
   display: none
   grid-gap: 1em
@@ -339,56 +143,47 @@ body
       transition: all .5s ease-in-out
       width: 100%
 
+    =portfolio-job($url)
+      background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url($url) no-repeat center
+      background-size: cover
+
     &.first
       grid-area: a
-
       .background
-        background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url("../img/portfolio/devinsanta.png") no-repeat center
-        background-size: cover
+        +portfolio-job("../img/portfolio/devinsanta.png")
 
     &.second
       grid-area: b
-
       .background
-        background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url("../img/portfolio/soon.jpg") no-repeat center
-        background-size: cover
+        +portfolio-job("../img/portfolio/soon.jpg")
 
     &.third
       grid-area: c
-
       .background
-        background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url("../img/portfolio/soon.jpg") no-repeat center
-        background-size: cover
+        +portfolio-job("../img/portfolio/soon.jpg")
 
     &.fourth
       grid-area: d
-
       .background
-        background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url("../img/portfolio/soon.jpg") no-repeat center
-        background-size: cover
+        +portfolio-job("../img/portfolio/soon.jpg")
 
     &.fifth
       grid-area: e
-
       .background
-        background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url("../img/portfolio/soon.jpg") no-repeat center
-        background-size: cover
+        +portfolio-job("../img/portfolio/soon.jpg")
 
     &.sixth
       grid-area: f
       .background
-        background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url("../img/portfolio/soon.jpg") no-repeat center
-        background-size: cover
+        +portfolio-job("../img/portfolio/soon.jpg")
 
     &:hover
-
       .background
         transform: scale(1.3)
 
     .text
       bottom: 0
-      color: #fff
-      font-family: "Poppins", sans-serif
+      color: $white
       left: 0
       margin: 0 0 1em 1em
       position: absolute

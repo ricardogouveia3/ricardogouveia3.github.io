@@ -1,0 +1,131 @@
+// Menu //
+.menu
+  .menu-list
+    list-style-type: none
+    margin: 0
+    padding: 0
+
+  .menu-list-item
+    display: block
+    margin-top: 1em
+
+  .menu-link
+    font-weight: bold
+    text-decoration: none
+    transition: color .3s ease-in-out
+    &:hover, &:focus
+      color: $medium-turquoise
+    &.active:hover, &.active:focus
+      color: $armadillo
+
+
+  .fa
+    font-size: .8em
+    opacity: .5
+
+
+  .active::after
+    background: $medium-turquoise
+    content: " "
+    height: 3px
+    position: absolute
+
+// Close dropdown via JS
+.close-menu
+  background-color: $black
+  cursor: pointer
+  display: none
+  height: 100%
+  left: 0
+  min-height: 100vh
+  min-width: 100vw
+  opacity: .1
+  position: absolute
+  top: 0
+  width: 100%
+  z-index: 11
+
+
+.menu-container
+  bottom: 0
+  left: 0
+  margin: 0 0 3em 3em
+  position: absolute
+  z-index: 12
+  @media (max-width: 1000px)
+    margin: 0 0 2em 2em
+  @media (max-width: 600px)
+    display: none
+
+  // Handling ::after size in a bad way. Remove ASAP
+  .menu-list-item.sobre
+
+    .active::after
+      left: 0
+      top: 23px
+      width: 49px
+
+  .menu-list-item.portfolio
+
+    .active::after
+      left: 0
+      top: 57px
+      width: 71px
+
+
+.dropdown-container
+  display: none
+  margin: 2em 2em 0 0
+  position: absolute
+  right: 0
+  top: 0
+  z-index: 12
+  @media (max-width: 600px)
+    display: block
+  @media (max-width: 500px)
+    margin: 1.3em 1.3em 0 0
+
+  .menu
+    margin: 0
+    padding: 0
+
+  .main-list
+    list-style-type: none
+
+  .icon
+    cursor: pointer
+    position: absolute
+    right: 0
+    top: 0
+    width: 4em
+    @media (max-width: 580px)
+      width: 3.3em
+
+  .menu-list
+    background-color: $white
+    display: none
+    min-width: 128px
+    position: absolute
+    right: 0px
+    top: 0px
+    z-index: 20
+
+  .menu-list-item
+    margin: 0
+    padding: .6em
+    text-align: center
+
+  // Handling ::after size in a bad way. Remove ASAP
+  .menu-list-item.sobre
+
+    .active::after
+      left: 40px
+      top: 17px
+      width: 49px
+
+  .menu-list-item.portfolio
+
+    .active::after
+      left: 29px
+      top: 55px
+      width: 71px
