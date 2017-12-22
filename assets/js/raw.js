@@ -1,15 +1,20 @@
 /* Dropdown Show&Hide */
 var closeMenu = document.getElementById("closeMenu");
-var menuList = document.getElementById("menuList");
+var menu = document.getElementById("menu");
+var button = document.getElementById("menuButton");
 
 function dropdownOpen() {
+  button.style.display = "none";
   closeMenu.style.display = "block";
-  menuList.style.display = "block";
+  menu.classList.remove("menu_display-none");
+  menu.classList.add("menu_display-block");
 }
 
 function dropdownClose() {
+  button.style.display = "block";
   closeMenu.style.display = "none";
-  menuList.style.display = "none";
+  menu.classList.remove("menu_display-block");
+  menu.classList.add("menu_display-none");
 }
 
 /* Portfolio Show&Hide */
@@ -34,29 +39,6 @@ function closePortfolio() {
   setTimeout(function(){
     modal.style.display = "none";
   }, 600);
-}
-
-var menuAboutDrop = document.getElementById("menuAboutDrop");
-var menuPortfolioDrop = document.getElementById("menuPortfolioDrop");
-
-function openPortfolioDrop() {
-  menuAboutDrop.classList.remove("active");
-  menuPortfolioDrop.classList.add("active");
-  modal.style.display = "grid";
-  setTimeout(function(){
-    modal.style.transform = "translate(0)";
-  }, 100);
-  dropdownClose();
-}
-
-function closePortfolioDrop() {
-  modal.style.transform = "translate(0, -200%)";
-  menuPortfolioDrop.classList.remove("active");
-  menuAboutDrop.classList.add("active");
-  setTimeout(function(){
-    modal.style.display = "none";
-  }, 600);
-  dropdownClose();
 }
 
 /* My actual age */

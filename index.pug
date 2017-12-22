@@ -49,46 +49,26 @@ html(lang='pt-br')
 
     //- Menu (Big screen resolutions)
     //- ===================================
-    nav.menu-container.menu
-      ul.menu-list
-        li.menu-list-item.sobre
-          a.menu-link.active#menuAbout(href='javascript:void(0)', onClick='closePortfolio()')
+    nav.menu.menu_display-none#menu
+      ul.menu__list
+        li.menu__list__item.menu__list__item_about
+          a.menu__list__item__link.menu__list__item__link_active#menuAbout(href='javascript:void(0)', onClick='closePortfolio()')
             | Sobre
-        li.menu-list-item.portfolio
-          a.menu-link#menuPortfolio(href='javascript:void(0)', onClick='openPortfolio()')
+        li.menu__list__item.menu__list__item_portfolio
+          a.menu__list__item__link#menuPortfolio(href='javascript:void(0)', onClick='openPortfolio()')
             | Portfolio
-        li.menu-list-item
-          a.menu-link(href='https://medium.com/@ricardogouveia3', target='_blank')
+        li.menu__list__item
+          a.menu__list__item__link(href='https://medium.com/@ricardogouveia3', target='_blank')
             | Posts &nbsp;
             i.fa.fa-external-link(aria-hidden='true')
-        li.menu-list-item
-          a.menu-link(href='mailto:contato@rcrd.me')
+        li.menu__list__item
+          a.menu__list__item__link(href='mailto:contato@rcrd.me')
             | Contato &nbsp;
             i.fa.fa-envelope-o(aria-hidden='true')
 
+    img.dropdown-buttom-icon#menuButton(src='assets/img/menu-indicator.svg', onClick='dropdownOpen()', alt='Link para o menu')
 
-    //- Dropdown menu (small screen resolutions)
-    //- ===================================
-    nav.dropdown-container
-      ul.menu
-        li.main-list
-          img.icon(src='assets/img/menu-indicator.svg', onClick='dropdownOpen()', alt='Link para o menu')
-          ul.menu-list#menuList
-            li.menu-list-item.sobre
-              a.menu-link.active#menuAboutDrop(href='javascript:void(0)', onClick='closePortfolioDrop()')
-                | Sobre
-            li.menu-list-item.portfolio
-              a.menu-link#menuPortfolioDrop(href='javascript:void(0)',  onClick='openPortfolioDrop()')
-                | Portfolio
-            li.menu-list-item
-              a.menu-link(href='https://medium.com/@ricardogouveia3', target='_blank')
-                | Posts &nbsp;
-                i.fa.fa-external-link(aria-hidden='true')
-            li.menu-list-item
-              a.menu-link(href='mailto:contato@rcrd.me')
-                | Contato &nbsp;
-                i.fa.fa-envelope-o(aria-hidden='true')
-    div.close-menu#closeMenu(onClick='dropdownClose()')
+    div.close-dropdown#closeMenu(onClick='dropdownClose()')
 
 
     //- Big text (name and role)
