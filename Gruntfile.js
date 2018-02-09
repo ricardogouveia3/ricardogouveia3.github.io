@@ -1,6 +1,12 @@
 module.exports = function(grunt) {
 
   // Project configuration.
+  const mozjpeg = require('imagemin-mozjpeg');
+  const imagemin = require('imagemin');
+  const imageminMozjpeg = require('imagemin-mozjpeg');
+  const imageminOptipng = require('imagemin-optipng');
+  const imageminSvgo = require('imagemin-svgo');
+
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
 
@@ -28,7 +34,7 @@ module.exports = function(grunt) {
     sass: {
       build: {
           options: {
-            style: 'compressed' //Seems to be the same as minified
+            style: 'compressed'
           },
         files: {
           'assets/css/style.css': 'assets/css/style.sass',
@@ -44,6 +50,22 @@ module.exports = function(grunt) {
         files: {
           'assets/css/style.css': 'assets/css/style.css',
         }
+      }
+    },
+
+    imagemin: {
+      dynamic: {
+        options: {
+          optimizationLevel: 3,
+          svgoPlugins: [{removeViewBox: false}],
+          use: [mozjpeg(), imageminOptipng(), imageminSvgo()]
+        },
+        files: [{
+          expand: true,
+          cwd: 'assets/img/',
+          src: ['**/*.{png,jpg,gif,svg}'],
+          dest: 'assets/img/'
+        }]
       }
     },
 
@@ -98,10 +120,11 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-autoprefixer');
+  grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-contrib-pug');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-browser-sync');
 
-  grunt.registerTask('compile', ['concat', 'uglify', 'sass', 'autoprefixer', 'pug']);
+  grunt.registerTask('compile', ['concat', 'uglify', 'sass', 'autoprefixer', 'imagemin', 'pug']);
   grunt.registerTask('default', ['browserSync', 'watch']);
 };
