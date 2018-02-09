@@ -60,15 +60,25 @@
   text-decoration: none
   transition: color .3s ease-in-out
 
-  &:hover, &:focus
+  &:hover
     color: $medium-turquoise
 
-  &.active:hover, &.active:focus
-    color: $armadillo
+  &:hover .menu__list__item__link__icon g
+    fill: $medium-turquoise
 
-  .fa
-    font-size: .8em
-    opacity: .5
+  &.active:hover
+    color: $armadillo //not working
+
+.menu__list__item__link__icon
+  margin-bottom: -1px
+  margin-left: -5px
+  opacity: .5
+  padding-left: 2px
+  width: .9em
+
+  & g
+    fill: $armadillo
+    transition: fill .3s ease-in-out
 
 
 .menu__list__item__link_active::after

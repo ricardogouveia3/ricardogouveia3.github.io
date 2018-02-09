@@ -93,13 +93,16 @@
     padding-left: 5px
 
 .main-text__social__link
-  font-size: 2em
-  margin-right: 1em
+  margin-right: 2.5em
   text-decoration: none
-  transition: color .3s ease-in-out
+
+  &:hover .main-text__social__link__icon
+    fill: $genoa
+
+.main-text__social__link__icon
+  width: 1.7em
+  fill: $armadillo
+  transition: fill .3s ease-in-out
 
   @media (max-width: 580px)
-    font-size: 1.5em
-
-  &:hover
-    color: $genoa
+    width: 1.5em
