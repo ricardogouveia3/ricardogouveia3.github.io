@@ -9,8 +9,8 @@ module.exports = function(grunt) {
         separator: ';',
       },
       dist: {
-        src: ['assets/js/uglyfied.js'],
-        dest: 'assets/js/index.js',
+        src: ['assets/js/modules/*.js'],
+        dest: 'assets/js/index.min.js',
       },
     },
 
@@ -20,7 +20,7 @@ module.exports = function(grunt) {
       },
       my_target: {
         files: {
-          'assets/js/uglyfied.js': ['assets/js/raw.js']
+          'assets/js/index.min.js': ['assets/js/index.min.js']
         }
       }
     },
@@ -102,5 +102,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-browser-sync');
 
+  grunt.registerTask('compile', ['concat', 'uglify', 'sass', 'autoprefixer', 'pug']);
   grunt.registerTask('default', ['browserSync', 'watch']);
 };
