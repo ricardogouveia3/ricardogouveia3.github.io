@@ -4,7 +4,6 @@
   box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.2)
   display: none
   grid-gap: 1em
-  grid-template-areas: "first second third" "fourth fifth sixth"
   grid-template-columns: 1fr 1fr 1fr
   grid-template-rows: 1fr 1fr
   height: 69.6%
@@ -16,10 +15,10 @@
   transition: transform .5s ease-in-out
   width: 85%
   z-index: 20
+  max-height: 600px
 
   @media (max-width: 1000px)
     grid-gap: 1em
-    grid-template-areas: "first second" "third fourth" "fifth sixth"
     grid-template-columns: 1fr 1fr
     grid-template-rows: 1fr 1fr 1fr
     height: 80%
@@ -28,15 +27,14 @@
   @media (max-width: 600px)
     bottom: 0
     grid-gap: 1em
-    grid-template-areas: "first" "second" "third" "fourth" "fifth" "sixth"
+    grid-column-gap: 0
     grid-template-columns: 1fr
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr
+    grid-template-rows: 1fr
     height: 75%
     overflow-y: auto
     padding: 1.3em
     transform: translate(0, -200%)
     width: 100vw
-
 
 .portfolio__link__job
   height: 100%
@@ -54,6 +52,14 @@
   width: 100%
 
 //
+//  Fix height at small screens for chrome and firefox. Safari and IE/Edge have old implementations of relative heights (JS fix)
+//
+.portfolio__link__job,
+.portfolio__link__job,
+.portfolio__link__job__background
+  min-height: 120px
+
+//
 // Mixin handling many backgrounds
 //
 =portfolio-job($url)
@@ -62,32 +68,26 @@
 
 
 .portfolio__link__job_first
-  grid-area: first
   .portfolio__link__job__background
     +portfolio-job("../img/portfolio/devinsanta.jpg")
 
 .portfolio__link__job_second
-  grid-area: second
   .portfolio__link__job__background
     +portfolio-job("../img/portfolio/lent-a-cal.jpg")
 
 .portfolio__link__job_third
-  grid-area: third
   .portfolio__link__job__background
     +portfolio-job("../img/portfolio/soon.jpg")
 
 .portfolio__link__job_fourth
-  grid-area: fourth
   .portfolio__link__job__background
     +portfolio-job("../img/portfolio/soon.jpg")
 
 .portfolio__link__job_fifth
-  grid-area: fifth
   .portfolio__link__job__background
     +portfolio-job("../img/portfolio/soon.jpg")
 
 .portfolio__link__job_sixth
-  grid-area: sixth
   .portfolio__link__job__background
     +portfolio-job("../img/portfolio/soon.jpg")
 
