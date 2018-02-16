@@ -87,12 +87,12 @@ module.exports = function(grunt) {
         tasks: ['sass'],
       },
       js: {
-        files: ['assets/js/raw.js'],
-        tasks: ['uglify'],
+        files: ['assets/js/modules/*.js'],
+        tasks: ['concat'],
       },
       scripts: {
-        files: ['assets/js/uglyfied.js'],
-        tasks: ['concat'],
+        files: ['assets/js/index.min.js'],
+        tasks: ['uglify'],
       },
     },
 
@@ -100,8 +100,8 @@ module.exports = function(grunt) {
       dev: {
         bsFiles: {
           src : [
-            'assets/css/*.css',
-            'assets/js/*.js',
+            'assets/css/style.css',
+            'assets/js/index.min.js',
             'index.html'
           ]
         },
