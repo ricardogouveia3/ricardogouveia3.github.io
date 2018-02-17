@@ -29,29 +29,34 @@
   @media (max-width: 750px)
     font-size: 1em
 
+
 .main-text__role
   font-size: 5em
   margin: 0
+
   @media (max-width: 1300px)
     font-size: 3em
+
   @media (max-width: 750px)
     font-size: 2.3em
+
   @media (max-width: 500px)
     font-size: 1.5em
     padding-left: 5px
 
 
-.main-text__description::before
-  background: $medium-turquoise
-  content: " "
-  display: block
-  height: 5px
-  margin: 12px 0 0 5px
-  position: absolute
-  width: 40px
+.main-text__description
+  &::before
+    background: $medium-turquoise
+    content: ' '
+    display: block
+    height: 5px
+    margin: 12px 0 0 5px
+    position: absolute
+    width: 40px
 
-  @media (max-width: 500px)
-    display: none
+    @media (max-width: 500px)
+      display: none
 
 
 .main-text__description__paragraph
@@ -66,7 +71,7 @@
 
   @media (max-width: 750px)
     font-size: 1em
-    margin-bottom: 0px
+    margin-bottom: 0
 
   @media (max-width: 580px)
     text-align: justify
@@ -74,11 +79,13 @@
   @media (max-width: 500px)
     padding-left: 6px
 
+
 .main-text__description__paragraph__link
   text-decoration: underline
   transition: color .3s ease-in-out
 
-  &:hover, &:focus
+  &:hover,
+  &:focus
     color: $genoa
 
 
@@ -92,17 +99,20 @@
     margin-left: 0
     padding-left: 5px
 
+
 .main-text__social__link
   margin-right: 2.5em
   text-decoration: none
 
-  &:hover .main-text__social__link__icon
-    fill: $genoa
+  &:hover
+    .main-text__social__link__icon
+      fill: $genoa
+
 
 .main-text__social__link__icon
-  width: 1.7em
   fill: $armadillo
   transition: fill .3s ease-in-out
+  width: 1.7em
 
   @media (max-width: 580px)
     width: 1.5em

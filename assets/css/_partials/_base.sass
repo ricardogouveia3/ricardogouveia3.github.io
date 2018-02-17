@@ -1,7 +1,8 @@
 *,
-*:after,
-*:before,
+*::after,
+*::before,
 html
+  // sass-lint:disable-block no-vendor-prefixes
   -moz-osx-font-smoothing: grayscale
   -webkit-font-smoothing: antialiased
   box-sizing: border-box
@@ -11,7 +12,7 @@ html
   font-size: 16px
 
 body
-  background-color: #ffffff
+  background-color: $white
   color: $armadillo
   display: flex
   font-family: $poppins
@@ -26,6 +27,7 @@ body
   @media (max-width: 350px)
     padding-bottom: 1em
 
+
 a
-  text-decoration: none
   color: $armadillo
+  text-decoration: none

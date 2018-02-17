@@ -106,13 +106,8 @@ html(lang='pt-br')
 
       include _includes/projects/project-lent-a-cal.pug
 
-      include _includes/projects/project-soon.pug
-
-      include _includes/projects/project-soon.pug
-
-      include _includes/projects/project-soon.pug
-
-      include _includes/projects/project-soon.pug
+      - for (var i = 1; i < 5; i++) //- Used to generate 'soon' projects. Always check < conditional value when adding something new
+        include _includes/projects/project-soon.pug
 
     //- Photo section
     //- ===================================
@@ -128,5 +123,3 @@ html(lang='pt-br')
 link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css')
 link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700')
 link(rel='stylesheet', href='assets/css/style.css')
-
-

@@ -21,5 +21,6 @@
     "imagemin-mozjpeg": "^7.0.0",
     "imagemin-optipng": "^5.2.1",
     "imagemin-svgo": "^6.0.0"
-  }
+  },
+  "sasslintConfig": "sass-lint.yml"
 }

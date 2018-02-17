@@ -79,7 +79,7 @@ module.exports = function(grunt) {
 
     watch: {
       structure: {
-        files: ['index.pug', 'includes/*.pug'],
+        files: ['index.pug', '_includes/*.pug'],
         tasks: ['pug'],
       },
       style: {

@@ -9,14 +9,15 @@
     margin: 0 0 2em 2em
 
   @media (max-width: 600px)
-    margin: 2em 2em 0 0
     bottom: unset
     left: unset
+    margin: 2em 2em 0 0
     right: 0
     top: 0
 
   @media (max-width: 500px)
     margin: 1.3em 1.3em 0 0
+
 
 //
 // Both classes handle dropdown show n hide via JS
@@ -40,8 +41,8 @@
     background-color: $white
     min-width: 128px
     position: absolute
-    right: 0px
-    top: 0px
+    right: 0
+    top: 0
     z-index: 40
 
 
@@ -63,11 +64,12 @@
   &:hover
     color: $medium-turquoise
 
-  &:hover .menu__list__item__link__icon g
-    fill: $medium-turquoise
+    .menu__list__item__link__icon__path-group
+      fill: $medium-turquoise
 
-  &.active:hover
-    color: $armadillo //not working
+  &.active
+    &:hover
+      color: $armadillo
 
 .menu__list__item__link__icon
   margin-bottom: -1px
@@ -80,35 +82,40 @@
     fill: $armadillo
     transition: fill .3s ease-in-out
 
-
-.menu__list__item__link_active::after
-  background: $medium-turquoise
-  content: " "
-  height: 3px
-  position: absolute
+.menu__list__item__link_active
+  &::after
+    background: $medium-turquoise
+    content: ' '
+    height: 3px
+    position: absolute
 
 //
 // This handles the dash on active link. For now, it has static size
 //
 .menu__list__item_about
-  .menu__list__item__link_active::after
-    left: 0
-    top: 23px
-    width: 49px
-    @media (max-width: 600px)
-      left: 40px
-      top: 17px
+  .menu__list__item__link_active
+    &::after
+      left: 0
+      top: 23px
       width: 49px
 
+      @media (max-width: 600px)
+        left: 40px
+        top: 17px
+        width: 49px
+
+
 .menu__list__item_portfolio
-  .menu__list__item__link_active::after
-    left: 0
-    top: 57px
-    width: 71px
-    @media (max-width: 600px)
-      left: 29px
-      top: 55px
+  .menu__list__item__link_active
+    &::after
+      left: 0
+      top: 57px
       width: 71px
+
+      @media (max-width: 600px)
+        left: 29px
+        top: 55px
+        width: 71px
 
 
 .dropdown-buttom-icon
@@ -131,6 +138,7 @@
 
   @media (max-width: 500px)
     margin: 1.3em 1.3em 0 0
+
 
 //
 // This div comes up when dropdown is open. It let outclicks to close it

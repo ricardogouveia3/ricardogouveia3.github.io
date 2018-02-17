@@ -6,3 +6,4 @@ package-lock.json
 *.map
 *.sublime-project
 *.sublime-workspace
+sass-lint.yml
