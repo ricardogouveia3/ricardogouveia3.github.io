@@ -4,6 +4,3 @@ _legacy/
 .DS_Store
 package-lock.json
 *.map
-*.sublime-project
-*.sublime-workspace
-sass-lint.yml

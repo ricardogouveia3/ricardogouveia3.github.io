@@ -1,5 +1,5 @@
 {
-  "name": "RCRD",
+  "name": "rcrd",
   "version": "1.0.0",
   "description": "My personal website",
   "url": "http://rcrd.me",
@@ -22,5 +22,5 @@
     "imagemin-optipng": "^5.2.1",
     "imagemin-svgo": "^6.0.0"
   },
-  "sasslintConfig": "sass-lint.yml"
+  "sasslintConfig": ".sass-lint.yml"
 }

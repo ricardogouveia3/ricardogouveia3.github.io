@@ -78,19 +78,23 @@ module.exports = function(grunt) {
     },
 
     watch: {
-      structure: {
-        files: ['index.pug', '_includes/*.pug'],
+      pug: {
+        files: ['index.pug', 'includes/*.pug'],
         tasks: ['pug'],
       },
-      style: {
+      sass: {
         files: ['assets/css/style.sass', 'assets/css/_partials/*.sass'],
         tasks: ['sass'],
       },
-      js: {
+      autoprefixer:{
+        files: ['assets/css/style.css'],
+        tasks: ['autoprefixer'],
+      },
+      concat: {
         files: ['assets/js/modules/*.js'],
         tasks: ['concat'],
       },
-      scripts: {
+      uglify: {
         files: ['assets/js/index.min.js'],
         tasks: ['uglify'],
       },
