@@ -63,17 +63,19 @@ These structure will change during the project.
 
 ### Code Standarts
 
-The code for this project is being migrated to [LFeh's Coding Style](https://github.com/LFeh/coding-style)
+This project uses [LFeh's Coding Style Guide](https://github.com/LFeh/coding-style)
 
 
 ### Tasks
 
-- `grunt uglify`: uglifies raw.js file into index.min.js
-- `grunt concat`: concat index.min,js into index.js
-- `grunt sass`: build [everything].sass into style.css
-- `grunt watch`: call for watch files
+- `grunt concat`: concat `*.js` into `index.min.js`
+- `grunt uglify`: uglifies `index.min.js` into `index.min.js`
+- `grunt sass`: build `*.sass` into `style.css`
+- `grunt autoprefixer`: prefixes `*.css` into style.css
+- `grunt watch`: watch files for changes
 
-- `grunt`: run all default tasks continuously; start local server
+- `grunt compile`: compile all `.sass`, `.pug` files, autoprefixes `.css`, concat/uglify `.js`, and optimize images.
+- `grunt`: run watch and browsersync tasks - local server.
 
 
 ## License
