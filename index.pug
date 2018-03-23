@@ -18,9 +18,7 @@ html(lang='pt-br')
     //- Stylesheet and fonts are placed after body for performance reasons
     //- Scripts are places at the end of body for performance reasons
 
-    include _includes/twitter-card.pug
-
-    include _includes/opengraph.pug
+    include _includes/social_meta.pug
 
     //- Google Site Verification
     //- ===================================
@@ -47,12 +45,11 @@ html(lang='pt-br')
         li.menu__list__item
           a.menu__list__item__link(href='https://medium.com/@ricardogouveia3', target='_blank')
             | Posts &nbsp;
-            include _includes/svg/svg-external-link.pug
-
+            include assets/img/icons/external_link.svg
         li.menu__list__item
           a.menu__list__item__link(href='mailto:contato@rcrd.me')
             | Contato &nbsp;
-            include _includes/svg/svg-mail.pug
+            include assets/img/icons/mail.svg
 
 
     img.dropdown-buttom-icon#menuButton(src='assets/img/menu-indicator.svg', onClick='dropdownOpen()', alt='Link para o menu')
@@ -90,13 +87,13 @@ html(lang='pt-br')
       //- ===================================
       div.main-text__social
         a.main-text__social__link(href='https://twitter.com/ricardogouveia3', target='_blank')
-          include _includes/svg/svg-twitter.pug
+          include assets/img/icons/twitter.svg
 
         a.main-text__social__link(href='https://github.com/ricardogouveia3', target='_blank')
-          include _includes/svg/svg-github.pug
+          include assets/img/icons/github.svg
 
         a.main-text__social__link(href='https://www.linkedin.com/in/ricardogouveia3', target='_blank')
-          include _includes/svg/svg-linkedin.pug
+          include assets/img/icons/linkedin.svg
 
     //- Portfolio modal
     //- ===================================

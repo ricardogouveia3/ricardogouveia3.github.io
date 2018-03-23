@@ -4,3 +4,4 @@ _legacy/
 .DS_Store
 package-lock.json
 *.map
+codealike.json
