@@ -2,7 +2,8 @@ doctype html
 html(lang='pt-br')
   head
     meta(charset='utf-8')
-    meta(name='description', content='Site de um desenvolvedor e designer que abre o Sketch só pra se distrair')
+    meta(itemprop='name', content='Ricardo Gouveia - Front end developer & UI/UX designer')
+    meta(name='description', itemprop='description', content='Site de um desenvolvedor e designer que abre o Sketch só pra se distrair')
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
     meta(name='format-detection', content='telephone=no')
     meta(name='theme-color', content='#4ecdc4')
@@ -24,11 +25,11 @@ html(lang='pt-br')
 
     //- Google Site Verification
     //- ===================================
-    meta(name="google-site-verification" content="bu8jWg3PkRWa2GeQxmi3S089gNfySWQd16gy5Rde8M8")
+    meta(name="google-site-verification", content="bu8jWg3PkRWa2GeQxmi3S089gNfySWQd16gy5Rde8M8")
 
     //- Canonical SEO for no http/https duplication
     //- ===================================
-    link(rel="canonical" href="https://rcrd.me")
+    link(rel="canonical", href="https://rcrd.me")
 
   body
     //- Logo Section
@@ -126,9 +127,10 @@ html(lang='pt-br')
     div.photo
       div.photo__background
 
-    //- JS scripts
+    //- Scripts
     //- ===================================
     script(async, src='assets/js/index.min.js')
+    include _includes/structured_data.html
 
 //- Stylesheet and fonts
 //- ===================================
