@@ -3,7 +3,7 @@ html(lang='pt-br')
   head
     meta(charset='utf-8')
     meta(name='description', content='Site de um desenvolvedor e designer que abre o Sketch só pra se distrair')
-    meta(name='viewport', content='width=device-width, initial-scale=1.0, user-scalable=no')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
     meta(name='format-detection', content='telephone=no')
 
     //- Title
@@ -47,7 +47,7 @@ html(lang='pt-br')
           a.menu__list__item__link#menuPortfolio(href='javascript:void(0)', onClick='openPortfolio()')
             | Portfolio
         li.menu__list__item
-          a.menu__list__item__link(href='https://medium.com/@ricardogouveia3', target='_blank')
+          a.menu__list__item__link(href='https://medium.com/@ricardogouveia3', target='_blank', rel='noopener')
             | Posts &nbsp;
             include assets/img/icons/external_link.svg
         li.menu__list__item
@@ -80,10 +80,10 @@ html(lang='pt-br')
             | XX
           | &nbsp;anos e desde 2014 estou na área de front-end. Também sou estudante de ciência da computação e tenho interesse por presentation design.
         p.main-text__description__paragraph Anteriormente, trabalhei na&nbsp;
-          a.main-text__description__paragraph__link(href='http://www.hoolyn.com.br/', target='_blank')
+          a.main-text__description__paragraph__link(href='http://www.hoolyn.com.br/', target='_blank', rel='noopener')
             | Hoolyn
           |, startup de turismo compartilhado, e&nbsp;
-          a.main-text__description__paragraph__link(href='http://reatordigital.com.br/', target='_blank')
+          a.main-text__description__paragraph__link(href='http://reatordigital.com.br/', target='_blank', rel='noopener')
             | Reator Digital
           |, uma agência de infoprodutos.
         p.main-text__description__paragraph No meu tempo livre, em geral estou pesquisando sobre arquitetura, aviação, fotografia, liberalismo, ou apenas jogando minecraft.
@@ -92,16 +92,16 @@ html(lang='pt-br')
       //- Social icon links
       //- ===================================
       div.main-text__social
-        a.main-text__social__link(href='https://twitter.com/ricardogouveia3', target='_blank')
+        a.main-text__social__link(href='https://twitter.com/ricardogouveia3', target='_blank', alt='Link para meu perfil no Twitter', rel='noopener')
           include assets/img/icons/twitter.svg
 
-        a.main-text__social__link(href='https://github.com/ricardogouveia3', target='_blank')
+        a.main-text__social__link(href='https://github.com/ricardogouveia3', target='_blank', alt='Link para meu perfil no Github', rel='noopener')
           include assets/img/icons/github.svg
 
-        a.main-text__social__link(href='https://www.linkedin.com/in/ricardogouveia3', target='_blank')
+        a.main-text__social__link(href='https://www.linkedin.com/in/ricardogouveia3', target='_blank', alt='Link para meu perfil no Linkedin', rel='noopener')
           include assets/img/icons/linkedin.svg
 
-        a.main-text__social__link(href='https://dribbble.com/ricardogouveia3', target='_blank')
+        a.main-text__social__link(href='https://dribbble.com/ricardogouveia3', target='_blank', alt='Link para meu perfil no Dribbble', rel='noopener')
           include assets/img/icons/dribbble.svg
 
     //- Portfolio modal
