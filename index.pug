@@ -16,7 +16,11 @@ html(lang='pt-br')
     //- ===================================
     link(rel='shortcut icon', href='assets/img/favicon.ico')
     link(rel='logo', type='image/svg', href='assets/img/logo.svg')
-    link(rel='manifest', href='manifest.json')
+    link(rel='manifest', href='/manifest.json')
+
+    //- Service Worker Init
+    script
+      include _includes/service-worker-init.js
 
     //- Stylesheet and fonts are placed after body for performance reasons
     //- Scripts are places at the end of body for performance reasons

@@ -1,8 +1,11 @@
 {
   "name": "RCRD Portfolio",
   "short_name": "RCRD",
-  "start_url": "https://rcrd.me",
+  "scope": "/",
+  "start_url": "/?utm_source=homescreen",
+  "lang": "pt-BR",
   "display": "browser",
+  "orientation": "any",
   "background_color": "#fff",
   "description": "Site de um desenvolvedor e designer que abre o Sketch só pra se distrair.",
   "theme_color": "#4ecdc4",
