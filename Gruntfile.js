@@ -86,18 +86,10 @@ module.exports = function(grunt) {
         files: ['assets/css/style.sass', 'assets/css/_partials/*.sass'],
         tasks: ['sass'],
       },
-      autoprefixer:{
-        files: ['assets/css/style.css'],
-        tasks: ['autoprefixer'],
-      },
       concat: {
         files: ['assets/js/modules/*.js'],
         tasks: ['concat'],
-      },
-      uglify: {
-        files: ['assets/js/index.min.js'],
-        tasks: ['uglify'],
-      },
+      }
     },
 
     browserSync: {

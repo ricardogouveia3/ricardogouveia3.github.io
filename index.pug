@@ -58,10 +58,10 @@ html(lang='pt-br')
             | Contato &nbsp;
             include assets/img/icons/mail.svg
 
+    a.menu-mobile#menuIcon(href='javascript:void(0)', aria-label='Menu')
+      img.dropdown-buttom-icon#menuButton(src='assets/img/menu-indicator.svg', alt='Menu')
 
-    img.dropdown-buttom-icon#menuButton(src='assets/img/menu-indicator.svg', onClick='dropdownOpen()', alt='Link para o menu')
-
-    div.close-dropdown#closeMenu(onClick='dropdownClose()')
+    div.close-menu#divCloseMenu
 
 
     //- Big text (name and role)
