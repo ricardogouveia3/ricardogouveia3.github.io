@@ -15,6 +15,8 @@ function openPortfolio() {
   }, 100);
 }
 
+menuPortfolio.addEventListener("click", openPortfolio, false); 
+
 function closePortfolio() {
   portfolioState = false;
   modal.style.transform = "translate(120%)";
@@ -24,3 +26,5 @@ function closePortfolio() {
     modal.style.display = "none";
   }, 600);
 }
+
+menuAbout.addEventListener("click", closePortfolio, false); 
