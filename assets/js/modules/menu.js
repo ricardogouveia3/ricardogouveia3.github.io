@@ -1,5 +1,6 @@
 /* Mobile menu Show&Hide */
 var divCloseMenu = document.getElementById("divCloseMenu");
+var itemCloseMenu = document.getElementById("itemCloseMenu");
 var menu = document.getElementById("menu");
 var menuIcon = document.getElementById("menuButton");
 
@@ -20,3 +21,4 @@ function closeMenu() {
 }
 
 divCloseMenu.addEventListener("click", closeMenu, false);
+itemCloseMenu.addEventListener("click", closeMenu, false);

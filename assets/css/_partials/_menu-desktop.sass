@@ -8,17 +8,6 @@
   @media (max-width: 1000px)
     margin: 0 0 2em 2em
 
-  @media (max-width: 600px)
-    bottom: unset
-    left: unset
-    margin: 2em 2em 0 0
-    right: 0
-    top: 0
-
-  @media (max-width: 500px)
-    margin: 1.3em 1.3em 0 0
-
-
 //
 // Both classes handle dropdown show n hide via JS
 //
@@ -37,24 +26,12 @@
   margin: 0
   padding: 0
 
-  @media (max-width: 600px)
-    background-color: $white
-    min-width: 128px
-    position: absolute
-    right: 0
-    top: 0
-    z-index: 40
-
-
 .menu__list__item
   display: block
   margin-top: 1em
 
-  @media (max-width: 600px)
-    margin: 0
-    padding: .6em
-    text-align: center
-
+  &:first-child
+    display: none
 
 .menu__list__item__link
   font-weight: bold
@@ -99,11 +76,6 @@
       top: 23px
       width: 49px
 
-      @media (max-width: 600px)
-        left: 40px
-        top: 17px
-        width: 49px
-
 
 .menu__list__item_portfolio
   .menu__list__item__link_active
@@ -112,32 +84,9 @@
       top: 57px
       width: 71px
 
-      @media (max-width: 600px)
-        left: 29px
-        top: 55px
-        width: 71px
 
-
-.dropdown-buttom-icon
+.menu-mobile__icon
   display: none
-
-  @media (max-width: 1000px)
-    margin: 2em 2em 0 0
-
-  @media (max-width: 600px)
-    cursor: pointer
-    display: block
-    position: absolute
-    right: 0
-    top: 0
-    width: 4em
-    z-index: 20
-
-  @media (max-width: 580px)
-    width: 3.3em
-
-  @media (max-width: 500px)
-    margin: 1.3em 1.3em 0 0
 
 
 //

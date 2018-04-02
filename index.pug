@@ -43,25 +43,34 @@ html(lang='pt-br')
     //- ===================================
     nav.menu.menu_display-none#menu
       ul.menu__list
+        li.menu__list__item.menu__list__item_mobile-only.menu__list__item_close
+          a.menu__list__item__link#itemCloseMenu(href='javascript:void(0)')
+            include assets/img/icons/close.svg
+            | Fechar
         li.menu__list__item.menu__list__item_about
           a.menu__list__item__link.menu__list__item__link_active#menuAbout(href='javascript:void(0)')
+            include assets/img/icons/user.svg
             | Sobre
         li.menu__list__item.menu__list__item_portfolio
           a.menu__list__item__link#menuPortfolio(href='javascript:void(0)')
+            include assets/img/icons/portfolio.svg
             | Portfolio
         li.menu__list__item
           a.menu__list__item__link(href='https://medium.com/@ricardogouveia3', target='_blank', rel='noopener')
+            include assets/img/icons/quill.svg
             | Posts &nbsp;
             include assets/img/icons/external_link.svg
         li.menu__list__item
           a.menu__list__item__link(href='mailto:contato@rcrd.me')
+            include assets/img/icons/mail-dark.svg
             | Contato &nbsp;
             include assets/img/icons/mail.svg
 
     a.menu-mobile#menuIcon(href='javascript:void(0)', aria-label='Menu')
-      img.dropdown-buttom-icon#menuButton(src='assets/img/menu-indicator.svg', alt='Menu')
+      img.menu-mobile__icon#menuButton(src='assets/img/menu-indicator.svg', alt='Menu')
 
     div.close-menu#divCloseMenu
+    div.close-portfolio#divClosePortfolio
 
 
     //- Big text (name and role)
