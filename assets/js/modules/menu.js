@@ -4,20 +4,24 @@ var itemCloseMenu = document.getElementById("itemCloseMenu");
 var menu = document.getElementById("menu");
 var menuIcon = document.getElementById("menuButton");
 
+var menuState = false;
+
 function openMenu() {
-  menuIcon.style.display = "none";
+  var menuState = true;
   divCloseMenu.style.display = "block";
-  menu.classList.remove("menu_display-none");
-  menu.classList.add("menu_display-block");
+  setTimeout(function(){
+    menu.style.transform = "translate(0)";
+  }, 100);
 }
 
 menuIcon.addEventListener("click", openMenu, false);
 
 function closeMenu() {
-  menuIcon.style.display = "block";
+  var menuState = false;
   divCloseMenu.style.display = "none";
-  menu.classList.remove("menu_display-block");
-  menu.classList.add("menu_display-none");
+  setTimeout(function(){
+    menu.style.transform = "translate(120%)";
+  }, 100);
 }
 
 divCloseMenu.addEventListener("click", closeMenu, false);
