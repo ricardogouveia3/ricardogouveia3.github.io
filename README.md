@@ -2,11 +2,12 @@
   <img src="https://i.imgur.com/erv3eR9.png" width="100">
 </p>
 
-# RCRD Portfolio
+# RCRD Website
 
 [Access the website](http://rcrd.me/)
 
 This project uses:
+
 - [Pug](https://pugjs.org/)
 - [Sass](http://sass-lang.com/)
 - [Grunt](https://gruntjs.com/)
