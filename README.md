@@ -54,12 +54,12 @@ After that, you should be good to go :)
 │   │       └── *.min.{jpg||png||svg}
 │   ├── js/
 │   │   └── index.min.js
-│   ├── *.html
 │   └── favicon.ico
 ├── js/
 │   └── *.js
 ├── pug/
 │   └── *.pug
+├── index.html
 ├── .editorconfig
 ├── .gitignore
 ├── gulpfile.js

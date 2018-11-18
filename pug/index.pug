@@ -1,145 +1,42 @@
 doctype html
 html(lang='pt-br')
-  head
-    meta(charset='utf-8')
-    meta(itemprop='name', content='Ricardo Gouveia - Front end developer & UI/UX designer')
-    meta(name='description', itemprop='description', content='Site de um desenvolvedor e designer que abre o Sketch só pra se distrair')
-    meta(name='viewport', content='width=device-width, initial-scale=1.0')
-    meta(name='format-detection', content='telephone=no')
-    meta(name='theme-color', content='#4ecdc4')
+head
+  meta(charset='utf-8')
+  meta(itemprop='name', content='Ricardo Gouveia - Front end developer & UI/UX designer')
+  meta(name='description', itemprop='description', content='Site de um desenvolvedor e designer que abre o Sketch só pra se distrair')
+  meta(name='viewport', content='width=device-width, initial-scale=1.0')
+  meta(name='format-detection', content='telephone=no')
+  meta(name='theme-color', content='#4ecdc4')
 
-    //- Title
-    //- ===================================
-    title Ricardo Gouveia - Front end developer &amp; UI/UX designer
+  //- Title
+  //- ===================================
+  title Ricardo Gouveia - Front end developer &amp; UI/UX designer
 
-    //- Favicon and SVG logo
-    //- ===================================
-    link(rel='shortcut icon', href='build/assets/img/favicon.ico')
-    link(rel='logo', type='image/svg', href='build/assets/img/logo.svg')
+  //- Favicon and SVG logo
+  //- ===================================
+  link(rel='shortcut icon', href='build/assets/img/favicon.ico')
+  link(rel='logo', type='image/svg', href='build/assets/img/logo.svg')
 
-    //- Stylesheet and fonts are placed after body for performance reasons
-    //- Scripts are places at the end of body for performance reasons
+  //- Stylesheet and fonts are placed after body for performance reasons
+  //- Scripts are places at the end of body for performance reasons
 
-    include includes/social_meta.pug
+  include includes/social_meta.pug
 
-    //- Google Site Verification
-    //- ===================================
-    meta(name="google-site-verification", content="bu8jWg3PkRWa2GeQxmi3S089gNfySWQd16gy5Rde8M8")
+  //- Google Site Verification
+  //- ===================================
+  meta(name="google-site-verification", content="bu8jWg3PkRWa2GeQxmi3S089gNfySWQd16gy5Rde8M8")
 
-    //- Canonical SEO for no http/https duplication
-    //- ===================================
-    link(rel="canonical", href="https://rcrd.me")
+  //- Canonical SEO for no http/https duplication
+  //- ===================================
+  link(rel="canonical", href="https://rcrd.me")
 
-  body
-    //- Logo Section
-    //- ===================================
-    div.logo
-      a.logo__link(href='http://rcrd.me', aria-label='Logotipo RCRD')
-        img.logo__link__icon(src='build/assets/img/logo.svg', alt='Logotipo do site: quadrado com letras R, C, R, e D')
+body
+  
 
-
-    //- Menu
-    //- ===================================
-    nav.menu.menu_display-none#menu
-      ul.menu__list
-        li.menu__list__item.menu__list__item_mobile-only.menu__list__item_close
-          a.menu__list__item__link#itemCloseMenu(href='javascript:void(0)')
-            include ../assets/img/icons/close.svg
-            | Fechar
-        li.menu__list__item.menu__list__item_about
-          a.menu__list__item__link.menu__list__item__link_active#menuAbout(href='javascript:void(0)')
-            include ../assets/img/icons/user.svg
-            | Sobre
-        li.menu__list__item.menu__list__item_portfolio
-          a.menu__list__item__link#menuPortfolio(href='javascript:void(0)')
-            include ../assets/img/icons/portfolio.svg
-            | Portfolio
-        li.menu__list__item
-          a.menu__list__item__link(href='https://medium.com/@ricardogouveia3', target='_blank', rel='noopener')
-            include ../assets/img/icons/quill.svg
-            | Posts &nbsp;
-            include ../assets/img/icons/external_link.svg
-        li.menu__list__item
-          a.menu__list__item__link(href='mailto:contato@rcrd.me')
-            include ../assets/img/icons/mail-dark.svg
-            | Contato &nbsp;
-            include ../assets/img/icons/mail.svg
-
-    a.menu-mobile#menuIcon(href='javascript:void(0)', aria-label='Menu')
-      img.menu-mobile__icon#menuButton(src='build/assets/img/menu-indicator.svg', alt='Menu')
-
-    div.close-menu#divCloseMenu
-    div.close-portfolio#divClosePortfolio
-
-
-    //- Big text (name and role)
-    //- ===================================
-    div.main-text
-      span.main-text__name
-        | Ricardo Gouveia
-      h1.main-text__role
-        | Front end developer 
-        br
-        | &amp; UI/UX designer
-
-
-      //- Description text (paragraphs)
-      //- ===================================
-      div.main-text__description
-        p.main-text__description__paragraph Sou natural de Recife-PE e moro em Santarém - PA. Tenho&nbsp;
-          span#years-old
-            | XX
-          | &nbsp;anos e desde 2014 estou na área de front-end. Também sou estudante de ciência da computação e tenho interesse por presentation design.
-        p.main-text__description__paragraph Anteriormente, trabalhei na&nbsp;
-          a.main-text__description__paragraph__link(href='http://www.hoolyn.com.br/', target='_blank', rel='noopener')
-            | Hoolyn
-          |, startup de turismo compartilhado, e&nbsp;
-          a.main-text__description__paragraph__link(href='http://reatordigital.com.br/', target='_blank', rel='noopener')
-            | Reator Digital
-          |, uma agência de infoprodutos.
-        p.main-text__description__paragraph No meu tempo livre, em geral estou pesquisando sobre arquitetura, aviação, fotografia, liberalismo, ou apenas jogando minecraft.
-
-
-      //- Social icon links
-      //- ===================================
-      div.main-text__social
-        a.main-text__social__link(href='https://twitter.com/ricardogouveia3', target='_blank', aria-label='Link para meu perfil no Twitter', rel='noopener')
-          include ../assets/img/icons/twitter.svg
-
-        a.main-text__social__link(href='https://github.com/ricardogouveia3', target='_blank', aria-label='Link para meu perfil no Github', rel='noopener')
-          include ../assets/img/icons/github.svg
-
-        a.main-text__social__link(href='https://www.linkedin.com/in/ricardogouveia3', target='_blank', aria-label='Link para meu perfil no Linkedin', rel='noopener')
-          include ../assets/img/icons/linkedin.svg
-
-        a.main-text__social__link(href='https://dribbble.com/ricardogouveia3', target='_blank', aria-label='Link para meu perfil no Dribbble', rel='noopener')
-          include ../assets/img/icons/dribbble.svg
-
-    //- Portfolio modal
-    //- ===================================
-    div.portfolio#portfolioModal
-
-      include includes/projects/project-devinsanta.pug
-
-      include includes/projects/project-espaco-ki.pug
-
-      include includes/projects/project-few-2k18.pug
-
-      include includes/projects/project-lu-vassilak.pug
-
-      include includes/projects/project-7dev.pug
-
-      include includes/projects/project-lent-a-cal.pug
-
-    //- Photo section
-    //- ===================================
-    div.photo
-      div.photo__background
-
-    //- Scripts
-    //- ===================================
-    script(async, src='build/js/index.min.js')
-    include includes/structured_data.html
+  //- Scripts
+  //- ===================================
+  script(src='build/js/index.min.js')
+  include includes/structured_data.html
 
 //- Stylesheet and fonts
 //- ===================================

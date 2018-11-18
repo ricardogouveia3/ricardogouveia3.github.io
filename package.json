@@ -1,6 +1,6 @@
 {
   "name": "rcrd",
-  "version": "2.2.0",
+  "version": "3.0.0",
   "description": "Personal website for ricardogouveia3",
   "main": "index.js",
   "dependencies": {},

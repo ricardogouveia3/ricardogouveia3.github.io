@@ -23,7 +23,7 @@ let autoprefixer = require('gulp-autoprefixer'),
 /*************/
 
 gulp.task('pugDev', () => {
-  return gulp.src('pug/**/*.pug')
+  return gulp.src('pug/index.pug')
     .pipe(pug())
     .pipe(htmlbeautify({indentSize: 2}))
     .pipe(gulp.dest('./'));
@@ -54,7 +54,7 @@ gulp.task('dev', ['pugDev', 'sassDev', 'jsDev']);
 /***************/
 
 gulp.task('pugBuild', () => {
-  return gulp.src('pug/**/*.pug')
+  return gulp.src('pug/index.pug')
     .pipe(pug())
     .pipe(gulp.dest('./'));
 });
