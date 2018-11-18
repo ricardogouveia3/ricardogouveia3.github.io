@@ -21,7 +21,7 @@ html(lang='pt-br')
     //- Stylesheet and fonts are placed after body for performance reasons
     //- Scripts are places at the end of body for performance reasons
 
-    include _includes/social_meta.pug
+    include includes/social_meta.pug
 
     //- Google Site Verification
     //- ===================================
@@ -45,26 +45,26 @@ html(lang='pt-br')
       ul.menu__list
         li.menu__list__item.menu__list__item_mobile-only.menu__list__item_close
           a.menu__list__item__link#itemCloseMenu(href='javascript:void(0)')
-            include assets/img/icons/close.svg
+            include ../assets/img/icons/close.svg
             | Fechar
         li.menu__list__item.menu__list__item_about
           a.menu__list__item__link.menu__list__item__link_active#menuAbout(href='javascript:void(0)')
-            include assets/img/icons/user.svg
+            include ../assets/img/icons/user.svg
             | Sobre
         li.menu__list__item.menu__list__item_portfolio
           a.menu__list__item__link#menuPortfolio(href='javascript:void(0)')
-            include assets/img/icons/portfolio.svg
+            include ../assets/img/icons/portfolio.svg
             | Portfolio
         li.menu__list__item
           a.menu__list__item__link(href='https://medium.com/@ricardogouveia3', target='_blank', rel='noopener')
-            include assets/img/icons/quill.svg
+            include ../assets/img/icons/quill.svg
             | Posts &nbsp;
-            include assets/img/icons/external_link.svg
+            include ../assets/img/icons/external_link.svg
         li.menu__list__item
           a.menu__list__item__link(href='mailto:contato@rcrd.me')
-            include assets/img/icons/mail-dark.svg
+            include ../assets/img/icons/mail-dark.svg
             | Contato &nbsp;
-            include assets/img/icons/mail.svg
+            include ../assets/img/icons/mail.svg
 
     a.menu-mobile#menuIcon(href='javascript:void(0)', aria-label='Menu')
       img.menu-mobile__icon#menuButton(src='assets/img/menu-indicator.svg', alt='Menu')
@@ -105,32 +105,32 @@ html(lang='pt-br')
       //- ===================================
       div.main-text__social
         a.main-text__social__link(href='https://twitter.com/ricardogouveia3', target='_blank', aria-label='Link para meu perfil no Twitter', rel='noopener')
-          include assets/img/icons/twitter.svg
+          include ../assets/img/icons/twitter.svg
 
         a.main-text__social__link(href='https://github.com/ricardogouveia3', target='_blank', aria-label='Link para meu perfil no Github', rel='noopener')
-          include assets/img/icons/github.svg
+          include ../assets/img/icons/github.svg
 
         a.main-text__social__link(href='https://www.linkedin.com/in/ricardogouveia3', target='_blank', aria-label='Link para meu perfil no Linkedin', rel='noopener')
-          include assets/img/icons/linkedin.svg
+          include ../assets/img/icons/linkedin.svg
 
         a.main-text__social__link(href='https://dribbble.com/ricardogouveia3', target='_blank', aria-label='Link para meu perfil no Dribbble', rel='noopener')
-          include assets/img/icons/dribbble.svg
+          include ../assets/img/icons/dribbble.svg
 
     //- Portfolio modal
     //- ===================================
     div.portfolio#portfolioModal
 
-      include _includes/projects/project-devinsanta.pug
+      include includes/projects/project-devinsanta.pug
 
-      include _includes/projects/project-espaco-ki.pug
+      include includes/projects/project-espaco-ki.pug
 
-      include _includes/projects/project-few-2k18.pug
+      include includes/projects/project-few-2k18.pug
 
-      include _includes/projects/project-lu-vassilak.pug
+      include includes/projects/project-lu-vassilak.pug
 
-      include _includes/projects/project-7dev.pug
+      include includes/projects/project-7dev.pug
 
-      include _includes/projects/project-lent-a-cal.pug
+      include includes/projects/project-lent-a-cal.pug
 
     //- Photo section
     //- ===================================
@@ -139,11 +139,11 @@ html(lang='pt-br')
 
     //- Scripts
     //- ===================================
-    script(async, src='assets/js/index.min.js')
-    include _includes/structured_data.html
+    script(async, src='js/index.min.js')
+    include includes/structured_data.html
 
 //- Stylesheet and fonts
 //- ===================================
 link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css')
 link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Poppins:400,500,700')
-link(rel='stylesheet', href='assets/css/style.css')
+link(rel='stylesheet', href='assets/css/style.min.css')
