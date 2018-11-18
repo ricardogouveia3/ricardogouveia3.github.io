@@ -1,4 +1,53 @@
 @import partials/variables
 @import partials/base
 
+
 // Use space below to code style, and then divide it into partials files
+body
+  align-items: center
+  background-color: #307671
+  display: flex
+  height: 100vh
+  justify-content: center
+  max-height: 100%
+  max-width: 100%
+  overflow: hidden
+  width: 100vw
+
+.loader
+  align-items: center
+  background-color: #307671
+  display: flex
+  height: 100vh
+  justify-content: center
+  max-height: 100%
+  max-width: 100%
+  overflow: hidden
+  position: relative
+  width: 100vw
+  z-index: 1000
+  display: none //INACTIVE ELEMENT
+
+
+.loader__outer-square,
+.loader__inner-square
+  position: absolute
+  animation: sideBouncing .3s ease-in-out infinite
+  
+.loader__outer-square
+  background-color: #fff
+  height: 150px
+  width: 150px
+  animation-direction: alternate-reverse
+  box-shadow: 0px 0px 12px 0px rgba(0,0,0,.3)
+  
+.loader__inner-square
+  height: 80px
+  width: 80px
+  animation-direction: alternate
+  
+@keyframes sideBouncing
+  0%
+    transform: rotate(-5deg)
+  100%
+    transform: rotate(5deg)
