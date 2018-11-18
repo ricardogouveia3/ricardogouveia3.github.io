@@ -14,9 +14,8 @@ html(lang='pt-br')
 
     //- Favicon and SVG logo
     //- ===================================
-    link(rel='shortcut icon', href='assets/img/favicon.ico')
-    link(rel='logo', type='image/svg', href='assets/img/logo.svg')
-    link(rel='manifest', href='/manifest.json')
+    link(rel='shortcut icon', href='build/assets/img/favicon.ico')
+    link(rel='logo', type='image/svg', href='build/assets/img/logo.svg')
 
     //- Stylesheet and fonts are placed after body for performance reasons
     //- Scripts are places at the end of body for performance reasons
@@ -36,7 +35,7 @@ html(lang='pt-br')
     //- ===================================
     div.logo
       a.logo__link(href='http://rcrd.me', aria-label='Logotipo RCRD')
-        img.logo__link__icon(src='assets/img/logo.svg', alt='Logotipo do site: quadrado com letras R, C, R, e D')
+        img.logo__link__icon(src='build/assets/img/logo.svg', alt='Logotipo do site: quadrado com letras R, C, R, e D')
 
 
     //- Menu
@@ -67,7 +66,7 @@ html(lang='pt-br')
             include ../assets/img/icons/mail.svg
 
     a.menu-mobile#menuIcon(href='javascript:void(0)', aria-label='Menu')
-      img.menu-mobile__icon#menuButton(src='assets/img/menu-indicator.svg', alt='Menu')
+      img.menu-mobile__icon#menuButton(src='build/assets/img/menu-indicator.svg', alt='Menu')
 
     div.close-menu#divCloseMenu
     div.close-portfolio#divClosePortfolio
@@ -139,11 +138,11 @@ html(lang='pt-br')
 
     //- Scripts
     //- ===================================
-    script(async, src='js/index.min.js')
+    script(async, src='build/js/index.min.js')
     include includes/structured_data.html
 
 //- Stylesheet and fonts
 //- ===================================
 link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css')
 link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Poppins:400,500,700')
-link(rel='stylesheet', href='assets/css/style.min.css')
+link(rel='stylesheet', href='build/assets/css/style.min.css')

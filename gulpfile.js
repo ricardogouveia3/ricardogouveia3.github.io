@@ -26,7 +26,7 @@ gulp.task('pugDev', () => {
   return gulp.src('pug/**/*.pug')
     .pipe(pug())
     .pipe(htmlbeautify({indentSize: 2}))
-    .pipe(gulp.dest('build/'));
+    .pipe(gulp.dest('./'));
 });
 
 gulp.task('sassDev', () => {
@@ -56,7 +56,7 @@ gulp.task('dev', ['pugDev', 'sassDev', 'jsDev']);
 gulp.task('pugBuild', () => {
   return gulp.src('pug/**/*.pug')
     .pipe(pug())
-    .pipe(gulp.dest('build/'));
+    .pipe(gulp.dest('./'));
 });
 
 gulp.task('sassBuild', () => {
@@ -101,7 +101,7 @@ gulp.task('watch', ['browserSync', 'pugDev', 'sassDev', 'jsDev'], () => {
 gulp.task('browserSync', () => {
   browserSync.init({
     server: {
-      baseDir: 'build',
+      baseDir: './',
       serveStaticOptions: {
         extensions: ["html"]
       }
