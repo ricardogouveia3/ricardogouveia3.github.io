@@ -1,20 +1,52 @@
-//  Trigger elements
-const menuButton = document.getElementById('menuLink')
+document.addEventListener('DOMContentLoaded', () => {
+  //  Trigger elements
+  const menuButton = document.getElementById('menuLink')
 
-//  Sliding Elements
-let menuInner = document.getElementById('menuInner')
+  //  Sliding Elements
+  let menuInner = document.getElementById('menuInner')
 
-// Initial state of element
-menuInner.style.transform = 'translateX(-150%)' // Initialize with translateY(150%) if mobile
+  // Initial state of element
+  let viewportW, mobileMode, initialPosition
 
-//  Major sliding (X axis) funtion
-function toogleSlidingElement (slidingElement) { // conditionalize to translateY(150%) if mobile (bool)
-  if (slidingElement.style.transform === 'translateX(-150%)') {
-    slidingElement.style.transform = 'translateX(0)'
-  } else { slidingElement.style.transform = 'translateX(-150%)' }
-}
+  setScreenMode()
+  setInitialPosition()
 
-//  Events binding
-menuButton.addEventListener('click', function () {
-  toogleSlidingElement(menuInner)
-}, false)
+  window.onresize = () => {
+    viewportW = window.innerWidth
+
+    setScreenMode()
+    setInitialPosition()
+  }
+
+  function setScreenMode () {
+    viewportW = window.innerWidth
+
+    if (viewportW <= 700) {
+      mobileMode = true
+    } else { mobileMode = false }
+  }
+
+  function setInitialPosition () {
+    if (mobileMode) {
+      initialPosition = 'translateY(-150%)'
+    } else {
+      initialPosition = 'translateX(-150%)'
+    }
+
+    menuInner.style.transform = initialPosition
+  }
+
+  //  Major sliding (both axis) funtion
+  function toogleSlidingElement (slidingElement) {
+    if (slidingElement.style.transform === initialPosition) {
+      slidingElement.style.transform = 'translate(0)'
+    } else {
+      slidingElement.style.transform = initialPosition
+    }
+  }
+
+  //  Events binding
+  menuButton.addEventListener('click', () => {
+    toogleSlidingElement(menuInner)
+  }, false)
+})

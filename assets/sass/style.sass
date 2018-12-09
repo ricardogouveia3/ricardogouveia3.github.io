@@ -15,6 +15,9 @@ body
     padding: 0
 
 
+.no-js .loader
+  display: none
+
 .loader
   align-items: center
   background-color: #307671
@@ -27,7 +30,9 @@ body
   position: absolute
   width: 100vw
   z-index: 1000
-  display: none //INACTIVE ELEMENT
+
+.loader-fade
+  animation: loader-fade .5s ease-in-out .9s
 
 
 .loader__outer-square,
@@ -148,3 +153,10 @@ body
 @media (max-width: 700px)
   .main
     width: 100%
+
+@keyframes loader-fade
+  0%
+    opacity: 1
+  100%
+    opacity: 0
+
