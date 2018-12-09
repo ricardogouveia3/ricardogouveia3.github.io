@@ -3,16 +3,17 @@
 
 
 // Use space below to code style, and then divide it into partials files
+
 body
-  align-items: center
-  background-color: #307671
-  display: flex
-  height: 100vh
-  justify-content: center
-  max-height: 100%
-  max-width: 100%
-  overflow: hidden
-  width: 100vw
+  padding: 50px
+  transition: padding .5s ease-in-out
+
+  @media (max-width: 1000px)
+    padding: 10px
+
+  @media (max-width: 700px)
+    padding: 0
+
 
 .loader
   align-items: center
@@ -23,7 +24,7 @@ body
   max-height: 100%
   max-width: 100%
   overflow: hidden
-  position: relative
+  position: absolute
   width: 100vw
   z-index: 1000
   display: none //INACTIVE ELEMENT
@@ -33,21 +34,117 @@ body
 .loader__inner-square
   position: absolute
   animation: sideBouncing .3s ease-in-out infinite
-  
+
 .loader__outer-square
   background-color: #fff
   height: 150px
   width: 150px
   animation-direction: alternate-reverse
-  box-shadow: 0px 0px 12px 0px rgba(0,0,0,.3)
-  
+  box-shadow: 0 0 12px 0 rgba(0, 0, 0, .3)
+
 .loader__inner-square
-  height: 80px
-  width: 80px
+  height: 80
+  width: 80
   animation-direction: alternate
-  
+
+
 @keyframes sideBouncing
   0%
     transform: rotate(-5deg)
+
   100%
     transform: rotate(5deg)
+
+
+
+.main-content
+  width: 100%
+  height: 100%
+  box-shadow: 0 0 12px 0 rgba(0, 0, 0, .2)
+  overflow: hidden
+  display: flex
+  position: relative
+  //display: none
+
+@media (max-width: 700px)
+  .main-content
+    flex-wrap: wrap
+
+
+.header
+  align-items: center
+  background-color: white
+  box-shadow: 2px 0 5px 0 rgba(0, 0, 0, .2)
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  padding: 30px 15px
+  width: 70px
+  z-index: 100
+
+@media (max-width: 700px)
+  .header
+    width: 100%
+    flex-direction: row-reverse
+    height: 75px
+    padding: 15px 30px
+
+
+.logo__img
+  width: 40px
+
+.menu__link
+  width: 30px
+
+.logo__img,
+.menu__link
+  transition: opacity .3s ease-in-out
+
+  &:hover
+    opacity: .7
+
+
+.menu__inner-container
+  position: absolute
+  width: calc(100% - 70px)
+  height: 100%
+  top: 0
+  right: 0
+  background-color: #4a4a4a
+  margin: 0
+  transition: transform .5s ease-in-out
+  z-index: 0
+
+  @media (max-width: 700px)
+    top: 75px
+    width: 100%
+    height: calc(100% - 75px)
+
+.menu__list
+  padding: 50px
+  list-style-type: none
+  margin: 0
+  display: flex
+  flex-direction: column
+  justify-content: space-around
+  height: 100%
+
+.menu__list__item
+  color: $white
+  font-size: 2em
+  font-weight: bold
+  text-decoration: none
+
+  @media (max-width: 700px)
+    font-size: 1.5em
+    text-align: center
+
+
+.main
+  width: calc(100% - 70px)
+  height: 100%
+  background-color: #4ECDC4
+
+@media (max-width: 700px)
+  .main
+    width: 100%

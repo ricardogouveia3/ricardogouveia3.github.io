@@ -65,6 +65,7 @@ After that, you should be good to go :)
 ├── gulpfile.js
 ├── package.json
 └── README.md
+```
 
 ### Code Standarts
 

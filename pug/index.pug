@@ -1,39 +1,18 @@
 doctype html
-html(lang='pt-br')
-head
-  meta(charset='utf-8')
-  meta(itemprop='name', content='Ricardo Gouveia - Front end developer & UI/UX designer')
-  meta(name='description', itemprop='description', content='Site de um desenvolvedor e designer que abre o Sketch só pra se distrair')
-  meta(name='viewport', content='width=device-width, initial-scale=1.0')
-  meta(name='format-detection', content='telephone=no')
-  meta(name='theme-color', content='#4ecdc4')
 
-  //- Title
-  //- ===================================
-  title Ricardo Gouveia - Front end developer &amp; UI/UX designer
-
-  //- Favicon and SVG logo
-  //- ===================================
-  link(rel='shortcut icon', href='build/assets/img/favicon.ico')
-  link(rel='logo', type='image/svg', href='build/assets/img/logo.svg')
-
-  //- Stylesheet and fonts are placed after body for performance reasons
-  //- Scripts are places at the end of body for performance reasons
-
-  include includes/social_meta.pug
-
-  //- Google Site Verification
-  //- ===================================
-  meta(name="google-site-verification", content="bu8jWg3PkRWa2GeQxmi3S089gNfySWQd16gy5Rde8M8")
-
-  //- Canonical SEO for no http/https duplication
-  //- ===================================
-  link(rel="canonical", href="https://rcrd.me")
+include includes/head.pug
 
 body
-  .loader
-    .loader__outer-square
-    img.loader__inner-square(src='build/assets/img/logo.svg')
+  include includes/loader.pug
+
+  .main-content
+    include includes/header.pug
+
+    include includes/sliding-menu.pug
+    include includes/sliding-about.pug
+    include includes/sliding-contact.pug
+
+    main.main
 
   //- Scripts
   //- ===================================
