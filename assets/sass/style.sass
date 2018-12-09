@@ -109,13 +109,13 @@ body
     opacity: .7
 
 
-.menu__inner-container
+.menu__inner-container,
+.about, .contact
   position: absolute
   width: calc(100% - 70px)
   height: 100%
   top: 0
   right: 0
-  background-color: #4a4a4a
   margin: 0
   transition: transform .5s ease-in-out
   z-index: 0
@@ -124,6 +124,9 @@ body
     top: 75px
     width: 100%
     height: calc(100% - 75px)
+
+.menu__inner-container
+  background-color: #4a4a4a
 
 .menu__list
   padding: 50px
@@ -144,6 +147,8 @@ body
     font-size: 1.5em
     text-align: center
 
+.menu__list__item--active
+  color: #4ECDC4
 
 .main
   width: calc(100% - 70px)
@@ -160,3 +165,8 @@ body
   100%
     opacity: 0
 
+.about
+  background-color: blue
+
+.contact
+  background-color: green
