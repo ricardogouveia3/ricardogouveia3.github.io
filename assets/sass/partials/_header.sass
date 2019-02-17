@@ -1,0 +1,35 @@
+.header
+  width: 100%
+
+.header__nav__list
+  list-style-type: none
+  display: flex
+  justify-content: space-between
+  margin: 50px 0
+  padding: 0
+
+.header__nav__list__item
+  margin: 0
+  padding: 0
+  display: flex
+  align-items: center
+
+.header__nav__list__item__link
+  color: $armadillo
+  font-size: 20px
+  line-height: 25px
+  text-transform: uppercase
+  transition: color .3s ease-in-out
+  letter-spacing: 1px
+
+  &:hover
+    color: $caribbean-green
+
+.header__line
+  border: 0
+  margin-bottom: 150px
+  border-bottom: .5px solid $armadillo
+
+  @media (max-width: 700px)
+    margin-bottom: 100px
+

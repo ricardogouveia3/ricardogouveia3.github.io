@@ -5,48 +5,74 @@
 
 <head>
     <meta charset="utf-8">
-    <meta itemprop="name" content="Ricardo Gouveia - Front end developer &amp; UI/UX designer">
+    <meta itemprop="name" content="Ricardo Gouveia - Front end developer &amp; UI designer">
     <meta name="description" itemprop="description" content="Site de um desenvolvedor e designer que abre o Sketch só pra se distrair">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="format-detection" content="telephone=no">
     <meta name="theme-color" content="#4ecdc4">
-    <title>Ricardo Gouveia - Front end developer &amp; UI/UX designer</title>
-    <link rel="shortcut icon" href="build/assets/img/favicon.ico">
-    <link rel="logo" type="image/svg" href="build/assets/img/logo.svg">
+    <title>Ricardo Gouveia - Front end developer &amp; UI designer</title>
+    <link rel="shortcut icon" href="assets/img/favicon.ico">
+    <link rel="logo" type="image/svg" href="assets/img/logo.svg">
     <meta name="google-site-verification" content="bu8jWg3PkRWa2GeQxmi3S089gNfySWQd16gy5Rde8M8">
     <link rel="canonical" href="https://rcrd.me">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:creator" content="@ricardogouveia3">
     <meta name="twitter:domain" content="ricardogouveia3.github.io">
-    <meta name="twitter:title" content="Ricardo Gouveia - Front end jr. developer &amp; UI/UX designer">
-    <meta name="twitter:description" content="Site de um desenvolvedor front end jr. e UI/UX designer que abre o Sketch só pra se distrair.">
+    <meta name="twitter:title" content="Ricardo Gouveia - Front end jr. developer &amp; UI designer">
+    <meta name="twitter:description" content="Site de um desenvolvedor front end jr. e UI designer que abre o Sketch só pra se distrair.">
     <meta property="og:image" itemprop="image" content="https://rcrd.me/assets/img/opengraph.jpg">
-    <meta property="og:title" content="Ricardo Gouveia - Front end jr. developer &amp; UI/UX designer">
+    <meta property="og:title" content="Ricardo Gouveia - Front end jr. developer &amp; UI designer">
     <meta property="og:url" content="https://rcrd.me/">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="rcrd.me">
-    <meta property="og:description" content="Site de um desenvolvedor front end jr. e UI/UX designer que abre o Sketch só pra se distrair.">
+    <meta property="og:description" content="Site de um desenvolvedor front end jr. e UI designer que abre o Sketch só pra se distrair.">
 </head>
 
 <body class="no-js">
-    <div class="loader" id="loader">
-        <div class="loader__outer-square"></div><img class="loader__inner-square" src="build/assets/img/logo.svg">
-    </div>
     <div class="main-content">
         <header class="header">
-            <nav class="menu"><a class="menu__link" id="menuLink" href="javascript:void(0)"><img class="menu__icon" src="build/assets/img/icons/menu-closed.svg" alt=""></a></nav><a class="logo__link" href="/"><img class="logo__img" src="build/assets/img/logo.svg" alt=""></a>
+            <div class="DEF_wrapper header__wrp">
+                <nav class="header__nav">
+                    <ul class="header__nav__list">
+                        <li class="header__nav__list__item"><a class="header__nav__list__item__link" href="">About</a></li>
+                        <li class="header__nav__list__item"><a class="header__nav__list__item__link" href="">Projects</a></li>
+                        <li class="header__nav__list__item"><img class="header__nav__list__item__logo" src="assets/img/logo.svg"></li>
+                        <li class="header__nav__list__item"><a class="header__nav__list__item__link" href="">Posts</a></li>
+                        <li class="header__nav__list__item"><a class="header__nav__list__item__link" href="">Contact</a></li>
+                    </ul>
+                </nav>
+                <hr class="header__line">
+            </div>
         </header>
-        <div class="menu__inner-container" id="menuInner">
-            <ul class="menu__list">
-                <li class="menu__list__item"><a class="menu__list__item menu__list__item--active" id="menuListItemHome" href="javascript:void(0)">Home</a></li>
-                <li class="menu__list__item"><a class="menu__list__item" id="menuListItemAboutMe" href="javascript:void(0)">About me</a></li>
-                <li class="menu__list__item"><a class="menu__list__item" id="menuListItemPosts" href="https://medium.com/@ricardogouveia3" rel="noopener" target="_blank">Posts</a></li>
-                <li class="menu__list__item"><a class="menu__list__item" id="menuListItemContact" href="javascript:void(0)">Contact</a></li>
-            </ul>
-        </div>
-        <section class="about" id="aboutMe"></section>
-        <section class="contact" id="contact"></section>
-        <main class="main"></main>
+        <section class="hero">
+            <div class="hero__wpr DEF_wrapper">
+                <div class="hero__title">
+                    <h1 class="hero__title__mega-title">Ricardo</h1>
+                    <div class="hero__title__subtitle">
+                        <h3 class="hero__title__subtitle__text hero__title__subtitle__text--left">Front-end dev —</h3>
+                        <h3 class="hero__title__subtitle__text hero__title__subtitle__text--right">— UI designer</h3>
+                    </div>
+                </div>
+                <div class="hero__image"><img class="hero__image__img" src="assets/img/me-lookingLeft-bw--sketch.png"></div>
+            </div>
+        </section>
+        <section class="about-me">
+            <div class="about-me__wrp DEF_wrapper">
+                <h2 class="about-me__title">About me</h2>
+                <div class="about-me__content"><img class="about-me__content__image" src="assets/img/me-lookingFront--sketch.png">
+                    <p class="about-me__content__text">Recifense morando em São Paulo. Desde 2014 no front-end. Estudante de ciência da computação.</p>
+                    <p class="about-me__content__text">Iniciei carreira na Hoolyn — startup de turismo compartilhado — estagiário; depois na Reator Digital — agência de infoprodutos — como desenvolvedor júnior.</p>
+                    <p class="about-me__content__text">Atualmente trabalho como desenvolvedor júnior na Murilhas Comunicação.</p>
+                </div>
+                <ul class="about-me__icons">
+                    <li class="about-me__icons__item"><a class="about-me__icons__item__link" href="https://twitter.com/ricardogouveia3" target="_blank"><img class="about-me__icons__item__link__img" src="assets/img/icons/twitter.png"></a></li>
+                    <li class="about-me__icons__item"><a class="about-me__icons__item__link" href="https://github.com/ricardogouveia3" target="_blank"><img class="about-me__icons__item__link__img" src="assets/img/icons/github.png"></a></li>
+                    <li class="about-me__icons__item"><a class="about-me__icons__item__link" href="https://www.linkedin.com/in/ricardogouveia3" target="_blank"><img class="about-me__icons__item__link__img" src="assets/img/icons/linkedin.png"></a></li>
+                    <li class="about-me__icons__item"><a class="about-me__icons__item__link" href="https://dribbble.com/ricardogouveia3" target="_blank"><img class="about-me__icons__item__link__img" src="assets/img/icons/dribbble.png"></a></li>
+                </ul>
+            </div>
+        </section>
+        <section class="posts"><a class="posts__link" href="https://medium.com/@ricardogouveia3" target="_blank"><span class="posts__link__text">Leia meus posts no Medium</span><img class="posts__link__icon" src="assets/img/icons/arrow_right--posts.png"></a></section>
     </div>
     <script src="build/js/index.min.js"></script>
     <script type="application/ld+json">
