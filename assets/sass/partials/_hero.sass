@@ -3,6 +3,8 @@
   background-color: $caribbean-green
   background-image: url('../../../assets/img/colorfull-background.jpg')
   background-repeat: repeat
+  max-width: 100vw
+  border: 0
   position: relative
 
   @media (max-width: 700px)
@@ -66,6 +68,9 @@
   animation: heroPhotoUpOnce .5s forwards
 
 .hero__image__img
+  border: 0
+  width: auto
+  overflow-x: hidden
   max-width: 1000px
   border-bottom: 40px solid transparent
   border-image: url("../../../assets/img/colorfull-background.jpg") 24 repeat
