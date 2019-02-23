@@ -1,0 +1,9 @@
+{
+  "devinsanta": {"title": "Devinsanta", "link": "http://devinsanta.github.io/", "date": "15 de Abril de 2017", "type": "UI & Dev", "color": "#f1c40f", "image": "assets/img/portfolio/devinsanta.jpg"},
+
+  "espacoki": {"title": "Espaço Ki", "link": "http://espacokisantarem.com.br/", "date": "30 de Maio de 2018", "type": "Wordpress Dev", "color": "#34495e", "image": "assets/img/portfolio/espaco-ki.jpg"},
+
+  "few2k18": {"title": "Front-end Week 2k19", "link": "http://frontendweek.com.br/", "date": "18 de Abril de 2018", "type": "UI & Dev", "color": "#f1c40f", "image": "assets/img/portfolio/few-2k18.jpg"},
+
+  "7dev": {"title": "7Dev Tapajós Code Studio", "link": "https://7dev-codestudio.github.io/", "date": "11 de Junho de 2018", "type": "UI & Dev", "color": "#f1c40f", "image": "assets/img/portfolio/7dev.jpg"}
+}
