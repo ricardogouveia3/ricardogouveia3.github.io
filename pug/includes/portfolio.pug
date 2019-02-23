@@ -5,12 +5,12 @@ section.portfolio#portfolio
     ul.portfolio__card-grid
        each val in [1, 2, 3]
         li.portfolio__card-grid__card-container
-          article.portfolio__card-grid__card-container__card
-          .portfolio__card-grid__card-container__card__img(style='background-image: url("https://picsum.photos/770/460");')
-          div.portfolio__card-grid__card-container__card__info
-            span.portfolio__card-grid__card-container__card__info__job-type Job type
-            h4.portfolio__card-grid__card-container__card__info__job-title Lorem Ipsum Job Title
-            span.portfolio__card-grid__card-container__card__info__job-date X de X-embro de 20XX
+          a(href="#").portfolio__card-grid__card-container__card#PortfolioItemLink
+            .portfolio__card-grid__card-container__card__img#PortfolioItemImage(style='background-image: url("https://picsum.photos/770/460");')
+            div.portfolio__card-grid__card-container__card__info
+              span.portfolio__card-grid__card-container__card__info__job-type#PortfolioItemType Job type
+              h4.portfolio__card-grid__card-container__card__info__job-title#PortfolioItemTitle Lorem Ipsum Job Title
+              span.portfolio__card-grid__card-container__card__info__job-date#PortfolioItemDate X de X-embro de 20XX
 
     button.portfolio__see-all
       a.portfolio__see-all__link(href="https://portfolio.rcrd.me")
