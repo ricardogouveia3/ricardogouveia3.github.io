@@ -2,6 +2,7 @@
   min-height: 600px
   background-color: $caribbean-green
   background-image: url('../../../assets/img/colorfull-background.jpg')
+  background-repeat: repeat
   position: relative
 
   @media (max-width: 700px)
@@ -13,13 +14,15 @@
   text-align: center
 
 .hero__title__mega-title
-  margin: 0
   padding: 0
   font-family: $classic
   font-weight: bold
   color: $armadillo
   font-size: 215px
   text-transform: uppercase
+  overflow: hidden
+  white-space: nowrap
+  margin: 0 auto
 
   @media (max-width: 1000px)
     font-size: 150px
@@ -35,11 +38,13 @@
   width: 100%
 
 .hero__title__subtitle__text
-  letter-spacing: 2.5
-  font-size: 35px
+  letter-spacing: 2.5px
   line-height: 40px
   color: $armadillo
   margin: 0
+  font-size: 25px
+  text-transform: uppercase
+  font-weight: 600
 
   @media (max-width: 1000px)
     font-size: 20px
@@ -58,6 +63,7 @@
   left: 50%
   top: 0
   transform: translateX(-50%)
+  animation: heroPhotoUpOnce .5s forwards
 
 .hero__image__img
   max-width: 1000px

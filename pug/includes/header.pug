@@ -1,16 +1,31 @@
 header.header
   div.DEF_wrapper.header__wrp
-    nav.header__nav
+    nav.header__nav.header__nav--desktop
       ul.header__nav__list
         li.header__nav__list__item
-          a.header__nav__list__item__link(href="") About
+          a.header__nav__list__item__link(href="#about") About
         li.header__nav__list__item
-          a.header__nav__list__item__link(href="") Projects
+          a.header__nav__list__item__link(href="#portfolio") Portfolio
         li.header__nav__list__item
-          img.header__nav__list__item__logo(src="assets/img/logo.svg")
+          a(href="/")
+            img.header__nav__list__item__logo(src="assets/img/logo.svg")
         li.header__nav__list__item
-          a.header__nav__list__item__link(href="") Posts
+          a.header__nav__list__item__link(href="#posts") Posts
         li.header__nav__list__item
-          a.header__nav__list__item__link(href="") Contact
+          a.header__nav__list__item__link(href="#contact") Contact
+
+    nav.header__nav.header__nav--mobile
+      ul.header__nav__list
+        li.header__nav__list__item
+          a(href="/")
+            img.header__nav__list__item__logo(src="assets/img/logo.svg")
+        li.header__nav__list__item
+          a.header__nav__list__item__link(href="#about") About
+        li.header__nav__list__item
+          a.header__nav__list__item__link(href="#projects") Projects
+        li.header__nav__list__item
+          a.header__nav__list__item__link(href="#posts") Posts
+        li.header__nav__list__item
+          a.header__nav__list__item__link(href="#contact") Contact
 
     hr.header__line

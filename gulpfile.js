@@ -33,7 +33,7 @@ gulp.task('sassDev', () => {
   return gulp.src(['assets/sass/*.sass', 'assets/sass/partials/*.sass'])
     .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
     .pipe(concat('style.min.css'))
-    .pipe(gulp.dest('build/assets/css'))
+    .pipe(gulp.dest('assets/css'))
     .pipe(browserSync.stream());
 });
 
@@ -41,7 +41,7 @@ gulp.task('jsDev', () => {
   return gulp.src('js/*.js')
     .pipe(concat('index.min.js'))
     .pipe(beautify({indent_size: 2}))
-    .pipe(gulp.dest('build/js'));
+    .pipe(gulp.dest('js/'));
 });
 
 // Main dev Task
@@ -65,7 +65,7 @@ gulp.task('sassBuild', () => {
     .pipe(autoprefixer())
     .pipe(cleanCSS())
     .pipe(concat('style.min.css'))
-    .pipe(gulp.dest('build/assets/css'));
+    .pipe(gulp.dest('assets/css'));
 });
 
 gulp.task('jsBuild', (cb) => {
@@ -73,14 +73,14 @@ gulp.task('jsBuild', (cb) => {
     gulp.src('js/*.js'),
     uglify(),
     concat('index.min.js'),
-    gulp.dest('build/js')
+    gulp.dest('js/')
   ], cb );
 });
 
 gulp.task('imageBuild', () => {
   return gulp.src('assets/img/**/*')
     .pipe(imagemin())
-    .pipe(gulp.dest('build/assets/img'));
+    .pipe(gulp.dest('assets/img'));
 });
 
 // Main Build Task

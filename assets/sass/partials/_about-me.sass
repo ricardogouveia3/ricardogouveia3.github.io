@@ -1,8 +1,11 @@
 .about-me
   width: 100%
   background: linear-gradient(-164deg, #5C5C5C 0%, #2F2F2F 92%)
+
+.about-me__wrp
   padding-bottom: 100px
   padding-top: 230px
+  border-bottom: 10px solid $caribbean-green
 
   @media (max-width: 700px)
     padding-top: 180px
@@ -59,6 +62,14 @@
     @media (max-width: 850px)
       padding-top: unset
       margin-top: 50px
+
+.about-me__content__text__link
+  text-decoration: underline
+  color: $white
+  transition: color .3s ease-in-out
+
+  &:hover
+    color: $caribbean-green
 
 .about-me__icons
   clear: both

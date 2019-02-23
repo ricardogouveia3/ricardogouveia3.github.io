@@ -1,0 +1,18 @@
+section.portfolio#portfolio
+  .portfolio__wpr.DEF_wrapper
+    h2.portfolio__title Portfolio
+
+    ul.portfolio__card-grid
+       each val in [1, 2, 3]
+        li.portfolio__card-grid__card-container
+          article.portfolio__card-grid__card-container__card
+          .portfolio__card-grid__card-container__card__img(style='background-image: url("https://picsum.photos/770/460");')
+          div.portfolio__card-grid__card-container__card__info
+            span.portfolio__card-grid__card-container__card__info__job-type Job type
+            h4.portfolio__card-grid__card-container__card__info__job-title Lorem Ipsum Job Title
+            span.portfolio__card-grid__card-container__card__info__job-date X de X-embro de 20XX
+
+    button.portfolio__see-all
+      a.portfolio__see-all__link(href="https://portfolio.rcrd.me")
+        span.portfolio__see-all__text Veja o portfolio completo
+        img.portfolio__see-all__link__img(src="assets/img/icons/arrow_right--portfolio.png", alt="")
