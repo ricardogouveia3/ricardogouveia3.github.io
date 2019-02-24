@@ -12,11 +12,9 @@ let autoprefixer = require('gulp-autoprefixer'),
   htmlbeautify = require('gulp-html-beautify'),
   imagemin = require('gulp-imagemin'),
   pug = require('gulp-pug'),
-  pump = require('pump'),
   sass = require ('gulp-sass'),
-  uglify = require('gulp-uglify'),
+  uglify = require('gulp-uglify-es').default,
   watch = require('gulp-watch');
-
 
 
 /*************/
@@ -76,12 +74,10 @@ gulp.task('sassBuild', () => {
 });
 
 gulp.task('jsBuild', ['clearJS'], (cb) => {
-  pump([
-    gulp.src('js/*.js'),
-    uglify(),
-    concat('index.min.js'),
-    gulp.dest('js/')
-  ], cb );
+  return gulp.src('js/*.js')
+    .pipe(concat('index.min.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('js/'));
 });
 
 gulp.task('imageBuild', () => {
