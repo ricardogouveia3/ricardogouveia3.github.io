@@ -3,7 +3,9 @@
   "version": "3.0.0",
   "description": "Personal website for ricardogouveia3",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "del": "^3.0.0"
+  },
   "devDependencies": {
     "browser-sync": "^2.24.4",
     "eslint": "^5.10.0",

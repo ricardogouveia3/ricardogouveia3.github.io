@@ -1,19 +1,15 @@
-document.body.classList.remove('no-js');
-
 fetch('_temp/portfolio.json')
-  .then(function(response) {
-    response.json().then(function(data) {
+.then(function(response){
+  response.json().then(function(data){
 
-      slicedProjects = data.projects.slice(0, 3);
-      for (var project of slicedProjects) {
-        buildPortfolioCard(project.link, project.image, project.type, project.title, project.date, project.color);
-      }
+    slicedProjects = data.projects.slice(0, 3);
+    for (var project of slicedProjects) {
+      buildPortfolioCard(project.link, project.image, project.type, project.title, project.date, project.color);
+    }
 
-    });
-  })
-  .catch(function(err) {
-    console.error('Failed retrieving portfolio information', err);
   });
+})
+.catch(function(err){ console.error('Failed retrieving portfolio information', err); });
 
 function buildPortfolioCard(link, img, type, title, date, color) {
 
@@ -60,3 +56,4 @@ function buildPortfolioCard(link, img, type, title, date, color) {
 
   document.getElementById('portfolioCardGrid').appendChild(cardFragment);
 }
+

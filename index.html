@@ -84,26 +84,16 @@
         <section class="portfolio" id="portfolio">
             <div class="portfolio__wpr DEF_wrapper">
                 <h2 class="portfolio__title">Portfolio</h2>
-                <ul class="portfolio__card-grid">
-                    <li class="portfolio__card-grid__card-container"><a class="portfolio__card-grid__card-container__card" href="#" id="PortfolioItemLink">
-                            <div class="portfolio__card-grid__card-container__card__img" id="PortfolioItemImage" style="background-image: url(&quot;https://picsum.photos/770/460&quot;);"></div>
-                            <div class="portfolio__card-grid__card-container__card__info"><span class="portfolio__card-grid__card-container__card__info__job-type" id="PortfolioItemType">Job type</span>
-                                <h4 class="portfolio__card-grid__card-container__card__info__job-title" id="PortfolioItemTitle">Lorem Ipsum Job Title</h4><span class="portfolio__card-grid__card-container__card__info__job-date" id="PortfolioItemDate">X de X-embro de 20XX</span>
-                            </div>
-                        </a></li>
-                    <li class="portfolio__card-grid__card-container"><a class="portfolio__card-grid__card-container__card" href="#" id="PortfolioItemLink">
-                            <div class="portfolio__card-grid__card-container__card__img" id="PortfolioItemImage" style="background-image: url(&quot;https://picsum.photos/770/460&quot;);"></div>
-                            <div class="portfolio__card-grid__card-container__card__info"><span class="portfolio__card-grid__card-container__card__info__job-type" id="PortfolioItemType">Job type</span>
-                                <h4 class="portfolio__card-grid__card-container__card__info__job-title" id="PortfolioItemTitle">Lorem Ipsum Job Title</h4><span class="portfolio__card-grid__card-container__card__info__job-date" id="PortfolioItemDate">X de X-embro de 20XX</span>
-                            </div>
-                        </a></li>
-                    <li class="portfolio__card-grid__card-container"><a class="portfolio__card-grid__card-container__card" href="#" id="PortfolioItemLink">
-                            <div class="portfolio__card-grid__card-container__card__img" id="PortfolioItemImage" style="background-image: url(&quot;https://picsum.photos/770/460&quot;);"></div>
-                            <div class="portfolio__card-grid__card-container__card__info"><span class="portfolio__card-grid__card-container__card__info__job-type" id="PortfolioItemType">Job type</span>
-                                <h4 class="portfolio__card-grid__card-container__card__info__job-title" id="PortfolioItemTitle">Lorem Ipsum Job Title</h4><span class="portfolio__card-grid__card-container__card__info__job-date" id="PortfolioItemDate">X de X-embro de 20XX</span>
-                            </div>
-                        </a></li>
-                </ul><button class="portfolio__see-all"><a class="portfolio__see-all__link" href="https://portfolio.rcrd.me"><span class="portfolio__see-all__text">Veja o portfolio completo</span><img class="portfolio__see-all__link__img" src="assets/img/icons/arrow_right--portfolio.png" alt=""></a></button>
+                <ul class="portfolio__card-grid" id="portfolioCardGrid"></ul>
+                <!--each val in [1, 2, 3]
+ li.portfolio__card-grid__card-container
+   a(href="#").portfolio__card-grid__card-container__card#PortfolioItemLink
+     .portfolio__card-grid__card-container__card__img#PortfolioItemImage(style='background-image: url("https://picsum.photos/770/460");')
+     div.portfolio__card-grid__card-container__card__info
+       span.portfolio__card-grid__card-container__card__info__job-type#PortfolioItemType Job type
+       h4.portfolio__card-grid__card-container__card__info__job-title#PortfolioItemTitle Lorem Ipsum Job Title
+       span.portfolio__card-grid__card-container__card__info__job-date#PortfolioItemDate X de X-embro de 20XX
+--><button class="portfolio__see-all"><a class="portfolio__see-all__link" href="https://portfolio.rcrd.me"><span class="portfolio__see-all__text">Veja o portfolio completo</span><img class="portfolio__see-all__link__img" src="assets/img/icons/arrow_right--portfolio.png" alt=""></a></button>
             </div>
         </section>
         <section class="posts" id="posts"><a class="posts__link" href="https://medium.com/@ricardogouveia3" target="_blank"><span class="posts__link__text">Leia meus posts no Medium</span><img class="posts__link__icon" src="assets/img/icons/arrow_right--posts.png"></a></section>
@@ -124,7 +114,7 @@
             </div>
         </footer>
     </div>
-    <script src="build/js/index.min.js"></script>
+    <script src="js/index.min.js" type="text/javascript"></script>
     <script type="application/ld+json">
         {
             "@context": "http://schema.org/",

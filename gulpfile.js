@@ -7,6 +7,7 @@ let autoprefixer = require('gulp-autoprefixer'),
   browserSync = require('browser-sync').create(),
   cleanCSS = require('gulp-clean-css'),
   concat = require ('gulp-concat'),
+  del = require('del'),
   gulp = require('gulp'),
   htmlbeautify = require('gulp-html-beautify'),
   imagemin = require('gulp-imagemin'),
@@ -37,12 +38,18 @@ gulp.task('sassDev', () => {
     .pipe(browserSync.stream());
 });
 
-gulp.task('jsDev', () => {
+gulp.task('clearJS', () => {
+  return del(['js/index.min.js']);
+});
+
+gulp.task('jsDev--comp', ['clearJS'], () => {
   return gulp.src('js/*.js')
     .pipe(concat('index.min.js'))
     .pipe(beautify({indent_size: 2}))
     .pipe(gulp.dest('js/'));
 });
+
+gulp.task('jsDev', ['clearJS', 'jsDev--comp']);
 
 // Main dev Task
 gulp.task('dev', ['pugDev', 'sassDev', 'jsDev']);
@@ -68,7 +75,7 @@ gulp.task('sassBuild', () => {
     .pipe(gulp.dest('assets/css'));
 });
 
-gulp.task('jsBuild', (cb) => {
+gulp.task('jsBuild', ['clearJS'], (cb) => {
   pump([
     gulp.src('js/*.js'),
     uglify(),
@@ -84,7 +91,7 @@ gulp.task('imageBuild', () => {
 });
 
 // Main Build Task
-gulp.task('build', ['pugBuild', 'sassBuild', 'jsBuild', 'imageBuild'], () => {});
+gulp.task('build', ['pugBuild', 'sassBuild', 'clearJS', 'jsBuild', 'imageBuild'], () => {});
 
 
 

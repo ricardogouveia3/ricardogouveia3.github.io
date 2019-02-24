@@ -2,7 +2,8 @@ section.portfolio#portfolio
   .portfolio__wpr.DEF_wrapper
     h2.portfolio__title Portfolio
 
-    ul.portfolio__card-grid
+    ul.portfolio__card-grid#portfolioCardGrid
+    //
        each val in [1, 2, 3]
         li.portfolio__card-grid__card-container
           a(href="#").portfolio__card-grid__card-container__card#PortfolioItemLink
