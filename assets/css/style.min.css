@@ -203,6 +203,7 @@ body {
 
 @media (max-width: 1000px) {
   .hero__title__subtitle__text {
+    letter-spacing: unset;
     font-size: 20px;
   }
 }
@@ -224,6 +225,7 @@ body {
 
 .hero__image {
   position: absolute;
+  overflow: hidden;
   left: 50%;
   top: 0;
   transform: translateX(-50%);
@@ -233,7 +235,7 @@ body {
 .hero__image__img {
   border: 0;
   width: auto;
-  overflow-x: hidden;
+  overflow: hidden;
   max-width: 1000px;
   border-bottom: 40px solid transparent;
   border-image: url("../../../assets/img/colorfull-background.jpg") 24 repeat;
@@ -242,6 +244,7 @@ body {
 
 @media (max-width: 700px) {
   .hero__image__img {
+    max-width: 100vw;
     max-height: 500px;
   }
 }
@@ -672,6 +675,7 @@ body {
 
 .contact__form__input,
 .contact__form__textarea {
+  border-radius: 0;
   background-color: transparent;
   margin-bottom: 25px;
   color: #fff;
