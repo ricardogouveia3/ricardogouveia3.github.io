@@ -1,4 +1,4 @@
-fetch('_temp/portfolio.json')
+fetch('https://raw.githubusercontent.com/ricardogouveia3/ricardogouveia3.github.io/master/_temp/portfolio.json')
 .then(function(response){
   response.json().then(function(data){
 
