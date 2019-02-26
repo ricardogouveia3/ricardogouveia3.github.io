@@ -28,7 +28,7 @@ function buildPortfolioCard(link, img, type, title, date, color) {
   var cardImage = document.createElement('div');
   cardImage.classList.add('portfolio__card-grid__card-container__card__img');
   cardImage.id = 'PortfolioItemImage';
-  cardImage.style.backgroundImage = 'url("' + img + '")';
+  cardImage.style.backgroundImage = 'url("https://raw.githubusercontent.com/ricardogouveia3/rcrd-portfolio/master/' + img + '")';
   cardLink.appendChild(cardImage);
 
   var cardInfo = document.createElement('div');
