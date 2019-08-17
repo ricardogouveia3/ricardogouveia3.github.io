@@ -26,51 +26,52 @@
   @media (max-width: 500px)
     font-size: 50px
 
-.about-me__content__image
-  float: left
-  width: 50%
-  padding-right: 20px
-  shape-outside: circle()
-  margin-right: 30px
-
-  @media (max-width: 850px)
-    display: block
-    max-width: 500px
-    width: 90vw
-    margin: 0 auto
-    padding: 0
-    shape-outside: unset
-    float: none
-
-.about-me__content__text
-  font-size: 20px
-  margin-top: 20px
-  color: $white
-  line-height: 2
-  font-weight: 300
-
-  @media (max-width: 850px)
-    display: block
-    width: 90vw
-    margin: 0 auto
-
-  &:first-of-type
-    padding-top: 70px
-
-    @media (max-width: 900px)
-      padding-top: 50px
+.about-me__content
+  img
+    float: left
+    width: 50%
+    padding-right: 20px
+    shape-outside: circle()
+    margin-right: 30px
 
     @media (max-width: 850px)
-      padding-top: unset
-      margin-top: 50px
+      display: block
+      max-width: 500px
+      width: 90vw
+      margin: 0 auto
+      padding: 0
+      shape-outside: unset
+      float: none
 
-.about-me__content__text__link
-  text-decoration: underline
-  color: $white
-  transition: color .3s ease-in-out
+  p
+    font-size: 20px
+    margin-top: 20px
+    color: $white
+    line-height: 2
+    font-weight: 300
 
-  &:hover
-    color: $caribbean-green
+    @media (max-width: 850px)
+      display: block
+      width: 90vw
+      margin: 0 auto
+
+    &:first-of-type
+      padding-top: 70px
+
+      @media (max-width: 900px)
+        padding-top: 50px
+
+      @media (max-width: 850px)
+        padding-top: unset
+        margin-top: 50px
+
+  a
+    text-decoration: underline
+    color: $white
+    transition: color .3s ease-in-out
+
+    &:hover
+      color: $caribbean-green
 
 .about-me__icons
   clear: both
