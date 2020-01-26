@@ -41,14 +41,10 @@ export default {
     };
   },
   created: function() {
-    this.$axios
-      .get(
-        "https://raw.githubusercontent.com/ricardogouveia3/rcrd-portfolio/master/data/portfolio.json"
-      )
-      .then(response => {
-        this.projects = response.data.projects;
-        this.projects.length = 3;
-      });
+    this.$axios.get("https://api.rcrd.me/rcrd/portfolio").then(response => {
+      this.projects = response.data;
+      this.projects.length = 3;
+    });
   },
   methods: {}
 };

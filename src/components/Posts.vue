@@ -31,7 +31,6 @@
 </template>
 
 <script>
-/* eslint-disable no-console */
 export default {
   name: "Posts",
   props: {},
@@ -46,7 +45,6 @@ export default {
     this.$axios
       .get("https://dev.to/api/articles?username=ricardogouveia3")
       .then(response => {
-        console.log(response);
         this.posts = response.data;
         this.posts.length = 4;
       });
