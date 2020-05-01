@@ -4,19 +4,11 @@
       <h2>Leia meus posts no DEV Community</h2>
 
       <ul>
-        <li v-for="(post, index) in posts" v-bind:key="index">
-          <a class="card" :href="post.url" target="_blank">
-            <div class="job-img">
-              <img :src="post.cover_image" />
-            </div>
-            <div class="job-info">
-              <h4 class="job-title">
-                {{ post.title }}
-              </h4>
-              <p>{{ post.description }}</p>
-            </div>
-          </a>
-        </li>
+        <SinglePost
+          v-for="(post, index) in posts"
+          v-bind:key="index"
+          :post="post"
+        ></SinglePost>
       </ul>
 
       <a class="see-all" target="_blank" href="https://dev.to/ricardogouveia3"
@@ -31,24 +23,29 @@
 </template>
 
 <script>
+import SinglePost from "./cards/SinglePost";
+
 export default {
   name: "Posts",
+  components: {
+    SinglePost,
+  },
   props: {},
 
   data: function() {
     return {
-      posts: []
+      posts: [],
     };
   },
 
   created: function() {
     this.$axios
       .get("https://dev.to/api/articles?username=ricardogouveia3")
-      .then(response => {
+      .then((response) => {
         this.posts = response.data;
         this.posts.length = 4;
       });
-  }
+  },
 };
 </script>
 

@@ -3,22 +3,11 @@
     <div class="DEF_wrapper">
       <h2>Portfolio</h2>
       <ul>
-        <li v-for="(project, index) in projects" v-bind:key="index">
-          <a class="card" :href="project.link">
-            <div class="job-img">
-              <img :src="project.image" />
-            </div>
-            <div class="job-info">
-              <span class="job-type" :style="{ color: project.color }">
-                {{ project.type }}
-              </span>
-              <h4 class="job-title">
-                {{ project.title }}
-              </h4>
-              <span class="job-date">{{ project.date }}</span>
-            </div>
-          </a>
-        </li>
+        <SingleJob
+          v-for="(project, index) in projects"
+          v-bind:key="index"
+          :project="project"
+        ></SingleJob>
       </ul>
       <a class="see-all" href="https://portfolio.rcrd.me"
         ><span class="see-all__text">Veja o portfolio completo</span
@@ -32,21 +21,26 @@
 </template>
 
 <script>
+import SingleJob from "./cards/SingleJob";
+
 export default {
   name: "Portfolio",
+  components: {
+    SingleJob,
+  },
   props: {},
   data: function() {
     return {
-      projects: []
+      projects: [],
     };
   },
   created: function() {
-    this.$axios.get("https://api.rcrd.me/rcrd/portfolio").then(response => {
+    this.$axios.get("https://api.rcrd.me/rcrd/portfolio").then((response) => {
       this.projects = response.data;
       this.projects.length = 3;
     });
   },
-  methods: {}
+  methods: {},
 };
 </script>
 
@@ -91,72 +85,6 @@ ul
 
   @media (max-width: 500px)
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-
-li
-  &:hover
-    .job-img
-      opacity: .7
-    .job-title
-      color: $caribbean-green
-
-@media (min-width: 1000px)
-  li:first-of-type
-    grid-column-start: 1
-    grid-column-end: 3
-
-    .job-info
-      max-width: 50%
-      margin-top: -180px
-
-    .job-img
-      height: 350px
-
-.job-info
-  background-color: $white
-  margin-top: -70px
-  position: relative
-  padding: 40px 30px
-  margin-right: 50px
-
-  @media (max-width: 1000px)
-    margin-right: unset
-
-.job-type,
-.job-date
-  font-weight: 300
-  color: #AEAEAE
-  letter-spacing: 1.25px
-
-.job-type
-  font-size: 15px
-  text-transform: uppercase
-  position: absolute
-  left: 0
-  border-left: 3px solid
-  padding: 8px 0 8px 28px
-  margin-bottom: 20px
-
-.job-title
-  transition: color .5s ease-in-out
-  font-weight: bold
-  margin: 40px 0 20px 0
-  font-size: 30px
-  color: $armadillo
-  line-height: 1.5
-
-.job-img
-  transition: opacity .5s ease-in-out
-  width: 100%
-  height: 280px
-  overflow: hidden
-
-  img
-    width: 100%
-    height: 100%
-    object-fit: cover
-    object-position: 100% 50%;
-
-
 
 .see-all
   background-color: $caribbean-green
