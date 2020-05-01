@@ -1,13 +1,14 @@
 {
   "name": "rcrd",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "private": false,
   "license": "MIT",
   "scripts": {
     "serve": "vue-cli-service serve",
     "ui": "vue ui",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "deploy": "push-dir --dir=dist --branch=master --cleanup"
   },
   "dependencies": {
     "axios": "^0.19.1",
@@ -26,6 +27,7 @@
     "eslint-plugin-vue": "^5.0.0",
     "node-sass": "^4.12.0",
     "prettier": "^1.19.1",
+    "push-dir": "^0.4.1",
     "sass-loader": "^8.0.0",
     "vue-template-compiler": "^2.6.10"
   },
