@@ -9,24 +9,20 @@
           :project="project"
         ></SingleJob>
       </ul>
-      <a class="see-all" href="https://portfolio.rcrd.me"
-        ><span class="see-all__text">Veja o portfolio completo</span
-        ><img
-          class="see-all__img"
-          src="../assets/img/icons/arrow_right--portfolio.png"
-          alt=""
-      /></a>
+      <Cta-portfolio></Cta-portfolio>
     </div>
   </section>
 </template>
 
 <script>
 import SingleJob from "./cards/SingleJob";
+import CtaPortfolio from "./ctas/ctaPortfolio";
 
 export default {
   name: "Portfolio",
   components: {
     SingleJob,
+    CtaPortfolio,
   },
   props: {},
   data: function() {

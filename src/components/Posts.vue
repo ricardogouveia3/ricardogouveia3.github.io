@@ -11,24 +11,20 @@
         ></SinglePost>
       </ul>
 
-      <a class="see-all" target="_blank" href="https://dev.to/ricardogouveia3"
-        ><span class="see-all__text">Veja todos os posts</span
-        ><img
-          class="see-all__img"
-          src="../assets/img/icons/arrow_right--posts.png"
-          alt=""
-      /></a>
+      <Cta-posts></Cta-posts>
     </div>
   </section>
 </template>
 
 <script>
 import SinglePost from "./cards/SinglePost";
+import CtaPosts from "./ctas/ctaPosts";
 
 export default {
   name: "Posts",
   components: {
     SinglePost,
+    CtaPosts,
   },
   props: {},
 
@@ -124,35 +120,4 @@ li a
   p
     opacity: .7
     font-size: .8em
-
-.see-all
-  color: $caribbean-green
-  border: 0
-  background-color: $white
-  cursor: pointer
-  display: block
-  font-weight: bold
-  padding: 1.5ch
-  position: relative
-  text-align: left
-  text-decoration: none
-  text-transform: uppercase
-  transition: background-color .4s ease-in-out
-  width: 100%
-
-  &:hover
-    background-color: darken($white, 10%)
-
-  @media (max-width: 700px)
-    text-align: center
-    line-height: 1.5
-
-.see-all__img
-  width: 25px
-  position: absolute
-  right: 50px
-  animation: arrowBounceLeft--light alternate 1.5s infinite
-
-  @media (max-width: 700px)
-    display: none
 </style>
