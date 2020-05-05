@@ -1,10 +1,7 @@
 <template>
   <div id="app" class="main-content">
     <Header />
-    <Hero
-      v-if="this.portfolioFirstProject"
-      :newest="this.portfolioFirstProject"
-    />
+    <Hero :newest="this.portfolioFirstProject" />
     <AboutMe />
     <Portfolio v-if="this.portfolioData" :projects="this.portfolioData" />
     <Posts />
@@ -53,7 +50,6 @@ export default {
   methods: {
     handleFetchError: function(response) {
       if (!response.ok) {
-        this.portfolioFirstProject = {};
         throw Error(response.statusText);
       }
       return response;

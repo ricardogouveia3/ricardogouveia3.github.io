@@ -16,7 +16,7 @@
         <img src="../assets/img/me-lookingLeft-bw--sketch.png" />
       </div>
     </div>
-    <Cta-newer-project v-if="this.newest && this.newest.title" :project="this.newest" />
+    <Cta-newer-project v-if="this.newest" :project="this.newest" />
   </section>
 </template>
 
