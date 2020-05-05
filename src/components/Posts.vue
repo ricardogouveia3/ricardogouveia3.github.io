@@ -1,5 +1,5 @@
 <template>
-  <section id="posts">
+  <section id="posts" v-if="this.posts">
     <div class="DEF_wrapper">
       <h2>Leia meus posts no DEV Community</h2>
 
@@ -20,6 +20,9 @@
 import SinglePost from "./cards/SinglePost";
 import CtaPosts from "./ctas/ctaPosts";
 
+const DEVTO_API_MY_POSTS =
+  "https://dev.to/api/articles?username=ricardogouveia3";
+
 export default {
   name: "Posts",
   components: {
@@ -30,19 +33,26 @@ export default {
 
   data: function() {
     return {
-      posts: []
+      posts: null
     };
   },
-
-  created: function() {
-    this.$axios
-      .get("https://dev.to/api/articles?username=ricardogouveia3")
-      .then(response => {
-        this.posts = response.data;
-        this.posts.length = 4;
+  beforeCreate() {
+    fetch(DEVTO_API_MY_POSTS)
+      .then(response => this.handleFetchError(response))
+      .then(response => response.json())
+      .then(data => {
+        this.posts = data.slice(0, 4);
       });
+  },
+  methods: {
+    handleFetchError: function(response) {
+      if (!response.ok) {
+        throw Error(response.statusText);
+      }
+      return response;
+    }
   }
-};
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

@@ -46,7 +46,7 @@ export default {
       .then(response => this.handleFetchError(response))
       .then(response => response.json())
       .then(data => {
-        this.portfolioData = data;
+        this.portfolioData = data.slice(0, 3);
         this.portfolioFirstProject = data[0];
       });
   },
