@@ -16,13 +16,21 @@
         <img src="../assets/img/me-lookingLeft-bw--sketch.png" />
       </div>
     </div>
+    <Cta-newer-project v-if="this.newest && this.newest.title" :project="this.newest" />
   </section>
 </template>
 
 <script>
+import CtaNewerProject from "./ctas/ctaNewerProject";
+
 export default {
   name: "Hero",
-  props: {}
+  components: {
+    CtaNewerProject
+  },
+  props: {
+    newest: Object
+  }
 };
 </script>
 

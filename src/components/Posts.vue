@@ -24,24 +24,24 @@ export default {
   name: "Posts",
   components: {
     SinglePost,
-    CtaPosts,
+    CtaPosts
   },
   props: {},
 
   data: function() {
     return {
-      posts: [],
+      posts: []
     };
   },
 
   created: function() {
     this.$axios
       .get("https://dev.to/api/articles?username=ricardogouveia3")
-      .then((response) => {
+      .then(response => {
         this.posts = response.data;
         this.posts.length = 4;
       });
-  },
+  }
 };
 </script>
 

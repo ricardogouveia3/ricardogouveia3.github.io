@@ -18,12 +18,12 @@
 export default {
   name: "SinglePost",
   props: {
-    post: Object,
+    post: Object
   },
 
   data: function() {
     return {};
-  },
+  }
 };
 </script>
 

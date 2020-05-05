@@ -23,7 +23,7 @@ export default {
   props: { project: Object },
   data: function() {
     return {};
-  },
+  }
 };
 </script>
 

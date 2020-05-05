@@ -7,9 +7,9 @@
           v-for="(project, index) in projects"
           v-bind:key="index"
           :project="project"
-        ></SingleJob>
+        />
       </ul>
-      <Cta-portfolio></Cta-portfolio>
+      <Cta-portfolio />
     </div>
   </section>
 </template>
@@ -22,21 +22,15 @@ export default {
   name: "Portfolio",
   components: {
     SingleJob,
-    CtaPortfolio,
+    CtaPortfolio
   },
-  props: {},
-  data: function() {
-    return {
-      projects: [],
-    };
+  props: {
+    projects: Array
   },
   created: function() {
-    this.$axios.get("https://api.rcrd.me/rcrd/portfolio").then((response) => {
-      this.projects = response.data;
-      this.projects.length = 3;
-    });
+    this.projects.length = 3;
   },
-  methods: {},
+  methods: {}
 };
 </script>
 

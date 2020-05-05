@@ -1,12 +1,15 @@
 <template>
   <div id="app" class="main-content">
-    <Header></Header>
-    <Hero></Hero>
-    <AboutMe></AboutMe>
-    <Portfolio></Portfolio>
-    <Posts></Posts>
-    <Contact></Contact>
-    <Footer></Footer>
+    <Header />
+    <Hero
+      v-if="this.portfolioFirstProject"
+      :newest="this.portfolioFirstProject"
+    />
+    <AboutMe />
+    <Portfolio v-if="this.portfolioData" :projects="this.portfolioData" />
+    <Posts />
+    <Contact />
+    <Footer />
   </div>
 </template>
 
@@ -19,6 +22,8 @@ import Posts from "./components/Posts";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
+const API_PORTFOLIO_ENDPOINT = "https://api.rcrd.me/rcrd/portfolio";
+
 export default {
   name: "app",
   components: {
@@ -29,6 +34,30 @@ export default {
     Posts,
     Contact,
     Footer
+  },
+  data() {
+    return {
+      portfolioData: null,
+      portfolioFirstProject: null
+    };
+  },
+  beforeCreate() {
+    fetch(API_PORTFOLIO_ENDPOINT)
+      .then(response => this.handleFetchError(response))
+      .then(response => response.json())
+      .then(data => {
+        this.portfolioData = data;
+        this.portfolioFirstProject = data[0];
+      });
+  },
+  methods: {
+    handleFetchError: function(response) {
+      if (!response.ok) {
+        this.portfolioFirstProject = {};
+        throw Error(response.statusText);
+      }
+      return response;
+    }
   }
 };
 </script>
