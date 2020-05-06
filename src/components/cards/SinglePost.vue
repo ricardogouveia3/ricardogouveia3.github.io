@@ -63,7 +63,7 @@ li a
 
 .job-info
   color: $armadillo
-  padding: 0 15px
+  padding: 0 15px 15px 15px
 
   p
     opacity: .7
