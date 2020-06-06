@@ -41,12 +41,20 @@ li
 
 @media (min-width: 1000px)
   li:first-of-type
+    height: 350px
     grid-column-start: 1
     grid-column-end: 3
 
     .job-info
-      max-width: 50%
-      margin-top: -180px
+      max-width: 40%
+      height: 350px
+      margin-top: -350px
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+
+    .job-title
+      margin-top: 85px
 
     .job-img
       height: 350px
