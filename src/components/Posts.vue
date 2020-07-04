@@ -67,7 +67,7 @@ section
 
 .DEF_wrapper
   padding: 50px 20px
-  border-top: 10px solid $caribbean-green
+  border-bottom: 10px solid $armadillo
 
 h2
   color: $white
