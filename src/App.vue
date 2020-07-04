@@ -19,7 +19,7 @@ import Posts from "./components/Posts";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
-const API_PORTFOLIO_ENDPOINT = "https://api.rcrd.me/rcrd/portfolio";
+const API_PORTFOLIO_ENDPOINT = "https://api.rcrd.me/portfolio";
 
 export default {
   name: "app",
@@ -42,9 +42,9 @@ export default {
     fetch(API_PORTFOLIO_ENDPOINT)
       .then(response => this.handleFetchError(response))
       .then(response => response.json())
-      .then(data => {
-        this.portfolioData = data.slice(0, 3);
-        this.portfolioFirstProject = data[0];
+      .then(response => {
+        this.portfolioData = response.data.slice(0, 3);
+        this.portfolioFirstProject = response.data[0];
       });
   },
   methods: {
