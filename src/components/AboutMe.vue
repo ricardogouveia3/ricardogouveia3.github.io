@@ -5,26 +5,44 @@
       <div class="content">
         <img src="../assets/img/me-lookingFront--sketch.png" />
         <p>
-          Recifense morando em São Paulo. Desde 2015 no front-end. Estudante de
-          ciência da computação.
-        </p>
-        <p>
-          Iniciei carreira na Hoolyn — startup de turismo compartilhado — como
-          estagiário; depois atuei na&nbsp;<a
-            href="http://reatordigital.com.br/"
+          Recifense morando em São Paulo. Desde 2015 no front-end. Formado em
+          Ciência da Computação pela&nbsp;
+          <a
             target="_blank"
-            >Reator Digital</a
-          >&nbsp;— agência de lançamento de infoprodutos e social media — e
-          na&nbsp;<a href="http://www.murilhas.com.br/" target="_blank"
-            >Murilhas Comunicação</a
-          >&nbsp; - agência de publicidade.
+            rel="noopener"
+            href="http://www.ufopa.edu.br/ufopa/"
+            >UFOPA</a
+          >.
         </p>
         <p>
-          Atualmente, trabalho na&nbsp;<a
-            href="https://www.accenture.com/"
+          Já atuei em startups como a Hoolyn - focada em turismo compartilhado;
+          em agências como a
+          <a href="http://reatordigital.com.br/" rel="noopener" target="_blank"
+            >Reator Digital</a
+          >
+          (infoprodutos e social media) e
+          <a href="https://murilhas.com.br/" rel="noopener" target="_blank"
+            >Murilhas Comunicação</a
+          >
+          (produtos físicos e digitais para grandes empresas) e em consultorias
+          de software como a
+          <a
+            href="https://www.accenture.com/br-pt"
+            rel="noopener"
             target="_blank"
             >Accenture</a
-          >&nbsp;em São Paulo desenvolvendo produtos com o framework Angular.
+          >
+          (usando Angular em contexto bancário).
+        </p>
+        <p>
+          Atualmente, trabalho na
+          <a
+            href="https://www.thoughtworks.com/pt/"
+            rel="noopener"
+            target="_blank"
+            >ThoughtWorks</a
+          >
+          em São Paulo como pessoa desenvolvedora.
         </p>
       </div>
       <ul class="icons">
@@ -110,11 +128,12 @@ h2
       float: none
 
   p
-    font-size: 20px
+    font-size: 19px
     margin-top: 20px
     color: $white
     line-height: 2
     font-weight: 300
+    padding-left: 15px
 
     @media (max-width: 850px)
       display: block
@@ -123,15 +142,16 @@ h2
       font-size: 18px
       line-height: 1.7
       text-align: justify
+      padding: 15px 0
 
     &:first-of-type
-      padding-top: 70px
+      padding-top: 45px
 
       @media (max-width: 900px)
         padding-top: 50px
 
       @media (max-width: 850px)
-        padding-top: unset
+        padding-top: 0
         margin-top: 50px
 
   a

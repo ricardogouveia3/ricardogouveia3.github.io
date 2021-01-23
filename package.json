@@ -6,10 +6,9 @@
   "scripts": {
     "start": "vue-cli-service serve --port 3469",
     "serve": "vue-cli-service serve --port 3469",
-    "ui": "vue ui",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "deploy": "push-dir --dir=dist --branch=master --cleanup"
+    "deploy": "push-dir --dir=dist --branch=main --cleanup"
   },
   "dependencies": {
     "core-js": "^3.4.4",

@@ -37,9 +37,9 @@ After that, you should be good to go :)
 
 ### Publishing
 
-Github pages will serve from master branch content. Build the project, then create a subtree from /dist folder to master branch and push it
+Github pages will serve from main branch content. Build the project, then use push-dir create a subtree from /dist folder to master branch and push it. This process is automatic with the command:
 
-`git subtree split --prefix dist -b master`
+`yarn deploy`
 
 
 ### Folders/Files Structure
