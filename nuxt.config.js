@@ -17,7 +17,12 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [],
+  css: ['normalize.css/normalize.css', '~assets/scss/variables.scss'],
+
+  // Configure global SCSS variables as here: https://dev.to/paramo/using-sass-global-variables-in-nuxt-js-j0k
+  styleResources: {
+    scss: ['./assets/scss/*.scss'],
+  },
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
@@ -34,7 +39,7 @@ export default {
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [],
+  modules: ['@nuxtjs/style-resources'],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
