@@ -69,6 +69,11 @@ export default {
         content: 'bu8jWg3PkRWa2GeQxmi3S089gNfySWQd16gy5Rde8M8',
       },
       { rel: 'canonical', href: 'https://rcrd.me' },
+      {
+        rel: 'stylesheet',
+        href:
+          'https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Playfair+Display:400,700',
+      },
     ],
   },
 
