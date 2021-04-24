@@ -4,16 +4,72 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'rcrd',
+    title: 'Ricardo Gouveia - Front-end developer & UI designer',
     htmlAttrs: {
-      lang: 'en',
+      lang: 'pt-br',
     },
     meta: [
+      { name: 'viewport', content: 'width:device-width, initial-scale:1' },
+      {
+        hid: 'description',
+        name: 'description',
+        content:
+          'Site de um desenvolvedor e designer que abre o Sketch só pra se distrair',
+      },
       { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      {
+        itemprop: 'name',
+        content: 'Ricardo Gouveia - Front end developer &amp; UI designer',
+      },
+      {
+        name: 'description',
+        itemprop: 'description',
+        content:
+          'Site de um desenvolvedor e designer que abre o Sketch só pra se distrair',
+      },
+      { name: 'format-detection', content: 'telephone:no' },
+      { name: 'theme-color', content: '#4ecdc4' },
+      { name: 'twitter:card', content: 'summary_large_image' },
+      { name: 'twitter:creator', content: '@ricardogouveia3' },
+      { name: 'twitter:domain', content: 'ricardogouveia3.github.io' },
+      {
+        name: 'twitter:title',
+        content: 'Ricardo Gouveia - Front end jr. developer &amp; UI designer',
+      },
+      {
+        name: 'twitter:description',
+        content:
+          'Site de um desenvolvedor front end jr. e UI designer que abre o Sketch só pra se distrair.',
+      },
+      {
+        property: 'og:image',
+        itemprop: 'image',
+        content: './opengraph.jpg',
+      },
+      {
+        property: 'og:title',
+        content: 'Ricardo Gouveia - Front end jr. developer &amp; UI designer',
+      },
+      { property: 'og:url', content: 'https://rcrd.me/' },
+      { property: 'og:type', content: 'website' },
+      { property: 'og:site_name', content: 'rcrd.me' },
+      {
+        property: 'og:description',
+        content:
+          'Site de um desenvolvedor front end jr. e UI designer que abre o Sketch só pra se distrair.',
+      },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: './favicon.ico' },
+      { rel: 'shortcut icon', href: './favicon.ico' },
+      { rel: 'logo', type: 'image/svg', href: './logo.svg' },
+      {
+        name: 'google-site-verification',
+        content: 'bu8jWg3PkRWa2GeQxmi3S089gNfySWQd16gy5Rde8M8',
+      },
+      { rel: 'canonical', href: 'https://rcrd.me' },
+    ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
