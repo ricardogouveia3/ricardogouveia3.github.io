@@ -8,7 +8,7 @@
         <h4 class="job-title">
           {{ post.title }}
         </h4>
-        <p>{{ post.description }}</p>
+        <p class="job-description">{{ post.description }}</p>
       </div>
     </a>
   </li>
@@ -40,15 +40,24 @@ export default {
     object-position: 100% 50%;
   }
 }
+
 .job-info {
   color: $armadillo;
-  padding: 0 15px 15px 15px;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
 
-  p {
+  .job-title {
+    margin: 10px 0;
+  }
+
+  .job-description {
     opacity: 0.7;
     font-size: 0.8em;
+    margin: 15px 0;
   }
 }
+
 li {
   list-style-type: none;
 
@@ -58,6 +67,7 @@ li {
     }
   }
 }
+
 li a {
   display: block;
   width: 100%;

@@ -78,7 +78,11 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: ['normalize.css/normalize.css', '~assets/scss/variables.scss'],
+  css: [
+    'normalize.css/normalize.css',
+    '~assets/scss/variables.scss',
+    '~assets/scss/animations.scss',
+  ],
 
   // Configure global SCSS variables as here: https://dev.to/paramo/using-sass-global-variables-in-nuxt-js-j0k
   styleResources: {
