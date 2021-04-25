@@ -8,3 +8,5 @@ $caribbean-green: #11D3B6;
 // 2. Typography
 $default: 'Montserrat', 'Helvetica Neue', 'Helvetica', 'Open Sans', -apple-system, blinkmacsystemfont, 'Segoe UI', roboto, oxygen-sans, sbuntu, cantarell, sans-serif;
 $classic: 'Playfair Display', serif;
+
+* { font-family: $default; }

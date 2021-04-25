@@ -81,6 +81,7 @@ export default {
   css: [
     'normalize.css/normalize.css',
     '~assets/scss/variables.scss',
+    '~assets/scss/base.scss',
     '~assets/scss/animations.scss',
   ],
 
