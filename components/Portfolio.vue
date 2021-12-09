@@ -15,10 +15,12 @@
 </template>
 
 <script>
+import { server } from '../config'
 import SingleJob from './cards/SingleJob'
 import CtaPortfolio from './ctas/ctaPortfolio'
 
 const API_PORTFOLIO_ENDPOINT = 'https://api.rcrd.dev/portfolio'
+const BACKUP_PORTFOLIO_DATA = `${server}/data/backup-portfolio.json`
 
 export default {
   name: 'Portfolio',
@@ -35,9 +37,14 @@ export default {
   },
 
   async fetch() {
-    this.projects = await fetch(API_PORTFOLIO_ENDPOINT).then((res) =>
-      res.json().then((res) => res.data.slice(0, 3))
-    )
+    this.projects = await fetch(API_PORTFOLIO_ENDPOINT)
+      .then((res) => res.json().then((res) => res.slice(0, 3)))
+      .catch(async function () {
+        const localBackup = await fetch(BACKUP_PORTFOLIO_DATA)
+        const parsedLocalBackup = await localBackup.json()
+
+        return parsedLocalBackup.slice(0, 3)
+      })
   },
 }
 </script>
