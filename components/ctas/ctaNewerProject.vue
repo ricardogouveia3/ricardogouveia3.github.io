@@ -14,7 +14,7 @@
 </template>
 
 <script>
-const API_PORTFOLIO_ENDPOINT = 'https://api.rcrd.me/portfolio'
+const API_PORTFOLIO_ENDPOINT = 'https://api.rcrd.dev/portfolio'
 
 export default {
   name: 'CtaNewerProject',

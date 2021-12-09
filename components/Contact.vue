@@ -2,7 +2,7 @@
   <section id="contact">
     <div class="DEF_wrapper">
       <h2>Contact</h2>
-      <form action="https://formspree.io/contato@rcrd.me" method="POST">
+      <form action="https://formspree.io/contato@rcrd.dev" method="POST">
         <div class="wrapper">
           <div class="wrap-in">
             <label id="formInputNameLabel" for="formInputName">Seu nome</label

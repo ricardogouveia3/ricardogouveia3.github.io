@@ -18,7 +18,7 @@
 import SingleJob from './cards/SingleJob'
 import CtaPortfolio from './ctas/ctaPortfolio'
 
-const API_PORTFOLIO_ENDPOINT = 'https://api.rcrd.me/portfolio'
+const API_PORTFOLIO_ENDPOINT = 'https://api.rcrd.dev/portfolio'
 
 export default {
   name: 'Portfolio',

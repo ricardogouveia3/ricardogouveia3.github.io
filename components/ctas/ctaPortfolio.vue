@@ -1,5 +1,5 @@
 <template>
-  <a href="https://portfolio.rcrd.me">
+  <a href="https://portfolio.rcrd.dev">
     <span>Veja o portfolio completo</span>
     <img
       class="see-all__img"

@@ -4,7 +4,7 @@
 
 # RCRD Website
 
-[Access the website](http://rcrd.me/)
+[Access the website](http://rcrd.dev/)
 
 This project uses:
 

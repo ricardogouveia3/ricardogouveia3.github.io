@@ -50,9 +50,9 @@ export default {
         property: 'og:title',
         content: 'Ricardo Gouveia - Front end jr. developer &amp; UI designer',
       },
-      { property: 'og:url', content: 'https://rcrd.me/' },
+      { property: 'og:url', content: 'https://rcrd.dev/' },
       { property: 'og:type', content: 'website' },
-      { property: 'og:site_name', content: 'rcrd.me' },
+      { property: 'og:site_name', content: 'rcrd.dev' },
       {
         property: 'og:description',
         content:
@@ -68,7 +68,7 @@ export default {
         name: 'google-site-verification',
         content: 'bu8jWg3PkRWa2GeQxmi3S089gNfySWQd16gy5Rde8M8',
       },
-      { rel: 'canonical', href: 'https://rcrd.me' },
+      { rel: 'canonical', href: 'https://rcrd.dev' },
       {
         rel: 'stylesheet',
         href:
