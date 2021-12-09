@@ -14,7 +14,7 @@
 </template>
 
 <script>
-const API_PORTFOLIO_ENDPOINT = 'https://api.rcrd.dev/portfolio'
+import { Portfolio as PortfolioAPI } from '../../api/portfolio'
 
 export default {
   name: 'CtaNewerProject',
@@ -27,9 +27,7 @@ export default {
   },
 
   async fetch() {
-    this.project = await fetch(API_PORTFOLIO_ENDPOINT).then((res) =>
-      res.json().then((res) => res.data[0])
-    )
+    this.project = await PortfolioAPI.getData().then((data) => data[0])
   },
 }
 </script>
