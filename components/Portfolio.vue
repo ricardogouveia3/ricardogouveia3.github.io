@@ -1,5 +1,5 @@
 <template>
-  <section id="portfolio">
+  <section v-if="projects.length > 0" id="portfolio">
     <div class="DEF_wrapper">
       <h2>Portfolio</h2>
       <ul>

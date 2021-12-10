@@ -6,7 +6,7 @@ const BACKUP_PORTFOLIO_DATA = `${server}/data/backup-portfolio.json`
 export const Portfolio = {
   getData: async () => {
     return await fetch(API_PORTFOLIO_ENDPOINT)
-      .then((res) => res.json().then((res) => res.slice(0, 3)))
+      .then((res) => res.json())
       .catch(async function () {
         // eslint-disable-next-line no-console
         console.error(

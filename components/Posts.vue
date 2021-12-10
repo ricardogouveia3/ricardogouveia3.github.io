@@ -1,5 +1,5 @@
 <template>
-  <section v-if="posts" id="posts">
+  <section v-if="posts.length > 0" id="posts">
     <div class="DEF_wrapper">
       <h2>Leia meus posts no DEV Community</h2>
 
@@ -17,11 +17,9 @@
 </template>
 
 <script>
+import { Blog as BlogAPI } from '../api/blog'
 import SinglePost from './cards/SinglePost'
 import CtaPosts from './ctas/ctaPosts'
-
-const DEVTO_API_MY_POSTS =
-  'https://dev.to/api/articles?username=ricardogouveia3'
 
 export default {
   name: 'Posts',
@@ -33,24 +31,12 @@ export default {
 
   data() {
     return {
-      posts: null,
+      posts: [],
     }
   },
-  beforeCreate() {
-    fetch(DEVTO_API_MY_POSTS)
-      .then((response) => this.handleFetchError(response))
-      .then((response) => response.json())
-      .then((data) => {
-        this.posts = data.slice(0, 4)
-      })
-  },
-  methods: {
-    handleFetchError(response) {
-      if (!response.ok) {
-        throw new Error(response.statusText)
-      }
-      return response
-    },
+
+  async fetch() {
+    this.posts = await BlogAPI.getData().then((data) => data.slice(0, 4))
   },
 }
 </script>

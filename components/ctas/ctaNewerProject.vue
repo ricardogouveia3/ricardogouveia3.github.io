@@ -1,5 +1,5 @@
 <template>
-  <div v-if="project" class="newer-project">
+  <div v-if="project.link" class="newer-project">
     <span>Projeto <br />+ recente</span>
     <a :href="project.link" target="_blank" rel="noopener noreferrer">
       <img class="project-img" :src="project.cardImg64" :alt="project.name" />
