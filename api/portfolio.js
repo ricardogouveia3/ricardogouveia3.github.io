@@ -8,6 +8,10 @@ export const Portfolio = {
     return await fetch(API_PORTFOLIO_ENDPOINT)
       .then((res) => res.json().then((res) => res.slice(0, 3)))
       .catch(async function () {
+        // eslint-disable-next-line no-console
+        console.error(
+          'Unable to fetch portfolio data from API. Using backup JSON'
+        )
         const localBackup = await fetch(BACKUP_PORTFOLIO_DATA)
         const parsedLocalBackup = await localBackup.json()
 
