@@ -2,7 +2,7 @@
   <li>
     <a class="card" :href="project.link">
       <div class="job-img">
-        <img :src="project.cardImg64" />
+        <img :src="project.cardImg" />
       </div>
       <div class="job-info">
         <span class="job-type" :style="{ color: project.typeColor }">

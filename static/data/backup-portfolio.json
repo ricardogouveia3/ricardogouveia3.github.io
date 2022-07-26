@@ -1,12 +1,22 @@
 [
   {
+    "title": "10TimePoint Chrome Extension",
+    "link": "https://chrome.google.com/webstore/detail/10-time-point/ckfilfnnlblcddjlapbnfgdajphfkkon",
+    "date": "3 de Fevereiro de 2021",
+    "type": "Browser Extension",
+    "typeColor": "#009432",
+    "bgColor": "#E59753",
+    "cardImg": "https://i.ibb.co/tQYs5yP/RCRD-portfolio-card.png",
+    "portfolioImg64": ""
+  },
+  {
     "title": "Cards - Taperebá Coworking",
     "link": "https://dribbble.com/shots/5655532-Cards-for-coworking-plans",
     "date": "5 de Dezembro de 2018",
     "type": "UI Design",
     "typeColor": "#E010BD",
     "bgColor": "#E59753",
-    "cardImg64": "https://i.ibb.co/k3gb1r9/cards-tapereba.jpg",
+    "cardImg": "https://i.ibb.co/k3gb1r9/cards-tapereba.jpg",
     "portfolioImg64": ""
   },
   {
@@ -16,7 +26,7 @@
     "type": "UI & Dev",
     "typeColor": "#f1c40f",
     "bgColor": "#62A5EB",
-    "cardImg64": "https://i.ibb.co/bdvBZyy/7dev.jpg",
+    "cardImg": "https://i.ibb.co/bdvBZyy/7dev.jpg",
     "portfolioImg64": ""
   },
   {
@@ -26,7 +36,7 @@
     "type": "Wordpress Dev",
     "typeColor": "#34495e",
     "bgColor": "#FD9301",
-    "cardImg64": "https://i.ibb.co/jrjThnQ/espaco-ki.jpg",
+    "cardImg": "https://i.ibb.co/jrjThnQ/espaco-ki.jpg",
     "portfolioImg64": ""
   },
   {
@@ -36,7 +46,7 @@
     "type": "UI & Dev",
     "typeColor": "#f1c40f",
     "bgColor": "#DC653D",
-    "cardImg64": "https://i.ibb.co/zZXWK4t/few-2018.jpg",
+    "cardImg": "https://i.ibb.co/zZXWK4t/few-2018.jpg",
     "portfolioImg64": ""
   },
   {
@@ -46,7 +56,7 @@
     "type": "UI & Dev",
     "typeColor": "#f1c40f",
     "bgColor": "#64A719",
-    "cardImg64": "https://i.ibb.co/zG2PC1d/devinsanta.jpg",
+    "cardImg": "https://i.ibb.co/zG2PC1d/devinsanta.jpg",
     "portfolioImg64": ""
   }
 ]

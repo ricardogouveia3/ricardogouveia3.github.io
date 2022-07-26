@@ -2,7 +2,7 @@
   <div v-if="project.link" class="newer-project">
     <span>Projeto <br />+ recente</span>
     <a :href="project.link" target="_blank" rel="noopener noreferrer">
-      <img class="project-img" :src="project.cardImg64" :alt="project.name" />
+      <img class="project-img" :src="project.cardImg" :alt="project.name" />
       <div class="arrow">
         <img
           src="./../../assets/img/icons/arrow_right--newerProject.png"
