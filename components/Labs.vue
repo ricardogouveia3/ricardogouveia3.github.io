@@ -3,7 +3,7 @@
     <div class="DEF_wrapper">
       <h2>Labs</h2>
       <ul>
-        <SingleJob
+        <SingleLabProject
           v-for="(project, index) in projects"
           :key="index"
           :project="project"
@@ -15,14 +15,14 @@
 </template>
 
 <script>
-import { Portfolio as PortfolioAPI } from '../api/portfolio'
-import SingleJob from './cards/SingleJob'
+import { Labs as LabsAPI } from '../api/labs'
+import SingleLabProject from './cards/SingleLabProject'
 import CtaLabs from './ctas/ctaLabs'
 
 export default {
   name: 'Labs',
   components: {
-    SingleJob,
+    SingleLabProject,
     CtaLabs,
   },
   props: {},
@@ -34,9 +34,7 @@ export default {
   },
 
   async fetch() {
-    this.projects = await PortfolioAPI.getData().then((data) =>
-      data.slice(0, 3)
-    )
+    this.projects = await LabsAPI.getData().then((data) => data.slice(0, 3))
   },
 }
 </script>
@@ -75,12 +73,12 @@ ul,
 }
 ul {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-  grid-gap: 50px;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 40px;
   margin-bottom: 50px;
 
-  @media (max-width: 500px) {
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  @media (max-width: 870px) {
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
   }
 }
 .see-all {
