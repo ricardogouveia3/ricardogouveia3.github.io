@@ -1,7 +1,7 @@
 <template>
   <section v-if="projects.length > 0" id="portfolio">
     <div class="DEF_wrapper">
-      <h2>Labs</h2>
+      <h2 id="labs">Labs</h2>
       <ul>
         <SingleLabProject
           v-for="(project, index) in projects"
