@@ -1,6 +1,6 @@
 import { server } from '../config'
 
-const API_LABS_ENDPOINT = 'https://rcrd-api.azurewebsites.net/labs111'
+const API_LABS_ENDPOINT = 'https://rcrd-api.azurewebsites.net/labs'
 const BACKUP_LABS_DATA = `${server}/data/backup-labs.json`
 
 const checkLabsResponse = (responseStatus) => {
