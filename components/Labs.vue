@@ -9,7 +9,8 @@
           :project="project"
         />
       </ul>
-      <cta-labs />
+      <!-- Disables as project is not ready -->
+      <!-- <cta-labs /> -->
     </div>
   </section>
 </template>
@@ -23,6 +24,7 @@ export default {
   name: 'Labs',
   components: {
     SingleLabProject,
+    // eslint-disable-next-line vue/no-unused-components
     CtaLabs,
   },
   props: {},
