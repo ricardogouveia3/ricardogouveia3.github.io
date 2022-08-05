@@ -9,7 +9,7 @@
           :project="project"
         />
       </ul>
-      <Cta-portfolio />
+      <cta-labs />
     </div>
   </section>
 </template>
@@ -17,13 +17,13 @@
 <script>
 import { Portfolio as PortfolioAPI } from '../api/portfolio'
 import SingleJob from './cards/SingleJob'
-import CtaPortfolio from './ctas/ctaPortfolio'
+import CtaLabs from './ctas/ctaLabs'
 
 export default {
   name: 'Labs',
   components: {
     SingleJob,
-    CtaPortfolio,
+    CtaLabs,
   },
   props: {},
 
