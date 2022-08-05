@@ -6,6 +6,12 @@
       :style="{ backgroundColor: project.color }"
       target="_blank"
     >
+      <div
+        v-if="!project.maintained"
+        class="card__status-indicator card__status-indicator--deprecated"
+      >
+        <span class="card__status-indicator__text">deprecated</span>
+      </div>
       <div class="project__icon-wrapper">
         <img
           v-if="project.icon"
@@ -48,6 +54,34 @@ export default {
   flex-direction: column;
   padding: 40px;
   height: 100%;
+  position: relative;
+}
+
+.card__status-indicator {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .card__status-indicator__text {
+    font-size: 10px;
+    line-height: 1;
+    display: inline-block;
+  }
+}
+
+.card__status-indicator--deprecated {
+  background-color: $black;
+
+  .card__status-indicator__text {
+    text-transform: uppercase;
+    color: #ff7979;
+    font-weight: bold;
+  }
 }
 
 .project__icon-wrapper {
