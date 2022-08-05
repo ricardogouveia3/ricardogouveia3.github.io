@@ -1,0 +1,32 @@
+[
+  {
+    "title": "AMUT",
+    "color": "#E74C3C",
+    "link": "https://rcrd.dev/amut/",
+    "description": "Teclado virtual de memes em som usando JS key id",
+    "icon": "",
+    "experimental": true,
+    "maintained": true,
+    "id": 2
+  },
+  {
+    "title": "LBCM",
+    "color": "#FFC355",
+    "link": "https://rcrd.dev/lbcm/",
+    "description": "Máquina de criptografia baseada no comprimento do texto",
+    "icon": "",
+    "experimental": true,
+    "maintained": true,
+    "id": 3
+  },
+  {
+    "title": "MPG",
+    "color": "#4834d4",
+    "link": "https://rcrd.dev/mpg/",
+    "description": "Gerador de senhas amigáveis e seguras a partir de dicionários de palavras",
+    "icon": "",
+    "experimental": true,
+    "maintained": false,
+    "id": 4
+  }
+]
