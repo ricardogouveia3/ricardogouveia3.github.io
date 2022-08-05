@@ -19,7 +19,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 footer {
-  background-color: #2f2f2f;
+  background-color: $armadillo;
 }
 div {
   padding: 50px 20px;

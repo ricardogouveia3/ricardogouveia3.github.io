@@ -44,10 +44,11 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 section {
-  background-color: #4a4a4a;
+  background-color: $armadillo;
 }
 .DEF_wrapper {
   border-top: 10px solid $caribbean-green;
+  border-bottom: 10px solid $white;
   padding: 50px 20px;
 }
 h2 {

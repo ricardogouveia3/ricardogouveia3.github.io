@@ -82,7 +82,7 @@ export default {
 <style scoped lang="scss">
 section {
   width: 100%;
-  background: linear-gradient(-164deg, #5c5c5c 0%, #2f2f2f 92%);
+  background-color: $armadillo;
 }
 .DEF_wrapper {
   padding-bottom: 100px;

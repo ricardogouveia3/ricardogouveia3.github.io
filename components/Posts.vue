@@ -50,7 +50,8 @@ section {
 }
 .DEF_wrapper {
   padding: 50px 20px;
-  border-top: 10px solid $caribbean-green;
+  border-top: 10px solid $white;
+  border-bottom: 10px solid $white;
 }
 h2 {
   color: $white;
