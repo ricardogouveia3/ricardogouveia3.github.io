@@ -4,6 +4,7 @@
     <Hero />
     <AboutMe />
     <Portfolio />
+    <Labs />
     <Posts />
     <Contact />
     <Footer />
