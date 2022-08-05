@@ -49,6 +49,8 @@ section {
 .DEF_wrapper {
   padding: 50px 20px;
   border-top: 10px solid $caribbean-green;
+  border-bottom: 10px solid $caribbean-green;
+  z-index: 1;
 }
 h2 {
   margin: 0;

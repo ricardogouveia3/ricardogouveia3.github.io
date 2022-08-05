@@ -44,11 +44,11 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 section {
-  background-color: #efeff0;
+  background-color: #4a4a4a;
 }
 .DEF_wrapper {
-  padding: 50px 20px;
   border-top: 10px solid $caribbean-green;
+  padding: 50px 20px;
 }
 h2 {
   margin: 0;
@@ -57,7 +57,7 @@ h2 {
   text-transform: uppercase;
   margin-bottom: 50px;
   font-size: 100px;
-  color: $armadillo;
+  color: $white;
   letter-spacing: 1.43px;
 
   @media (max-width: 700px) {
