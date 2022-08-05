@@ -4,6 +4,7 @@
       class="card"
       :href="project.link"
       :style="{ backgroundColor: project.color }"
+      target="_blank"
     >
       <div class="project__icon-wrapper">
         <img

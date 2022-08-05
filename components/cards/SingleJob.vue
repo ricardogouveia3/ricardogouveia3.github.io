@@ -1,6 +1,6 @@
 <template>
   <li>
-    <a class="card" :href="project.link">
+    <a class="card" :href="project.link" target="_blank">
       <div class="job-img">
         <img :src="project.cardImg" />
       </div>
