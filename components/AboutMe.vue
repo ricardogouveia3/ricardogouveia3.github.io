@@ -7,10 +7,7 @@
         <p>
           Recifense morando em São Paulo. Desde 2015 no front-end. Formado em
           Ciência da Computação pela&nbsp;
-          <a
-            target="_blank"
-            rel="noopener"
-            href="http://www.ufopa.edu.br/ufopa/"
+          <a target="_blank" rel="noopener" href="http://ufopa.edu.br/ufopa/"
             >UFOPA</a
           >.
         </p>
@@ -26,20 +23,14 @@
           >
           (produtos físicos e digitais para grandes empresas) e em consultorias
           de software como a
-          <a
-            href="https://www.accenture.com/br-pt"
-            rel="noopener"
-            target="_blank"
+          <a href="https://accenture.com/br-pt" rel="noopener" target="_blank"
             >Accenture</a
           >
           (usando Angular em contexto bancário).
         </p>
         <p>
           Atualmente, trabalho na
-          <a
-            href="https://www.thoughtworks.com/pt/"
-            rel="noopener"
-            target="_blank"
+          <a href="https://thoughtworks.com/pt/" rel="noopener" target="_blank"
             >ThoughtWorks</a
           >
           em São Paulo como pessoa desenvolvedora.
@@ -47,8 +38,8 @@
       </div>
       <ul class="icons">
         <li>
-          <a href="https://twitter.com/ricardogouveia3" target="_blank"
-            ><img src="../assets/img/icons/twitter.png"
+          <a href="https://threads.net/@ricardogouveia3" target="_blank"
+            ><img src="../assets/img/icons/threads.svg"
           /></a>
         </li>
         <li>
@@ -57,7 +48,7 @@
           /></a>
         </li>
         <li>
-          <a href="https://www.linkedin.com/in/ricardogouveia3" target="_blank"
+          <a href="https://linkedin.com/in/ricardogouveia3" target="_blank"
             ><img src="../assets/img/icons/linkedin.png"
           /></a>
         </li>
