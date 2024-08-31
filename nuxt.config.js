@@ -29,18 +29,6 @@ export default {
       },
       { name: 'format-detection', content: 'telephone:no' },
       { name: 'theme-color', content: '#4ecdc4' },
-      { name: 'twitter:card', content: 'summary_large_image' },
-      { name: 'twitter:creator', content: '@ricardogouveia3' },
-      { name: 'twitter:domain', content: 'ricardogouveia3.github.io' },
-      {
-        name: 'twitter:title',
-        content: 'Ricardo Gouveia - Front end jr. developer &amp; UI designer',
-      },
-      {
-        name: 'twitter:description',
-        content:
-          'Site de um desenvolvedor front end jr. e UI designer que abre o Sketch só pra se distrair.',
-      },
       {
         property: 'og:image',
         itemprop: 'image',
