@@ -1,99 +1,50 @@
-<p align="center">
-  <img src="https://i.imgur.com/erv3eR9.png" width="100">
-</p>
+# React + TypeScript + Vite
 
-# RCRD Website
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-[Access the website](http://rcrd.dev/)
+Currently, two official plugins are available:
 
-This project uses:
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-- [Yarn](https://yarnpkg.com/)
-- [Vue](https://vuejs.org/)
-- [Sass](http://sass-lang.com/)
+## Expanding the ESLint configuration
 
-## Getting Started
+If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-### Installation
+- Configure the top-level `parserOptions` property like this:
 
-First of all, install the dependencies to run this boilerplate.
-
-- [NodeJS](http://nodejs.org/)
-- [Yarn](https://yarnpkg.com/)
-
-```sh
-
-# Clone this repository
-git clone git@github.com:ricardogouveia3/ricardogouveia3.github.io.git
-cd ricardogouveia3.github.io
-
-# install dependencies
-yarn install
-
+```js
+export default tseslint.config({
+  languageOptions: {
+    // other options...
+    parserOptions: {
+      project: ['./tsconfig.node.json', './tsconfig.app.json'],
+      tsconfigRootDir: import.meta.dirname,
+    },
+  },
+})
 ```
 
-After that, you should be good to go :)
+- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
+- Optionally add `...tseslint.configs.stylisticTypeChecked`
+- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
 
+```js
+// eslint.config.js
+import react from 'eslint-plugin-react'
 
-### Publishing
-
-Github pages will serve from main branch content. Build the project, then use push-dir create a subtree from /dist folder to master branch and push it. This process is automatic with the command:
-
-`yarn deploy`
-
-
-### Folders/Files Structure
-
-```sh
-├── public
-│   ├── public_assets/
-│   └── index.html
-├── src/
-│   ├── assets/
-│   │   ├── sass/
-│   │   │   └── *.sass
-│   │   └── img/
-│   │       └── *.{jpg||png||svg}
-│   ├── components/
-│   │   └── *.vue
-├── node_modules
-│   └── (...)
-├── dist
-│   └── (publised *.html/*.css/*.js)
-├── _legacy
-│   └── *.zip
-├── .editorconfig
-├── .gitignore
-├── babel.config.js
-├── package.json
-├── yarn.lock
-├── CNAME
-└── README.md
+export default tseslint.config({
+  // Set the react version
+  settings: { react: { version: '18.3' } },
+  plugins: {
+    // Add the react plugin
+    react,
+  },
+  rules: {
+    // other rules...
+    // Enable its recommended rules
+    ...react.configs.recommended.rules,
+    ...react.configs['jsx-runtime'].rules,
+  },
+})
 ```
-
-### Code Standarts
-
-This project uses [LFeh's Coding Style Guide](https://github.com/LFeh/coding-style)
-
-
-### Tasks
-
-#### Dev/Server Tasks
-
-These tasks are used for live reloading and debugging. They are time-saving focused. Don't use then for deploying.
-
-- `yarn serve`: Compiles everything uminified and serves to a port (default 8080).
-
-- `yarn ui`: Serves GUI vue app to a port (default 8000).
-
-- `yarn lint`: Lints project.
-
-#### Build Tasks
-
-These tasks are used for building and deploying. They are performance and good practices focused. They may be too slow for live reloading (or may cause infinite looping tasks).
-
-- `yarn build`: Builds minified files to /dist.
-
-## License
-
-[MIT License](http://ricardogouveia3.mit-license.org/) © Ricardo Álvaro Gouveia Gomes Filho

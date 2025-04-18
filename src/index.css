@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .default-text-color {
+    @apply text-black dark:text-white;
+  }
+
+  .smooth-text-color {
+    @apply text-quartz-650;
+  }
+  .default-border {
+    @apply border border-quartz-800 dark:border-quartz-450;
+  }
+  .default-background {
+    @apply bg-white dark:bg-quartz-200;
+  }
+
+  .smooth-noisy-background {
+    @apply bg-white dark:bg-quartz-200 bg-noise-light dark:bg-noise-dark bg-repeat h-full w-full;
+  }
+
+  .above-noise-content-background {
+    @apply bg-white/60 dark:bg-quartz-200/70 h-full w-full;
+  }
+
+  .hover-background {
+    @apply transition-colors hover:bg-quartz-950 dark:hover:bg-quartz-200;
+  }
+}

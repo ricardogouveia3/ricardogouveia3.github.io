@@ -1,0 +1,68 @@
+{
+  "aboutMe": {
+    "a": "um",
+    "primaryRole": "desenvolvedor front-end",
+    "and": "e",
+    "secondaryRole": "designer de UI",
+    "currentlyWorking": "trabalhando na"
+  },
+  "contact": {
+    "button": {
+      "send": "Enviar",
+      "sendSuccess": "Mensagem enviada!",
+      "sendError": "Erro ao enviar mensagem",
+      "sending": "Enviando..."
+    },
+    "email": "Seu e-mail",
+    "captcha": "Não sou um robô",
+    "message": "Mensagem",
+    "subject": "Assunto",
+    "title": "Deixe uma mensagem:"
+  },
+  "experience": {
+    "title": "Experiência:",
+    "present": "Presente"
+  },
+  "footer": {
+    "copy": "(a menos que especificado de outra forma e/ou em conteúdo replicado de outras fontes | Logotipos e marcas registradas pertencem aos seus respectivos proprietários)",
+    "privacy": "Política de privacidade",
+    "source": "Código-fonte",
+    "madeWith": "Feito com React + Vite",
+    "inspired": "Inspirado por"
+  },
+  "header": {},
+  "location": {
+    "based": "Atualmente em",
+    "city": "São Paulo, Brasil"
+  },
+  "marquee": {
+    "stack": "Tecnologias:"
+  },
+  "phrase": {
+    "first": "Como desenvolvedor front-end, crio experiências de usuário por meio de um código limpo e uma componentização cuidadosa.",
+    "second": "Com expertise em Angular, React e mais, venho construindo soluções digitais desde 2015, focado em criar interfaces responsivas e envolventes que atendam aos padrões modernos da web."
+  },
+  "posts": {
+    "title": "Últimos posts:",
+    "seeAll": "Ver todos os posts",
+    "link": "https://blog.rcrd.dev"
+  },
+  "projects": {
+    "title": "Projetos:",
+    "seeAll": "Ver todos os projetos",
+    "soon": "Em breve"
+  },
+  "social": {
+    "getInTouch": "Entre em contato:"
+  },
+  "weatherNames": {
+    "Thunderstorm": "Trovoada",
+    "Drizzle": "Garoa",
+    "Rain": "Chuva",
+    "Snow": "Neve",
+    "Atmosphere": "Neblina e partículas",
+    "Clear": "Céu limpo",
+    "Clouds": "Nuvens",
+    "Unknown": "Desconhecido"
+  }
+}
