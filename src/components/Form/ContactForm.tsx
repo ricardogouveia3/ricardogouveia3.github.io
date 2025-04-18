@@ -45,7 +45,7 @@ const ContactForm = ({ email, subject, message, handleInputChange, isFormValid }
                 setButtonText(t("contact.button.sendSuccess"));
                 setTimeout(() => setButtonText(t("contact.button.send")), 3000);
             } else {
-                throw new Error("Failed to send message");
+                console.error("Failed to send message");
             }
         } catch (error) {
             console.error(error);
