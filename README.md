@@ -1,3 +1,5 @@
+![RCRD logo](https://raw.githubusercontent.com/ricardogouveia3/ricardogouveia3.github.io/refs/heads/main/public/default-image.png "RCRD logo")
+
 # rcrd - my personal website & portfolio
 
 **Version:** 5.0.0  
