@@ -1,50 +1,102 @@
-# React + TypeScript + Vite
+# rcrd - my personal website & portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Version:** 5.0.0  
+**Package Manager:** pnpm  
+**Build Tool:** Vite + TypeScript
 
-Currently, two official plugins are available:
+A modern React project with internationalization, Firebase integration, performance optimizations, and responsive design.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🚀 Available Scripts
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+You can run the following commands with `pnpm`:
 
-- Configure the top-level `parserOptions` property like this:
+- `pnpm dev` — Start the development server using Vite.
+- `pnpm build` — Build the project using TypeScript and Vite.
+- `pnpm preview` — Preview the production build locally.
+- `pnpm lint` — Run ESLint to check code quality.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+---
+
+## 📦 Technologies & Libraries
+
+### Core
+
+- **React 18** with **React DOM**
+- **TypeScript**
+- **Vite**
+- **Tailwind CSS** (`@tailwindcss/line-clamp`)
+- **i18next** + `react-i18next`
+- **Firebase**
+- **React Router v7**
+- **React Helmet Async**
+- **React Google Recaptcha**
+- **react-fast-marquee**
+- **react-responsive**
+
+### Dev & Optimization
+
+- ESLint + Plugins (React, A11Y, etc.)
+- Pre-rendering with `react-snap`
+- Compression with `rollup-plugin-gzip`
+- Vite Plugins:
+    - `vite-plugin-svgr`
+    - `vite-plugin-image-optimizer`
+    - `vite-plugin-node-polyfills`
+    - `vite-plugin-minify`
+    - `vite-plugin-linter`
+
+---
+
+## 📁 Project Structure (suggested)
+
+```bash
+src/
+├── assets/
+├── components/
+├── hooks/
+├── i18n/
+├── pages/
+├── routes/
+├── styles/
+├── utils/
+└── main.tsx
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+---
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## 🌍 Internationalization
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+This project supports multiple languages using `i18next`.  
+You can configure the default and fallback languages in `src/i18n`.
+
+---
+
+## 📄 License
+
+This project is open source, its code is licensed under **MIT** license terms.
+
+---
+
+## 🤝 Contributing
+
+Feel free to suggest improvements or open issues.  
+Contribution guidelines coming soon.
+
+---
+
+## ✨ Acknowledgements
+
+- React team
+- Vite community
+- Tailwind CSS team
+- i18next team
+- React Helmet team
+- React Google Recaptcha team
+- react-fast-marquee team
+- ESLint team
+- Prettier team
+- pnpm team
+- Contributors of all used libraries
+
