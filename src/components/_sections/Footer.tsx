@@ -52,7 +52,7 @@ export default function Footer() {
         {currentYear} - Ricardo Gouveia - <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.pt_BR" target="_blank" className="underline">CC BY-SA 4.0</a><span className="text-xs smooth-text-color font-normal block mt-1">{t('footer.copy')}</span>
       </p>
       <p className="italic text-xs smooth-text-color mt-3">
-        <a className="underline" href="https://github.com/ricardogouveia3/rcrd-beta" target="_blank">{t('footer.source')}</a> - {t('footer.madeWith')} - {t('footer.inspired')}&nbsp;<a className="underline" href="https://www.joshuabrigati.com/" target="_blank">Joshua Brigati</a>
+        <a className="underline" href="https://github.com/ricardogouveia3/ricardogouveia3.github.io" target="_blank">{t('footer.source')}</a> - {t('footer.madeWith')} - {t('footer.inspired')}&nbsp;<a className="underline" href="https://www.joshuabrigati.com/" target="_blank">Joshua Brigati</a>
       </p>
     </Card>
   );
