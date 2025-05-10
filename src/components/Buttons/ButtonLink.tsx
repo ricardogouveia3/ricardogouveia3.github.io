@@ -1,18 +1,14 @@
-import { useState } from "react";
 import {ButtonLinkProps} from "../../types/Button.type.ts";
 
 export default function ButtonLink({
-  children,
-  link,
-  round,
-  hoverColor = "transparent",
-  className,
-  style,
-  onMouseEnter,
-  onMouseLeave,
-}: Readonly<ButtonLinkProps>) {
-  const [bgColor, setBgColor] = useState("transparent");
-
+                                     children,
+                                     link,
+                                     round,
+                                     className,
+                                     style,
+                                     onMouseEnter,
+                                     onMouseLeave,
+                                   }: Readonly<ButtonLinkProps>) {
   let roundClassName = '';
 
   switch (round) {
@@ -37,15 +33,9 @@ export default function ButtonLink({
       href={link}
       target="_blank"
       className={`flex justify-center items-center py-2 px-4 text-sm font-medium text-center default-text-color ${roundClassName} w-fit hover-background border default-border ${className}`}
-      style={{ ...style, backgroundColor: bgColor }}
-      onMouseEnter={(e) => {
-        setBgColor(hoverColor);
-        if (onMouseEnter) onMouseEnter(e);
-      }}
-      onMouseLeave={(e) => {
-        setBgColor("transparent");
-        if (onMouseLeave) onMouseLeave(e);
-      }}
+      style={style}
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
     >
       {children}
     </a>

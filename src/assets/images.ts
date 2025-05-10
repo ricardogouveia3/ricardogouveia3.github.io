@@ -5,6 +5,8 @@
 
 import avatar1 from "@avatar/avatar-1.webp";
 
+import rcrd from "@logos/rcrd.svg?react";
+
 import AngularIcon from "@logos/angular.svg?react";
 import BootstrapIcon from "@logos/bootstrap.svg?react";
 import Css3Icon from "@logos/css3.svg?react";
@@ -50,6 +52,7 @@ export const icons = {
 export const flags = {};
 
 export const logos = {
+  rcrd: rcrd,
   angular: AngularIcon,
   bootstrap: BootstrapIcon,
   css3: Css3Icon,

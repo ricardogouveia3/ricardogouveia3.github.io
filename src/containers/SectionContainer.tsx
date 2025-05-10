@@ -1,5 +1,5 @@
 import {GridClassNames} from "@constants/layout.ts";
-import {CardGridProps} from "../../types/App.type.ts";
+import {CardGridProps} from "../types/App.type.ts";
 
 const MainWrapper = ({ children, classNames = GridClassNames.container }: Readonly<CardGridProps>) => {
   return (

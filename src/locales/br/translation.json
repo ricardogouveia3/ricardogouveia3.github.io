@@ -55,6 +55,11 @@
   "social": {
     "getInTouch": "Entre em contato:"
   },
+  "notFound": {
+    "title": "Erro 404",
+    "description": "Página não encontrada",
+    "backHome": "Voltar para a página inicial"
+  },
   "weatherNames": {
     "Thunderstorm": "Trovoada",
     "Drizzle": "Garoa",

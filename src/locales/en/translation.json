@@ -54,6 +54,11 @@
   "social": {
     "getInTouch": "Get in touch:"
   },
+  "notFound": {
+    "title": "Error 404",
+    "description": "Page not found",
+    "backHome": "Back to home"
+  },
   "weatherNames": {
     "Thunderstorm": "Thunderstorm",
     "Drizzle": "Drizzle",

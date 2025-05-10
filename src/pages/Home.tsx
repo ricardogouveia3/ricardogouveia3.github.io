@@ -1,6 +1,6 @@
 import { useEffect, useState, Suspense, lazy } from "react";
 import i18n from "@utils/i18n";
-import MainWrapper from "@components/Containers/SectionContainer";
+import MainWrapper from "../containers/SectionContainer";
 import Header from "@components/_sections/Header";
 import AboutMe from "@components/_sections/AboutMe.section";
 import {useTheme} from "@hooks/useTheme.ts";

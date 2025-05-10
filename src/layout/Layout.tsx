@@ -1,4 +1,4 @@
-import AppContainer from "@components/Containers/AppContainer";
+import AppContainer from "../containers/AppContainer";
 import { Outlet } from "react-router-dom";
 import {useTheme} from "@hooks/useTheme.ts";
 

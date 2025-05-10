@@ -1,4 +1,4 @@
-import {AppContainerProps} from "../../types/App.type.ts";
+import {AppContainerProps} from "../types/App.type.ts";
 
 export default function AppContainer({ children, darkMode }: Readonly<AppContainerProps>) {
   return (
