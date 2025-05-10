@@ -49,7 +49,14 @@ export const icons = {
   moon: moon,
 };
 
-export const flags = {};
+export const flags = {
+  br_emoji: br,
+  gb_emoji: gb,
+  brazil: br2,
+  br_pa: pa,
+  br_pe: pe,
+  br_sp: sp,
+};
 
 export const logos = {
   rcrd: rcrd,
@@ -81,10 +88,4 @@ export const logos = {
 export const images = {
   avatar: avatar1,
   map_spbr: spbr,
-  flag_br: br,
-  flag_gb: gb,
-  flag_br2: br2,
-  flag_pa: pa,
-  flag_pe: pe,
-  flag_sp: sp,
 };

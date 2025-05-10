@@ -2,49 +2,58 @@ import { GridClassNames } from "@constants/layout.ts";
 import Card from "../Card/Card.tsx";
 import { currentYear } from "@utils/date.ts";
 import {useTranslation} from "react-i18next";
-import { images } from "@assets/images.ts";
+import {flags} from "@assets/images.ts";
+import Icon from "@components/Icon.tsx";
 
 export default function Footer() {
   const { t } = useTranslation();
 
   return (
     <Card classNames={`${GridClassNames.footer} rounded-lg text-sm default-text-color text-center`}>
-      <div className="flex justify-center gap-4 mb-3">
+      <div className="flex justify-center gap-4 mb-3 items-center">
+        <a href="/">
+          <Icon
+            name="rcrd"
+            className="max-w-10 max-h-10"
+          />
+        </a>
+        <p>•</p>
         <img
-          src={images.flag_pe}
+          src={flags.br_pe}
           alt="Bandeira de Pernambuco"
           width="40"
           height="27"
           loading="lazy"
           decoding="async"
-          className={`default-border`}
+          className={`default-border max-h-7`}
         />
         <img
-          src={images.flag_pa}
+          src={flags.br_pa}
           alt="Bandeira do Pará"
           width="40"
           height="27"
           loading="lazy"
           decoding="async"
-          className={`default-border`}
+          className={`default-border max-h-7`}
         />
         <img
-          src={images.flag_sp}
+          src={flags.br_sp}
           alt="Bandeira de São Paulo"
           width="40"
           height="27"
           loading="lazy"
           decoding="async"
-          className={`default-border`}
+          className={`default-border max-h-7`}
         />
+        <p>•</p>
         <img
-          src={images.flag_br2}
+          src={flags.brazil}
           alt="Bandeira do Brasil"
           width="40"
           height="27"
           loading="lazy"
           decoding="async"
-          className={`default-border`}
+          className={`default-border max-h-7`}
         />
       </div>
 
