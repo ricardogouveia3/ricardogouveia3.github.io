@@ -16,6 +16,8 @@ export type ButtonLinkProps = {
   style?: CSSProperties;
   onMouseEnter?: MouseEventHandler<HTMLAnchorElement>;
   onMouseLeave?: MouseEventHandler<HTMLAnchorElement>;
+  icon?: IconName;
+  iconPosition?: "left" | "right"
 };
 
 export type SocialLinkProps = {

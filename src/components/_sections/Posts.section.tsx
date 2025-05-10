@@ -34,7 +34,7 @@ export default function PostsSection() {
     <Card classNames={`${GridClassNames.posts}`} loading={loading}>
       <header className="flex flex-row justify-between mb-4 items-center">
         <h3 className="text-lg/7 font-medium text-gray-950 dark:text-white mb-0">{t('posts.title')}</h3>
-        <ButtonLink round="lg" link={t('posts.link')}>{t('posts.seeAll')}</ButtonLink>
+        <ButtonLink round="lg" link={t('posts.link')} icon={'externalArrow'} iconPosition={'right'}>{t('posts.seeAll')}</ButtonLink>
       </header>
       
       {!loading && (
