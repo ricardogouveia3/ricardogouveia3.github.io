@@ -18,6 +18,7 @@ export type ButtonLinkProps = {
   onMouseLeave?: MouseEventHandler<HTMLAnchorElement>;
   icon?: IconName;
   iconPosition?: "left" | "right"
+  iconClassnames?: string;
 };
 
 export type SocialLinkProps = {

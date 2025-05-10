@@ -11,6 +11,7 @@ export default function ButtonLink({
                                      onMouseLeave,
                                      icon,
                                      iconPosition = "right",
+                                     iconClassnames = "",
                                    }: Readonly<ButtonLinkProps>) {
   let roundClassName = "";
 
@@ -40,9 +41,13 @@ export default function ButtonLink({
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
     >
-      {icon && iconPosition === "left" && <Icon name={icon} className="mr-0.5" />}
+      {icon && iconPosition === "left" && (
+        <Icon name={icon} className={`mr-0.5 ${iconClassnames}`} />
+      )}
       {children}
-      {icon && iconPosition === "right" && <Icon name={icon} className="ml-0.5" />}
+      {icon && iconPosition === "right" && (
+        <Icon name={icon} className={`ml-0.5 ${iconClassnames}`} />
+      )}
     </a>
   );
 }
