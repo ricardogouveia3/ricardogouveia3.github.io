@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import {ButtonProps} from "../../types/Button.type.ts";
-import { buttonLikeComponentMotionProps } from "../../layout/Animation";
+import { buttonLikeComponentMotionProps } from "@layout/Animation.tsx";
 
 export default function Button({ children, type, disabled }: Readonly<ButtonProps>) {
   const disabledClassnames = disabled ? 'opacity-50 cursor-not-allowed' : '';

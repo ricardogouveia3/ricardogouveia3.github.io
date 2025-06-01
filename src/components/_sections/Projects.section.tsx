@@ -74,7 +74,7 @@ const ProjectSection = () => {
   const itemsToRender = projectsToRender.slice(0, maxRendered);
   
   return (
-    <Card classNames={GridClassNames.projects} loading={loading} contentClassnames="p-4 lg:p-6 flex flex-col gap-4">
+    <Card classNames={GridClassNames.projects} loading={loading} contentClassnames="p-4 lg:p-6 flex flex-col gap-4" animatedBorder={false}>
       <header className="flex flex-row justify-between mb-4 items-center">
         <h3 className="text-lg/7 mb-4 font-medium default-text-color">{t("projects.title")}</h3>
         {(!!showAllProjectsButton && projects.length >= 12) && <ButtonLink round="lg" link={'/projects'}>{t('projects.seeAll')}</ButtonLink>}

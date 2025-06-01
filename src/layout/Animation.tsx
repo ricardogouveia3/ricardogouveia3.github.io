@@ -1,38 +1,26 @@
+const effectColors = `conic-gradient(
+  from 0deg,
+  #fc1da7 0%,
+  #fba506 33%,
+  #11d3b6 66%,
+  #fc1da7 100%
+)`;
+
 const linearInfiniteRotation = {
   rotate: 360,
   transition: {
     repeat: Infinity,
-    duration: 60,
+    duration: 20,
     ease: "linear",
   },
 };
 
-const easeInOutTransition = {
-  duration: 0.5,
-  ease: "easeInOut",
+const initialAnimatedBorderState = {
+  backgroundImage: effectColors,
+  backgroundSize: "300% 300%",
+  backgroundPosition: "50% 50%",
+  rotate: 0,
 };
-
-const effectColors = `conic-gradient(
-        from 0deg,
-        #00ff00,
-        #00ff80,
-        #00ffff,
-        #40ffff,
-        #ff0000,
-        #ff4040,
-        #ffa500,
-        #ffb040,
-        #ff00ff,
-        #ff40ff,
-        #00ff00,
-        #00ff80,
-        #00ffff,
-        #40ffff,
-        #ff0000,
-        #ff4040,
-        #ffa500,
-        #ffb040
-      )`
 
 export const buttonLikeComponentMotionProps = {
   whileHover: { scale: 1.05 },
@@ -47,20 +35,11 @@ export const cardBorderMotionProps = {
   initial: "initial",
   variants: {
     initial: {
-      backgroundImage: effectColors,
-      backgroundSize: "300% 300%",
-      backgroundPosition: "150% 150%",
-      scale: 1.5,
-      rotate: 0,
-      opacity: 1,
+      ...initialAnimatedBorderState,
+      scale: 10,
     },
-    hover: {
-      ...linearInfiniteRotation,
-      opacity: 1,
-    },
-    transparent: {
-      opacity: 0,
-      transition: easeInOutTransition,
+    animate: {
+      ...linearInfiniteRotation
     },
   },
 };
@@ -70,23 +49,10 @@ export const avatarBorderMotionProps = {
   whileHover: "hover",
   variants: {
     initial: {
-      backgroundImage: effectColors,
-      backgroundSize: "300% 300%",
-      backgroundPosition: "50% 50%",
-      rotate: 0,
-      opacity: 1,
+      ...initialAnimatedBorderState,
     },
     hover: {
-      ...linearInfiniteRotation,
-      transition: {
-        repeat: Infinity,
-        duration: 20, // override da duração aqui
-        ease: "linear",
-      },
-    },
-    transparent: {
-      opacity: 0,
-      transition: easeInOutTransition,
+      ...linearInfiniteRotation
     },
   },
 };

@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { ButtonLinkProps } from "../../types/Button.type.ts";
 import Icon from "../Icon.tsx";
-import { buttonLikeComponentMotionProps } from "../../layout/Animation";
+import { buttonLikeComponentMotionProps } from "@layout/Animation.tsx";
 
 export default function ButtonLink({
                                      children,
