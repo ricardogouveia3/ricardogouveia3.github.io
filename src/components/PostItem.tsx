@@ -25,22 +25,24 @@ export default function PostsItem({ title, description, link, imgSrc, imgAlt = `
           />
         )}
 
-        <div className="relative border-box rounded-md flex flex-col md:flex-row sm:min-h-40 md:h-32 z-10 smooth-noisy-background hover-background overflow-hidden">
-          <picture className="object-cover w-full h-48 md:w-auto md:max-w-52 md:h-full">
-            <source srcSet={imgSrc} type="image/jpg" />
-            <img
-              src={imgSrc}
-              alt={imgAlt}
-              decoding="async"
-              loading="lazy"
-              className={`object-cover w-full h-48 md:w-auto md:max-w-52 md:h-full`}
-              width={420}
-              height={195}
-            />
-          </picture>
-          <div className="flex flex-col justify-center p-4 leading-normal py-3 gap-2 z-10 above-noise-content-background">
-            <h4 className="text-base font-bold default-text-color">{title}</h4>
-            <p className="text-sm smooth-text-color">{description}</p>
+        <div className="relative border-box rounded-md z-10 smooth-noisy-background hover-background overflow-hidden">
+          <div className={`flex flex-col md:flex-row sm:min-h-40 md:h-32 above-noise-content-background hover-background h-full w-full`}>
+            <picture className="object-cover w-full h-48 md:w-auto md:max-w-52 md:h-full">
+              <source srcSet={imgSrc} type="image/jpg" />
+              <img
+                src={imgSrc}
+                alt={imgAlt}
+                decoding="async"
+                loading="lazy"
+                className={`object-cover w-full h-48 md:w-auto md:max-w-52 md:h-full`}
+                width={420}
+                height={195}
+              />
+            </picture>
+            <div className="flex flex-col justify-center p-4 leading-normal py-3 gap-2 z-10">
+              <h4 className="text-base font-bold default-text-color">{title}</h4>
+              <p className="text-sm smooth-text-color">{description}</p>
+            </div>
           </div>
         </div>
       </motion.a>
