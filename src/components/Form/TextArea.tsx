@@ -1,7 +1,7 @@
 import { TextAreaProps } from '../../types/Contact.type.ts';
 
 const inputDefaultStyles =
-  'block w-full text-sm default-text-color rounded-lg p-2.5 dark:placeholder-quartz-750 bg-transparent border default-border';
+  'appearance-none block w-full text-sm smooth-text-color rounded-lg p-2.5 dark:placeholder-quartz-750 bg-transparent border default-border focus:border-none focus:ring-0';
 
 const labelDefaultStyles = 'block mb-2 text-sm font-medium default-text-color';
 
@@ -16,14 +16,14 @@ const TextArea = ({
   inputStyles = inputDefaultStyles,
   labelStyles = labelDefaultStyles,
 }: TextAreaProps) => (
-  <div>
+  <div className={`flex h-full flex-col`}>
     <label htmlFor={id} className={labelStyles}>
       {label}
     </label>
     <textarea
       id={id}
       rows={rows}
-      className={inputStyles}
+      className={`h-full max-h-full ${inputStyles}`}
       name={name}
       value={value}
       onChange={onChange}

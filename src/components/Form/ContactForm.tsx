@@ -63,7 +63,7 @@ const ContactForm = ({
   };
 
   return (
-    <form onSubmit={handleSubmit} className="flex h-full flex-col justify-between gap-2">
+    <form onSubmit={handleSubmit} className="flex h-full flex-col justify-between gap-4">
       <InputField
         type="email"
         id="email"
