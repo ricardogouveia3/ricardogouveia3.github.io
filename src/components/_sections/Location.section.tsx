@@ -45,6 +45,7 @@ export default function LocationSection() {
       classNames={`${GridClassNames.location}`}
       contentClassnames="w-full h-full"
       loading={loading}
+      animatedBorder={false}
     >
       <div className="flex flex-col lg:flex-row h-full"
          onMouseOver={handleInteraction}

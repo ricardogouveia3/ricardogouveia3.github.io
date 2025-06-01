@@ -5,6 +5,7 @@ export type CardProps = {
   classNames?: string;
   contentClassnames?: string;
   loading?: boolean;
+  animatedBorder?: boolean;
 }
 
 export type CardSpinnerProps = {
