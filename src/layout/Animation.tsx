@@ -1,16 +1,18 @@
-export const buttonLikeComponentMotionProps = {
-  whileHover: { scale: 1.05 },
-  whileTap: { scale: 0.95, rotate: "2.5deg" },
+const linearInfiniteRotation = {
+  rotate: 360,
   transition: {
-    duration: 0.125,
-    ease: "easeInOut",
+    repeat: Infinity,
+    duration: 60,
+    ease: "linear",
   },
 };
 
-export const cardBorderMotionProps = {
-  variants: {
-    initial: {
-      backgroundImage: `conic-gradient(
+const easeInOutTransition = {
+  duration: 0.5,
+  ease: "easeInOut",
+};
+
+const effectColors = `conic-gradient(
         from 0deg,
         #00ff00,
         #00ff80,
@@ -30,19 +32,61 @@ export const cardBorderMotionProps = {
         #ff4040,
         #ffa500,
         #ffb040
-      )`,
+      )`
+
+export const buttonLikeComponentMotionProps = {
+  whileHover: { scale: 1.05 },
+  whileTap: { scale: 0.95, rotate: "2.5deg" },
+  transition: {
+    duration: 0.125,
+    ease: "easeInOut",
+  },
+};
+
+export const cardBorderMotionProps = {
+  initial: "initial",
+  variants: {
+    initial: {
+      backgroundImage: effectColors,
       backgroundSize: "300% 300%",
+      backgroundPosition: "150% 150%",
       scale: 1.5,
       rotate: 0,
+      opacity: 1,
     },
     hover: {
-      rotate: 360,
+      ...linearInfiniteRotation,
+      opacity: 1,
+    },
+    transparent: {
+      opacity: 0,
+      transition: easeInOutTransition,
+    },
+  },
+};
+
+export const avatarBorderMotionProps = {
+  initial: "initial",
+  whileHover: "hover",
+  variants: {
+    initial: {
+      backgroundImage: effectColors,
+      backgroundSize: "300% 300%",
+      backgroundPosition: "50% 50%",
+      rotate: 0,
+      opacity: 1,
+    },
+    hover: {
+      ...linearInfiniteRotation,
       transition: {
         repeat: Infinity,
-        duration: 60,
+        duration: 20, // override da duração aqui
         ease: "linear",
       },
     },
+    transparent: {
+      opacity: 0,
+      transition: easeInOutTransition,
+    },
   },
-  initial: "initial",
 };
