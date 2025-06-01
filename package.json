@@ -56,5 +56,5 @@
     "vite-plugin-node-polyfills": "^0.22.0",
     "vite-plugin-svgr": "^4.2.0"
   },
-  "packageManager": "pnpm@10.7.1"
+  "packageManager": "pnpm@10.11.0"
 }
