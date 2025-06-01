@@ -1,4 +1,4 @@
-const effectColors = `conic-gradient(
+export const effectColors = `conic-gradient(
   from 0deg,
   #fc1da7 0%,
   #fba506 33%,
