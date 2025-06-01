@@ -92,7 +92,7 @@ const ContactForm = ({
         required
       />
 
-      <div className="flex justify-center w-full scale-90 md:scale-100">
+      <div className="flex w-full scale-90 justify-center md:scale-100">
         <ReCAPTCHA
           sitekey="6Lfeev0qAAAAAOxvaQ7TikINLNisNWtEudEnR4Ia"
           onChange={setRecaptchaToken}

@@ -10,9 +10,9 @@ export default function Footer() {
 
   return (
     <Card classNames={`${GridClassNames.footer} rounded-lg text-sm default-text-color text-center`}>
-      <div className="flex justify-center gap-4 mb-3 items-center">
+      <div className="mb-3 flex items-center justify-center gap-4">
         <a href="/">
-          <Icon name="rcrd" className="max-w-10 max-h-10" />
+          <Icon name="rcrd" className="max-h-10 max-w-10" />
         </a>
         <p>•</p>
         <img
@@ -63,9 +63,9 @@ export default function Footer() {
         >
           CC BY-SA 4.0
         </a>
-        <span className="text-xs smooth-text-color font-normal block mt-1">{t('footer.copy')}</span>
+        <span className="smooth-text-color mt-1 block text-xs font-normal">{t('footer.copy')}</span>
       </p>
-      <p className="italic text-xs smooth-text-color mt-3">
+      <p className="smooth-text-color mt-3 text-xs italic">
         <a
           className="underline"
           href="https://github.com/ricardogouveia3/ricardogouveia3.github.io"

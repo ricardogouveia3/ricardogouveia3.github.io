@@ -80,8 +80,8 @@ const ProjectSection = () => {
       contentClassnames="p-4 lg:p-6 flex flex-col gap-4"
       animatedBorder={false}
     >
-      <header className="flex flex-row justify-between mb-4 items-center">
-        <h3 className="text-lg/7 mb-4 font-medium default-text-color">{t('projects.title')}</h3>
+      <header className="mb-4 flex flex-row items-center justify-between">
+        <h3 className="default-text-color mb-4 text-lg/7 font-medium">{t('projects.title')}</h3>
         {!!showAllProjectsButton && projects.length >= 12 && (
           <ButtonLink round="lg" link={'/projects'}>
             {t('projects.seeAll')}

@@ -41,7 +41,7 @@ export default function SocialSection({ darkMode = true }: Readonly<SocialSectio
       <p className="text-lg/7 font-medium text-gray-950 dark:text-white">
         {t('social.getInTouch')}
       </p>
-      <div className="flex gap-2 flex-wrap">{renderSocialItems(socialItems)}</div>
+      <div className="flex flex-wrap gap-2">{renderSocialItems(socialItems)}</div>
     </Card>
   );
 }

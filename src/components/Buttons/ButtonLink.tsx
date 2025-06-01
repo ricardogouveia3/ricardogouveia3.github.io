@@ -38,7 +38,7 @@ export default function ButtonLink({
     <motion.a
       href={link}
       target="_blank"
-      className={`flex justify-center items-center py-2 px-4 text-sm font-medium text-center default-text-color ${roundClassName} w-fit hover-background border default-border ${className}`}
+      className={`default-text-color flex items-center justify-center px-4 py-2 text-center text-sm font-medium ${roundClassName} hover-background default-border w-fit border ${className}`}
       style={style}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}

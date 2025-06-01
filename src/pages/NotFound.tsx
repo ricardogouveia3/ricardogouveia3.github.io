@@ -11,22 +11,22 @@ export default function NotFound() {
     <PageContainer>
       <Card contentClassnames="text-center justify-center items-center default-text-color p-6 lg:p-8">
         <div className={'px-16 lg:px-32'}>
-          <a className={'w-full flex justify-center items-center mb-4 lg:mb-6'} href={'/'}>
+          <a className={'mb-4 flex w-full items-center justify-center lg:mb-6'} href={'/'}>
             <Icon
               name="rcrd"
-              className="max-w-24 lg:max-w-32 max-h-20 lg:max-h-24 transition-all"
+              className="max-h-20 max-w-24 transition-all lg:max-h-24 lg:max-w-32"
             />
           </a>
 
-          <h1 className="font-bold text-2xl lg:text-4xl mb-3 lg:mb-5 tracking-tight">
+          <h1 className="mb-3 text-2xl font-bold tracking-tight lg:mb-5 lg:text-4xl">
             {t('notFound.title')}
           </h1>
-          <h2 className="font-medium text-lg md:text-xl lg:text-2xl mb-8 lg:mb-10 smooth-text-color tracking-tight">
+          <h2 className="smooth-text-color mb-8 text-lg font-medium tracking-tight md:text-xl lg:mb-10 lg:text-2xl">
             {t('notFound.description')}
           </h2>
         </div>
 
-        <ButtonLink className={'w-full hover-background py-2.5'} round="lg" link={'/'}>
+        <ButtonLink className={'hover-background w-full py-2.5'} round="lg" link={'/'}>
           {t('notFound.backHome')}
         </ButtonLink>
       </Card>

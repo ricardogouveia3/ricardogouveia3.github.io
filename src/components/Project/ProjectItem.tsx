@@ -27,30 +27,30 @@ export default function ProjectItem({
         onBlur={() => setShowBorder(false)}
         target="_blank"
         rel="noopener noreferrer"
-        className={`relative flex overflow-hidden rounded-lg default-border  h-${height} p-[1px]`}
+        className={`default-border h- relative flex overflow-hidden rounded-lg${height} p-[1px]`}
       >
         {showBorder && (
           <motion.div
-            className="absolute inset-0 pointer-events-none"
+            className="pointer-events-none absolute inset-0"
             animate="animate"
             {...cardBorderMotionProps}
           />
         )}
 
         <div
-          className={`relative flex flex-col justify-between overflow-hidden rounded-lg smooth-noisy-background z-10 h-full w-full`}
+          className={`smooth-noisy-background relative z-10 flex h-full w-full flex-col justify-between overflow-hidden rounded-lg`}
         >
           <div className={`above-noise-content-background hover-background`}>
             <div className="flex flex-col gap-4 p-4 lg:p-6">
-              <h3 className="text-lg font-medium default-text-color">{project.title}</h3>
-              {expanded && <p className="line-clamp-3 smooth-text-color">{description}</p>}
+              <h3 className="default-text-color text-lg font-medium">{project.title}</h3>
+              {expanded && <p className="smooth-text-color line-clamp-3">{description}</p>}
             </div>
 
             <div className="flex flex-wrap gap-2 p-4 lg:p-6">
               {tagsToRender.map((tag: string) => (
                 <span
                   key={tag}
-                  className="text-xs font-medium smooth-text-color default-border rounded-full px-2 py-1"
+                  className="smooth-text-color default-border rounded-full px-2 py-1 text-xs font-medium"
                 >
                   {tag}
                 </span>
@@ -65,9 +65,9 @@ export default function ProjectItem({
   const renderSoon = () => {
     return (
       <div
-        className={`flex flex-col justify-center align-middle text-center overflow-hidden rounded-lg default-border cursor-not-allowed h-full`}
+        className={`default-border flex h-full cursor-not-allowed flex-col justify-center overflow-hidden rounded-lg text-center align-middle`}
       >
-        <h3 className="text-lg font-medium smooth-text-color p-8 lg:p-12">{t('projects.soon')}</h3>
+        <h3 className="smooth-text-color p-8 text-lg font-medium lg:p-12">{t('projects.soon')}</h3>
       </div>
     );
   };

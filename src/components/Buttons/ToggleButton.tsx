@@ -5,7 +5,7 @@ import { buttonLikeComponentMotionProps } from '@layout/Animation.tsx';
 const ToggleButton = ({ onClick, icon: Icon }: Readonly<HeaderToggleButtonProps>) => {
   return (
     <motion.button
-      className={`flex items-center justify-center h-full w-full default-background default-border hover-background rounded-lg sm:rounded-full default-text-color font-semibold px-3 py-1 aspect-square`}
+      className={`default-background default-border hover-background default-text-color flex aspect-square h-full w-full items-center justify-center rounded-lg px-3 py-1 font-semibold sm:rounded-full`}
       onClick={onClick}
       aria-label="Toggle button"
       {...{
@@ -16,7 +16,7 @@ const ToggleButton = ({ onClick, icon: Icon }: Readonly<HeaderToggleButtonProps>
       {typeof Icon === 'string' ? (
         <img src={Icon} alt="Toggle icon" className="w-5 sm:w-4" />
       ) : (
-        Icon && <Icon className="w-4 default-text-color" />
+        Icon && <Icon className="default-text-color w-4" />
       )}
     </motion.button>
   );

@@ -3,9 +3,9 @@ import { AppContainerProps } from '../types/App.type.ts';
 export default function AppContainer({ children, darkMode }: Readonly<AppContainerProps>) {
   return (
     <main
-      className={`${darkMode ? 'dark' : ''} bg-quartz-950 dark:bg-quartz-150 bg-noise-light dark:bg-noise-dark bg-repeat min-h-screen flex items-center justify-center overflow-hidden`}
+      className={`${darkMode ? 'dark' : ''} flex min-h-screen items-center justify-center overflow-hidden bg-quartz-950 bg-noise-light bg-repeat dark:bg-quartz-150 dark:bg-noise-dark`}
     >
-      <div className="w-full p-4 lg:p-6 flex flex-col items-center max-w-7xl 2xl:max-w-screen-2xl tracking-tight">
+      <div className="flex w-full max-w-7xl flex-col items-center p-4 tracking-tight lg:p-6 2xl:max-w-screen-2xl">
         {children}
       </div>
     </main>

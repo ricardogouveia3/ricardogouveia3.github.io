@@ -9,7 +9,7 @@ export default function Button({ children, type, disabled }: Readonly<ButtonProp
       type={type}
       disabled={disabled}
       {...(disabled ? {} : buttonLikeComponentMotionProps)}
-      className={`py-3 px-5 text-sm font-medium text-center default-text-color rounded-lg w-full ${disabled ? '' : 'hover-background'} default-border ${disabledClassnames}`}
+      className={`default-text-color w-full rounded-lg px-5 py-3 text-center text-sm font-medium ${disabled ? '' : 'hover-background'} default-border ${disabledClassnames}`}
     >
       {children}
     </motion.button>

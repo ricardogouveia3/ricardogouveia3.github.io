@@ -33,8 +33,8 @@ export default function PostsSection() {
 
   return (
     <Card classNames={`${GridClassNames.posts}`} loading={loading} animatedBorder={false}>
-      <header className="flex flex-row justify-between mb-4 items-center">
-        <h3 className="text-lg/7 font-medium text-gray-950 dark:text-white mb-0">
+      <header className="mb-4 flex flex-row items-center justify-between">
+        <h3 className="mb-0 text-lg/7 font-medium text-gray-950 dark:text-white">
           {t('posts.title')}
         </h3>
         <ButtonLink round="lg" link={t('posts.link')} icon={'externalArrow'} iconPosition={'right'}>

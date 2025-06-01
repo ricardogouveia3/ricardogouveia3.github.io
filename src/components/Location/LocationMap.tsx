@@ -9,15 +9,15 @@ export default function LocationMap({
   const hoverMapClassnames = hover ? `scale-125` : ``;
 
   return (
-    <div className={`w-full h-full ${mapStyleIfInfoLoaded} transition-all overflow-hidden`}>
-      <a href={map.link} target="_blank" className="relative w-full h-full block">
+    <div className={`h-full w-full ${mapStyleIfInfoLoaded} overflow-hidden transition-all`}>
+      <a href={map.link} target="_blank" className="relative block h-full w-full">
         <div className={`absolute h-full w-full bg-black opacity-0 dark:opacity-40`} />
         <picture>
           <source srcSet={map.imgSrc} type="image/webp" />
           <img
             src={map.imgSrc}
             alt={map.alt}
-            className={`transition-all object-cover object-center h-full w-full max-h-40 lg:max-h-full ${hoverMapClassnames}`}
+            className={`h-full max-h-40 w-full object-cover object-center transition-all lg:max-h-full ${hoverMapClassnames}`}
             decoding="async"
           />
         </picture>

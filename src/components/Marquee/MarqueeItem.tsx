@@ -15,11 +15,11 @@ export default function MarqueeItem({
 
   return (
     <div
-      className="flex items-center px-4 mx-2 py-2 border rounded-lg gap-2 justify-center default-border transition-colors duration-300"
+      className="default-border mx-2 flex items-center justify-center gap-2 rounded-lg border px-4 py-2 transition-colors duration-300"
       style={{ backgroundColor: bgColor }}
     >
       <Icon name={iconName} color={textColor} />
-      <span className="text-xs font-semibold default-text-color" style={{ color: textColor }}>
+      <span className="default-text-color text-xs font-semibold" style={{ color: textColor }}>
         {children}
       </span>
     </div>

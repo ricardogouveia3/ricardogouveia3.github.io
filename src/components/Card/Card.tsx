@@ -15,7 +15,7 @@ export default function Card({
 
   return (
     <motion.div
-      className={`relative rounded-lg overflow-hidden transition-all default-border duration-300 ease-in-out p-[1px] ${classNames}`}
+      className={`default-border relative overflow-hidden rounded-lg p-[1px] transition-all duration-300 ease-in-out ${classNames}`}
       role="region"
       aria-busy={loading}
       onHoverStart={() => setShowBorder(true)}
@@ -25,15 +25,15 @@ export default function Card({
     >
       {animatedBorder && showBorder && (
         <motion.div
-          className="absolute inset-0 pointer-events-none"
+          className="pointer-events-none absolute inset-0"
           animate="animate"
           {...cardBorderMotionProps}
         />
       )}
 
-      <div className="relative z-10 bg-[var(--background-color)] rounded-md overflow-hidden w-full h-full">
-        <div className="smooth-noisy-background w-full h-full flex flex-col">
-          <div className={`${contentClassnames} above-noise-content-background w-full h-full`}>
+      <div className="relative z-10 h-full w-full overflow-hidden rounded-md bg-[var(--background-color)]">
+        <div className="smooth-noisy-background flex h-full w-full flex-col">
+          <div className={`${contentClassnames} above-noise-content-background h-full w-full`}>
             {children}
           </div>
         </div>

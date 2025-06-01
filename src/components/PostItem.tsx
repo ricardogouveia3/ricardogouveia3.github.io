@@ -21,35 +21,35 @@ export default function PostsItem({
         onHoverEnd={() => setShowBorder(false)}
         onFocus={() => setShowBorder(true)}
         onBlur={() => setShowBorder(false)}
-        className="relative border-box flex flex-col items-center rounded-lg overflow-hidden md:flex-row w-full default-border hover-background p-[1px]"
+        className="border-box default-border hover-background relative flex w-full flex-col items-center overflow-hidden rounded-lg p-[1px] md:flex-row"
       >
         {showBorder && (
           <motion.div
-            className="absolute inset-0 pointer-events-none"
+            className="pointer-events-none absolute inset-0"
             animate="animate"
             {...cardBorderMotionProps}
           />
         )}
 
-        <div className="relative border-box rounded-md z-10 smooth-noisy-background hover-background overflow-hidden">
+        <div className="border-box smooth-noisy-background hover-background relative z-10 overflow-hidden rounded-md">
           <div
-            className={`flex flex-col md:flex-row sm:min-h-40 md:h-32 above-noise-content-background hover-background h-full w-full`}
+            className={`above-noise-content-background hover-background flex h-full w-full flex-col sm:min-h-40 md:h-32 md:flex-row`}
           >
-            <picture className="object-cover w-full h-48 md:w-auto md:max-w-52 md:h-full">
+            <picture className="h-48 w-full object-cover md:h-full md:w-auto md:max-w-52">
               <source srcSet={imgSrc} type="image/jpg" />
               <img
                 src={imgSrc}
                 alt={imgAlt}
                 decoding="async"
                 loading="lazy"
-                className={`object-cover w-full h-48 md:w-auto md:max-w-52 md:h-full`}
+                className={`h-48 w-full object-cover md:h-full md:w-auto md:max-w-52`}
                 width={420}
                 height={195}
               />
             </picture>
-            <div className="flex flex-col justify-center p-4 leading-normal py-3 gap-2 z-10">
-              <h4 className="text-base font-bold default-text-color">{title}</h4>
-              <p className="text-sm smooth-text-color">{description}</p>
+            <div className="z-10 flex flex-col justify-center gap-2 p-4 py-3 leading-normal">
+              <h4 className="default-text-color text-base font-bold">{title}</h4>
+              <p className="smooth-text-color text-sm">{description}</p>
             </div>
           </div>
         </div>

@@ -17,7 +17,7 @@ const MarqueeSection = ({ darkMode = true }: Readonly<MarqueeSectionProps>) => {
   return (
     <Card classNames={GridClassNames.marquee} contentClassnames="p-0" loading={loading}>
       <section
-        className="p-4 lg:p-6 h-full"
+        className="h-full p-4 lg:p-6"
         aria-labelledby="marquee-header"
         onMouseOver={handleInteraction}
         onFocus={handleInteraction}

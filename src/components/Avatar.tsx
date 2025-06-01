@@ -13,13 +13,13 @@ export default function Avatar({
 }: AvatarAnimatedBorderProps) {
   return (
     <div
-      className={`relative rounded-full p-[2px] inline-block ${className}`}
+      className={`relative inline-block rounded-full p-[2px] ${className}`}
       onMouseEnter={onHoverStart}
       onMouseLeave={onHoverEnd}
     >
       {isHoveredOrFocused && (
         <motion.div
-          className="absolute inset-0 rounded-full pointer-events-none"
+          className="pointer-events-none absolute inset-0 rounded-full"
           variants={avatarBorderMotionProps.variants}
           initial="initial"
           animate={'hover'}
@@ -36,8 +36,8 @@ export default function Avatar({
         loading="lazy"
         width={size}
         height={size}
-        className={`relative rounded-full border-4 border-black dark:border-white transition-all ${
-          isHoveredOrFocused ? 'scale-110 p-2 border-none rotate-6' : 'p-2'
+        className={`relative rounded-full border-4 border-black transition-all dark:border-white ${
+          isHoveredOrFocused ? 'rotate-6 scale-110 border-none p-2' : 'p-2'
         }`}
         style={{ position: 'relative', zIndex: 10 }}
       />

@@ -48,7 +48,7 @@ export default function LocationSection() {
       animatedBorder={false}
     >
       <div
-        className="flex flex-col lg:flex-row h-full"
+        className="flex h-full flex-col lg:flex-row"
         onMouseOver={handleInteraction}
         onFocus={handleInteraction}
         onMouseLeave={handleLeaveOrBlur}

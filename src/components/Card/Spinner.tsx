@@ -4,12 +4,12 @@ const CardSpinner = ({ isLoading }: CardSpinnerProps) => {
   const spinnerToggle = isLoading ? 'flex' : 'hidden';
   return (
     <div
-      className={`${isLoading} absolute h-full w-full bg-black/80 ${spinnerToggle} justify-center items-center z-10`}
+      className={`${isLoading} absolute h-full w-full bg-black/80 ${spinnerToggle} z-10 items-center justify-center`}
     >
       <div>
         <svg
           aria-hidden="true"
-          className="inline w-8 h-8 smooth-text-color animate-spin  fill-quartz-600 dark:fill-quartz-800"
+          className="smooth-text-color inline h-8 w-8 animate-spin fill-quartz-600 dark:fill-quartz-800"
           viewBox="0 0 100 101"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"

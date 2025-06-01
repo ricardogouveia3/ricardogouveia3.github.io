@@ -6,7 +6,7 @@ const MainWrapper = ({
   classNames = GridClassNames.container,
 }: Readonly<CardGridProps>) => {
   return (
-    <div className={`grid ${classNames} grid-flow-row auto-rows-auto gap-4 my-4 sm:my-6`}>
+    <div className={`grid ${classNames} my-4 grid-flow-row auto-rows-auto gap-4 sm:my-6`}>
       {children}
     </div>
   );

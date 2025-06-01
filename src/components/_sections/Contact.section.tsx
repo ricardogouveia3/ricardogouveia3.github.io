@@ -24,7 +24,7 @@ export default function Contact() {
       classNames={GridClassNames.contact}
       contentClassnames="flex flex-col p-4 lg:p-6 h-full justify-between"
     >
-      <h3 className="text-lg/7 mb-4 font-medium text-gray-950 dark:text-white">
+      <h3 className="mb-4 text-lg/7 font-medium text-gray-950 dark:text-white">
         {t('contact.title')}
       </h3>
       <ContactForm

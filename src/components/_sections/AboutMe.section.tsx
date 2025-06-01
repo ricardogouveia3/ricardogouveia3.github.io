@@ -45,7 +45,7 @@ export default function AboutMe() {
         onMouseLeave={handleLeaveOrBlur}
         onBlur={handleLeaveOrBlur}
       >
-        <div className={'flex justify-between items-start'}>
+        <div className={'flex items-start justify-between'}>
           {avatar && (
             <Avatar
               src={avatar}
@@ -67,10 +67,10 @@ export default function AboutMe() {
             </ButtonLink>
           )}
         </div>
-        <h1 className="font-bold text-2xl lg:text-4xl mb-1 lg:mb-3 tracking-tight">
+        <h1 className="mb-1 text-2xl font-bold tracking-tight lg:mb-3 lg:text-4xl">
           Ricardo Gouveia
         </h1>
-        <h2 className="font-medium text-lg md:text-xl lg:text-2xl smooth-text-color tracking-tight mb-2">
+        <h2 className="smooth-text-color mb-2 text-lg font-medium tracking-tight md:text-xl lg:text-2xl">
           {t('aboutMe.a')}{' '}
           <span className="default-text-color font-bold">{t('aboutMe.primaryRole')}</span>{' '}
           {t('aboutMe.and')}

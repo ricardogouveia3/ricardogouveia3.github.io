@@ -37,7 +37,7 @@ const MarqueeContent = ({
 
   if (loading) {
     return (
-      <div className="h-24 flex items-center justify-center text-sm text-gray-500 dark:text-gray-400">
+      <div className="flex h-24 items-center justify-center text-sm text-gray-500 dark:text-gray-400">
         Carregando stack...
       </div>
     );

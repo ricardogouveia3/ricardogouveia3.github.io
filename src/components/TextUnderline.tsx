@@ -11,7 +11,7 @@ export default function TextUnderline({
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className={`font-bold inline-block default-text-color underline decoration-wavy underline-offset-8 transition-colors ${
+      className={`default-text-color inline-block font-bold underline decoration-wavy underline-offset-8 transition-colors ${
         isHoveredOrFocused ? 'decoration-cyan-500' : ''
       } ${className}`}
     >

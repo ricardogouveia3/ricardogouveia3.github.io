@@ -9,7 +9,7 @@ export default function PhraseSection() {
     <Card classNames={`${GridClassNames.phrase}`}>
       <p className="smooth-text-color text-sm lg:text-lg">{t('phrase.first')}</p>
       <br />
-      <p className="default-text-color font-medium text-base lg:text-xl">{t('phrase.second')}</p>
+      <p className="default-text-color text-base font-medium lg:text-xl">{t('phrase.second')}</p>
     </Card>
   );
 }
