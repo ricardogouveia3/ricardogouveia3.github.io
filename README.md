@@ -28,8 +28,8 @@ You can run the following commands with `pnpm`:
 - **React 18** with **React DOM**
 - **TypeScript**
 - **Vite**
-- **Tailwind CSS** (`@tailwindcss/line-clamp`)
-- **i18next** + `react-i18next`
+- **Tailwind CSS**
+- **i18next + react-i18next**
 - **Firebase**
 - **React Router v7**
 - **React Helmet Async**

@@ -1,5 +1,7 @@
 import Spinner from "./Spinner";
 import { CardProps } from "../../types/Card.type.ts";
+import { motion } from "framer-motion";
+import { cardMotionProps } from "../../layout/Animation"
 
 export default function Card({
                                children,
@@ -8,10 +10,11 @@ export default function Card({
                                loading = false,
                              }: Readonly<CardProps>) {
   return (
-    <div
+    <motion.div
       className={`relative default-border default-background flex flex-col overflow-hidden cursor-default transition-all ease-in-out rounded-lg ${classNames}`}
       role="region"
       aria-busy={loading}
+      {...cardMotionProps}
     >
       <div className="smooth-noisy-background">
         <div className={`${contentClassnames} above-noise-content-background`}>
@@ -19,7 +22,7 @@ export default function Card({
         </div>
       </div>
       <Spinner isLoading={loading} />
-    </div>
+    </motion.div>
   );
 }
 
