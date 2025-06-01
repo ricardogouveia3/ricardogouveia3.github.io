@@ -12,7 +12,7 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-export default defineConfig(configEnv => ({
+export default defineConfig(({ command, mode }) => ({
   assetsInclude: ['**/*.webp', '**/*.png', '**/*.jpg', '**/*.jpeg', '**/*.svg'],
   plugins: [
     react(),
@@ -34,16 +34,16 @@ export default defineConfig(configEnv => ({
     linterPlugin({
       include: ['./src/**/*.ts', './src/**/*.tsx'],
       exclude: [
-        './src/assets/*',
-        './src/locales/*',
-        './src/data/*',
-        './src/utils/*',
-        './src/constants/*',
-        './src/api/*',
+        '**/assets/**',
+        '**/locales/**',
+        '**/data/**',
+        '**/utils/**',
+        '**/constants/**',
+        '**/api/**',
       ],
       linters: [
         new EsLinter({
-          configEnv: configEnv,
+          configEnv: { command, mode },
           serveOptions: { clearCacheOnStart: true },
         }),
         new TypeScriptLinter(),
