@@ -1,23 +1,23 @@
-import { useEffect, useState } from "react";
-import ButtonLink from "./ButtonLink";
-import Icon from "@components/Icon";
-import { getContrastColor } from "@utils/color";
-import {SocialLinkProps} from "../../types/Button.type.ts";
+import { useEffect, useState } from 'react';
+import ButtonLink from './ButtonLink';
+import Icon from '@components/Icon';
+import { getContrastColor } from '@utils/color';
+import { SocialLinkProps } from '../../types/Button.type.ts';
 
 export default function SocialLink({
   children,
   iconName,
   link,
-  hoverColor = "#000000",
+  hoverColor = '#000000',
   darkMode = true,
 }: Readonly<SocialLinkProps>) {
-  const defaultTextColor = darkMode ? "#FFFFFF" : "#1A202C";
+  const defaultTextColor = darkMode ? '#FFFFFF' : '#1A202C';
 
-  const [bgColor, setBgColor] = useState("transparent");
+  const [bgColor, setBgColor] = useState('transparent');
   const [textColor, setTextColor] = useState(defaultTextColor);
 
   useEffect(() => {
-    setBgColor("transparent");
+    setBgColor('transparent');
     setTextColor(defaultTextColor);
   }, [darkMode, defaultTextColor]);
 
@@ -27,7 +27,7 @@ export default function SocialLink({
   };
 
   const handleMouseLeave = () => {
-    setBgColor("transparent");
+    setBgColor('transparent');
     setTextColor(defaultTextColor);
   };
 
@@ -43,10 +43,7 @@ export default function SocialLink({
     >
       {iconName && <Icon name={iconName} color={textColor} />}
       &nbsp;
-      <span
-        className="text-xs font-semibold"
-        style={{ color: textColor }}
-      >
+      <span className="text-xs font-semibold" style={{ color: textColor }}>
         {children}
       </span>
     </ButtonLink>

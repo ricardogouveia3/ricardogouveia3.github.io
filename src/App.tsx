@@ -1,7 +1,7 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Layout from "./layout/Layout";
-import HomePage from "./pages/Home";
-import NotFound from "./pages/NotFound";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Layout from './layout/Layout';
+import HomePage from './pages/Home';
+import NotFound from './pages/NotFound';
 
 export default function App() {
   return (

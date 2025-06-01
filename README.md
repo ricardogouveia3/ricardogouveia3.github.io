@@ -1,4 +1,4 @@
-![RCRD logo](https://raw.githubusercontent.com/ricardogouveia3/ricardogouveia3.github.io/refs/heads/main/public/default-image.png "RCRD logo")
+![RCRD logo](https://raw.githubusercontent.com/ricardogouveia3/ricardogouveia3.github.io/refs/heads/main/public/default-image.png 'RCRD logo')
 
 # rcrd - my personal website & portfolio
 
@@ -43,11 +43,11 @@ You can run the following commands with `pnpm`:
 - Pre-rendering with `react-snap`
 - Compression with `rollup-plugin-gzip`
 - Vite Plugins:
-    - `vite-plugin-svgr`
-    - `vite-plugin-image-optimizer`
-    - `vite-plugin-node-polyfills`
-    - `vite-plugin-minify`
-    - `vite-plugin-linter`
+  - `vite-plugin-svgr`
+  - `vite-plugin-image-optimizer`
+  - `vite-plugin-node-polyfills`
+  - `vite-plugin-minify`
+  - `vite-plugin-linter`
 
 ---
 
@@ -101,4 +101,3 @@ Contribution guidelines coming soon.
 - Prettier team
 - pnpm team
 - Contributors of all used libraries
-

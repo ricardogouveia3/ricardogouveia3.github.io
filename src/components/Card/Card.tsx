@@ -1,16 +1,16 @@
-import { useState } from "react";
-import Spinner from "./Spinner";
-import { CardProps } from "../../types/Card.type.ts";
-import { motion } from "framer-motion";
-import { cardBorderMotionProps } from "@layout/Animation.tsx";
+import { useState } from 'react';
+import Spinner from './Spinner';
+import { CardProps } from '../../types/Card.type.ts';
+import { motion } from 'framer-motion';
+import { cardBorderMotionProps } from '@layout/Animation.tsx';
 
 export default function Card({
-                               children,
-                               classNames = "",
-                               contentClassnames = "p-4 lg:p-6",
-                               loading = false,
-                               animatedBorder = true,
-                             }: Readonly<CardProps>) {
+  children,
+  classNames = '',
+  contentClassnames = 'p-4 lg:p-6',
+  loading = false,
+  animatedBorder = true,
+}: Readonly<CardProps>) {
   const [showBorder, setShowBorder] = useState(false);
 
   return (
@@ -33,9 +33,7 @@ export default function Card({
 
       <div className="relative z-10 bg-[var(--background-color)] rounded-md overflow-hidden w-full h-full">
         <div className="smooth-noisy-background w-full h-full flex flex-col">
-          <div
-            className={`${contentClassnames} above-noise-content-background w-full h-full`}
-          >
+          <div className={`${contentClassnames} above-noise-content-background w-full h-full`}>
             {children}
           </div>
         </div>

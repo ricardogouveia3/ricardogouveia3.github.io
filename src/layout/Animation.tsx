@@ -11,48 +11,48 @@ const linearInfiniteRotation = {
   transition: {
     repeat: Infinity,
     duration: 20,
-    ease: "linear",
+    ease: 'linear',
   },
 };
 
 const initialAnimatedBorderState = {
   backgroundImage: effectColors,
-  backgroundSize: "300% 300%",
-  backgroundPosition: "50% 50%",
+  backgroundSize: '300% 300%',
+  backgroundPosition: '50% 50%',
   rotate: 0,
 };
 
 export const buttonLikeComponentMotionProps = {
   whileHover: { scale: 1.05 },
-  whileTap: { scale: 0.95, rotate: "2.5deg" },
+  whileTap: { scale: 0.95, rotate: '2.5deg' },
   transition: {
     duration: 0.125,
-    ease: "easeInOut",
+    ease: 'easeInOut',
   },
 };
 
 export const cardBorderMotionProps = {
-  initial: "initial",
+  initial: 'initial',
   variants: {
     initial: {
       ...initialAnimatedBorderState,
       scale: 10,
     },
     animate: {
-      ...linearInfiniteRotation
+      ...linearInfiniteRotation,
     },
   },
 };
 
 export const avatarBorderMotionProps = {
-  initial: "initial",
-  whileHover: "hover",
+  initial: 'initial',
+  whileHover: 'hover',
   variants: {
     initial: {
       ...initialAnimatedBorderState,
     },
     hover: {
-      ...linearInfiniteRotation
+      ...linearInfiniteRotation,
     },
   },
 };

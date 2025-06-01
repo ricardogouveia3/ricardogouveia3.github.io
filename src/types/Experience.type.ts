@@ -8,8 +8,8 @@ export type Experience = {
 };
 
 export type ExperienceItemProps = {
-  jobTitle: string,
-  company: string,
-  startDate: string,
-  endDate?: string
-}
+  jobTitle: string;
+  company: string;
+  startDate: string;
+  endDate?: string;
+};

@@ -1,10 +1,10 @@
-import {WeatherInfoType} from "./WeatherInfo.type.ts";
+import { WeatherInfoType } from './WeatherInfo.type.ts';
 
 export type LocationMapProps = {
   map: {
-    imgSrc: string,
-    alt: string,
-    link: string,
+    imgSrc: string;
+    alt: string;
+    link: string;
   };
   info: boolean;
   hover?: boolean;

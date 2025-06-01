@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 export type ContactFormProps = {
   email: string;
@@ -9,15 +9,15 @@ export type ContactFormProps = {
 };
 
 export type InputProps = {
-  type: string,
-  id: string,
-  label: string,
-  value: string,
-  name?: string,
-  onChange: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void,
-  required?: boolean,
-  inputStyles?: string,
-  labelStyles?: string,
+  type: string;
+  id: string;
+  label: string;
+  value: string;
+  name?: string;
+  onChange: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
+  required?: boolean;
+  inputStyles?: string;
+  labelStyles?: string;
 };
 
 export type TextAreaProps = {

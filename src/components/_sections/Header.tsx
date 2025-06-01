@@ -1,16 +1,17 @@
-import React, { FC } from "react";
-import ToggleButton from "@components/Buttons/ToggleButton.tsx";
-import {flags, icons} from "@assets/images.ts";
-import {useTheme} from "@hooks/useTheme.ts";
-import {HeaderProps} from "../../types/Header.types.ts";
+import React, { FC } from 'react';
+import ToggleButton from '@components/Buttons/ToggleButton.tsx';
+import { flags, icons } from '@assets/images.ts';
+import { useTheme } from '@hooks/useTheme.ts';
+import { HeaderProps } from '../../types/Header.types.ts';
 
 const Header: FC<HeaderProps> = ({ language, handleLanguageToggle }) => {
   const { darkMode, toggleDarkMode } = useTheme();
 
-  const ToggleDarkModeIcon: React.ComponentType<React.SVGProps<SVGSVGElement>> =
-    darkMode ? icons.sun : icons.moon;
+  const ToggleDarkModeIcon: React.ComponentType<React.SVGProps<SVGSVGElement>> = darkMode
+    ? icons.sun
+    : icons.moon;
 
-  const ToggleLanguageIcon: string = language === "pt-br" ? flags.gb_emoji : flags.br_emoji;
+  const ToggleLanguageIcon: string = language === 'pt-br' ? flags.gb_emoji : flags.br_emoji;
 
   return (
     <header className="flex justify-center gap-3">

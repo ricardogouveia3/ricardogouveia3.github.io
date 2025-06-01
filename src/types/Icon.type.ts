@@ -1,4 +1,4 @@
-import { flags, icons, logos } from "@assets/images";
+import { flags, icons, logos } from '@assets/images';
 
 export type LogoKey = keyof typeof logos;
 export type IconKey = keyof typeof icons;

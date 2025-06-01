@@ -37,7 +37,7 @@
       "@icons/*": ["src/assets/icons/*"],
       "@flags/*": ["src/assets/flags/*"],
       "@maps/*": ["src/assets/maps/*"],
-      "@pages/*": ["src/pages/*"],
+      "@pages/*": ["src/pages/*"]
     }
   },
   "include": ["src/**/*", "types/**/*", "vite.config.ts", "tailwind.config.js"],

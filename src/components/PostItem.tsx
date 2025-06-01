@@ -1,9 +1,15 @@
-import {PostsItemProps} from "../types/Post.type.ts";
-import {motion} from "framer-motion";
-import {cardBorderMotionProps} from "@layout/Animation.tsx";
-import {useState} from "react";
+import { PostsItemProps } from '../types/Post.type.ts';
+import { motion } from 'framer-motion';
+import { cardBorderMotionProps } from '@layout/Animation.tsx';
+import { useState } from 'react';
 
-export default function PostsItem({ title, description, link, imgSrc, imgAlt = `Auto generated description: ${title}` }: Readonly<PostsItemProps>) {
+export default function PostsItem({
+  title,
+  description,
+  link,
+  imgSrc,
+  imgAlt = `Auto generated description: ${title}`,
+}: Readonly<PostsItemProps>) {
   const [showBorder, setShowBorder] = useState(false);
 
   return (
@@ -15,8 +21,8 @@ export default function PostsItem({ title, description, link, imgSrc, imgAlt = `
         onHoverEnd={() => setShowBorder(false)}
         onFocus={() => setShowBorder(true)}
         onBlur={() => setShowBorder(false)}
-        className="relative border-box flex flex-col items-center rounded-lg overflow-hidden md:flex-row w-full default-border hover-background p-[1px]">
-
+        className="relative border-box flex flex-col items-center rounded-lg overflow-hidden md:flex-row w-full default-border hover-background p-[1px]"
+      >
         {showBorder && (
           <motion.div
             className="absolute inset-0 pointer-events-none"
@@ -26,7 +32,9 @@ export default function PostsItem({ title, description, link, imgSrc, imgAlt = `
         )}
 
         <div className="relative border-box rounded-md z-10 smooth-noisy-background hover-background overflow-hidden">
-          <div className={`flex flex-col md:flex-row sm:min-h-40 md:h-32 above-noise-content-background hover-background h-full w-full`}>
+          <div
+            className={`flex flex-col md:flex-row sm:min-h-40 md:h-32 above-noise-content-background hover-background h-full w-full`}
+          >
             <picture className="object-cover w-full h-48 md:w-auto md:max-w-52 md:h-full">
               <source srcSet={imgSrc} type="image/jpg" />
               <img
@@ -49,4 +57,3 @@ export default function PostsItem({ title, description, link, imgSrc, imgAlt = `
     </article>
   );
 }
-

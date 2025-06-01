@@ -9,11 +9,11 @@ export type ApiPostType = {
 };
 
 export type PostsItemProps = {
-  title: string,
-  description: string,
-  link: string,
-  imgSrc: string,
-  imgAlt?: string
+  title: string;
+  description: string;
+  link: string;
+  imgSrc: string;
+  imgAlt?: string;
 };
 
 export type ParsedPost = {

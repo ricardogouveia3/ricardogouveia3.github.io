@@ -1,6 +1,6 @@
-import { motion } from "framer-motion";
-import {HeaderToggleButtonProps} from "../../types/Button.type.ts";
-import {buttonLikeComponentMotionProps} from "../../layout/Animation";
+import { motion } from 'framer-motion';
+import { HeaderToggleButtonProps } from '../../types/Button.type.ts';
+import { buttonLikeComponentMotionProps } from '@layout/Animation.tsx';
 
 const ToggleButton = ({ onClick, icon: Icon }: Readonly<HeaderToggleButtonProps>) => {
   return (
@@ -19,8 +19,7 @@ const ToggleButton = ({ onClick, icon: Icon }: Readonly<HeaderToggleButtonProps>
         Icon && <Icon className="w-4 default-text-color" />
       )}
     </motion.button>
-
   );
-}
+};
 
 export default ToggleButton;

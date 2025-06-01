@@ -1,5 +1,5 @@
-import {ReactNode} from "react";
-import {IconName} from "./Icon.type.ts";
+import { ReactNode } from 'react';
+import { IconName } from './Icon.type.ts';
 
 export type MarqueeSectionProps = {
   darkMode?: boolean;

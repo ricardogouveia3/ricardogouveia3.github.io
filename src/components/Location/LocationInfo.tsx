@@ -1,21 +1,25 @@
-import { useTranslation } from "react-i18next";
-import {LocationInfoProps} from "../../types/Location.type.ts";
+import { useTranslation } from 'react-i18next';
+import { LocationInfoProps } from '../../types/Location.type.ts';
 
-export default function LocationInfo({ loading = false, weatherInfo, currentTime }: Readonly<LocationInfoProps>) {
+export default function LocationInfo({
+  loading = false,
+  weatherInfo,
+  currentTime,
+}: Readonly<LocationInfoProps>) {
   const { t } = useTranslation();
-  const weatherKey = `weatherNames.${weatherInfo?.weather ?? "Unknown"}`;
+  const weatherKey = `weatherNames.${weatherInfo?.weather ?? 'Unknown'}`;
 
   return (
     <div>
-      {(!loading && weatherInfo) && (
+      {!loading && weatherInfo && (
         <div className="p-4 lg:p-6 h-full flex flex-col font-medium smooth-text-color tracking-tight">
-          <span className="text-sm">
-            {t('location.based')}
-          </span>
+          <span className="text-sm">{t('location.based')}</span>
           <div className="h-full flex lg:flex-col justify-between">
             <div>
               <p className="default-text-color font-bold text-lg">{t('location.city')}</p>
-              <span className="text-sm">{weatherInfo.coordinates.latitude}, {weatherInfo.coordinates.longitude}</span>
+              <span className="text-sm">
+                {weatherInfo.coordinates.latitude}, {weatherInfo.coordinates.longitude}
+              </span>
             </div>
 
             <div>
@@ -29,8 +33,8 @@ export default function LocationInfo({ loading = false, weatherInfo, currentTime
                 <p className="default-text-color font-bold text-lg">{weatherInfo.temperature}°C</p>
                 &nbsp;
                 <span className="text-sm">
-  {t(weatherKey, { defaultValue: t("weatherNames.Unknown") })}
-</span>
+                  {t(weatherKey, { defaultValue: t('weatherNames.Unknown') })}
+                </span>
               </div>
             </div>
           </div>

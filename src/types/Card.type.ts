@@ -1,4 +1,4 @@
-import {ReactNode} from "react";
+import { ReactNode } from 'react';
 
 export type CardProps = {
   children: ReactNode;
@@ -6,8 +6,8 @@ export type CardProps = {
   contentClassnames?: string;
   loading?: boolean;
   animatedBorder?: boolean;
-}
+};
 
 export type CardSpinnerProps = {
   isLoading: boolean;
-}
+};

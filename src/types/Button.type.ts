@@ -1,11 +1,11 @@
-import React, {CSSProperties, MouseEventHandler, ReactNode} from "react";
-import {IconName} from "./Icon.type.ts";
+import React, { CSSProperties, MouseEventHandler, ReactNode } from 'react';
+import { IconName } from './Icon.type.ts';
 
 export type ButtonProps = {
   children: ReactNode;
-  type: "submit" | "reset" | "button" | undefined;
+  type: 'submit' | 'reset' | 'button' | undefined;
   disabled: boolean;
-}
+};
 
 export type ButtonLinkProps = {
   children: ReactNode;
@@ -17,7 +17,7 @@ export type ButtonLinkProps = {
   onMouseEnter?: MouseEventHandler<HTMLAnchorElement>;
   onMouseLeave?: MouseEventHandler<HTMLAnchorElement>;
   icon?: IconName;
-  iconPosition?: "left" | "right"
+  iconPosition?: 'left' | 'right';
   iconClassnames?: string;
 };
 

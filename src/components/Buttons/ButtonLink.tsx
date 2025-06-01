@@ -1,34 +1,34 @@
-import { motion } from "framer-motion";
-import { ButtonLinkProps } from "../../types/Button.type.ts";
-import Icon from "../Icon.tsx";
-import { buttonLikeComponentMotionProps } from "@layout/Animation.tsx";
+import { motion } from 'framer-motion';
+import { ButtonLinkProps } from '../../types/Button.type.ts';
+import Icon from '../Icon.tsx';
+import { buttonLikeComponentMotionProps } from '@layout/Animation.tsx';
 
 export default function ButtonLink({
-                                     children,
-                                     link,
-                                     round,
-                                     className,
-                                     style,
-                                     onMouseEnter,
-                                     onMouseLeave,
-                                     icon,
-                                     iconPosition = "right",
-                                     iconClassnames = "",
-                                   }: Readonly<ButtonLinkProps>) {
-  let roundClassName = "";
+  children,
+  link,
+  round,
+  className,
+  style,
+  onMouseEnter,
+  onMouseLeave,
+  icon,
+  iconPosition = 'right',
+  iconClassnames = '',
+}: Readonly<ButtonLinkProps>) {
+  let roundClassName = '';
 
   switch (round) {
-    case "lg":
-      roundClassName = "rounded-lg";
+    case 'lg':
+      roundClassName = 'rounded-lg';
       break;
-    case "md":
-      roundClassName = "rounded-md";
+    case 'md':
+      roundClassName = 'rounded-md';
       break;
-    case "sm":
-      roundClassName = "rounded";
+    case 'sm':
+      roundClassName = 'rounded';
       break;
-    case "full":
-      roundClassName = "rounded-full";
+    case 'full':
+      roundClassName = 'rounded-full';
       break;
     default:
       break;
@@ -44,11 +44,11 @@ export default function ButtonLink({
       onMouseLeave={onMouseLeave}
       {...buttonLikeComponentMotionProps}
     >
-      {icon && iconPosition === "left" && (
+      {icon && iconPosition === 'left' && (
         <Icon name={icon} className={`mr-0.5 ${iconClassnames}`} />
       )}
       {children}
-      {icon && iconPosition === "right" && (
+      {icon && iconPosition === 'right' && (
         <Icon name={icon} className={`ml-0.5 ${iconClassnames}`} />
       )}
     </motion.a>

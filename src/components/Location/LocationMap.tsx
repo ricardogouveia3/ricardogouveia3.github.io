@@ -1,6 +1,10 @@
-import {LocationMapProps} from "../../types/Location.type.ts";
+import { LocationMapProps } from '../../types/Location.type.ts';
 
-export default function LocationMap({ map, info = false, hover = false }: Readonly<LocationMapProps>) {
+export default function LocationMap({
+  map,
+  info = false,
+  hover = false,
+}: Readonly<LocationMapProps>) {
   const mapStyleIfInfoLoaded = info ? `lg:w-[60%]` : 'lg:w-full max-h-80';
   const hoverMapClassnames = hover ? `scale-125` : ``;
 
@@ -17,7 +21,6 @@ export default function LocationMap({ map, info = false, hover = false }: Readon
             decoding="async"
           />
         </picture>
-      
       </a>
     </div>
   );

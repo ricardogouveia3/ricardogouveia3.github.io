@@ -3,48 +3,48 @@
 
 /// <reference types="vite-plugin-svgr/client" />
 
-import avatar1 from "@avatar/avatar-1.webp";
+import avatar1 from '@avatar/avatar-1.webp';
 
-import rcrd from "@logos/rcrd.svg?react";
+import rcrd from '@logos/rcrd.svg?react';
 
-import AngularIcon from "@logos/angular.svg?react";
-import BootstrapIcon from "@logos/bootstrap.svg?react";
-import Css3Icon from "@logos/css3.svg?react";
-import FigmaIcon from "@logos/figma.svg?react";
-import GitIcon from "@logos/git.svg?react";
-import Html5Icon from "@logos/html5.svg?react";
-import JsIcon from "@logos/js.svg?react";
-import NextjsIcon from "@logos/nextjs.svg?react";
-import ReactNativeIcon from "@logos/react-native.svg?react";
-import ReactIcon from "@logos/react.svg?react";
-import SassIcon from "@logos/sass.svg?react";
-import TypescriptIcon from "@logos/typescript.svg?react";
-import VueIcon from "@logos/vuejs.svg?react";
-import WordpressIcon from "@logos/wordpress.svg?react";
-import ViteIcon from "@logos/vite.svg?react";
-import FirebaseIcon from "@logos/firebase.svg?react";
-import TailwindIcon from "@logos/tailwind.svg?react";
+import AngularIcon from '@logos/angular.svg?react';
+import BootstrapIcon from '@logos/bootstrap.svg?react';
+import Css3Icon from '@logos/css3.svg?react';
+import FigmaIcon from '@logos/figma.svg?react';
+import GitIcon from '@logos/git.svg?react';
+import Html5Icon from '@logos/html5.svg?react';
+import JsIcon from '@logos/js.svg?react';
+import NextjsIcon from '@logos/nextjs.svg?react';
+import ReactNativeIcon from '@logos/react-native.svg?react';
+import ReactIcon from '@logos/react.svg?react';
+import SassIcon from '@logos/sass.svg?react';
+import TypescriptIcon from '@logos/typescript.svg?react';
+import VueIcon from '@logos/vuejs.svg?react';
+import WordpressIcon from '@logos/wordpress.svg?react';
+import ViteIcon from '@logos/vite.svg?react';
+import FirebaseIcon from '@logos/firebase.svg?react';
+import TailwindIcon from '@logos/tailwind.svg?react';
 
-import bluesky from "@logos/bluesky.svg?react";
-import dribbble from "@logos/dribbble.svg?react";
-import email from "@logos/email.svg?react";
-import github from "@logos/github.svg?react";
-import linkedin from "@logos/linkedin.svg?react";
-import instagram from "@logos/instagram.svg?react";
+import bluesky from '@logos/bluesky.svg?react';
+import dribbble from '@logos/dribbble.svg?react';
+import email from '@logos/email.svg?react';
+import github from '@logos/github.svg?react';
+import linkedin from '@logos/linkedin.svg?react';
+import instagram from '@logos/instagram.svg?react';
 
-import sun from "@icons/sun.svg?react";
-import moon from "@icons/moon.svg?react";
-import externalArrow from "@icons/arrow-up-right.svg?react";
-import arrowDown from "@icons/arrow-down.svg?react";
+import sun from '@icons/sun.svg?react';
+import moon from '@icons/moon.svg?react';
+import externalArrow from '@icons/arrow-up-right.svg?react';
+import arrowDown from '@icons/arrow-down.svg?react';
 
-import br from "@flags/flag-br.webp";
-import gb from "@flags/flag-gb.webp";
-import sp from "@flags/sp-br.webp";
-import pe from "@flags/pe-br.webp";
-import pa from "@flags/pa-br.webp";
-import br2 from "@flags/br.webp";
+import br from '@flags/flag-br.webp';
+import gb from '@flags/flag-gb.webp';
+import sp from '@flags/sp-br.webp';
+import pe from '@flags/pe-br.webp';
+import pa from '@flags/pa-br.webp';
+import br2 from '@flags/br.webp';
 
-import spbr from "@maps/sao-paulo.webp";
+import spbr from '@maps/sao-paulo.webp';
 
 export const icons = {
   sun: sun,

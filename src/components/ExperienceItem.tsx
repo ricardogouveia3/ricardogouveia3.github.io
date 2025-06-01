@@ -1,9 +1,16 @@
-import {useTranslation} from "react-i18next";
-import {ExperienceItemProps} from "../types/Experience.type.ts";
+import { useTranslation } from 'react-i18next';
+import { ExperienceItemProps } from '../types/Experience.type.ts';
 
-const ExperienceItem = ({ jobTitle, company, startDate, endDate }: Readonly<ExperienceItemProps>) => {
+const ExperienceItem = ({
+  jobTitle,
+  company,
+  startDate,
+  endDate,
+}: Readonly<ExperienceItemProps>) => {
   const { t } = useTranslation();
-  const experienceStyle = endDate ? 'opacity-60 text-sm lg:text-base line-through' : 'text-base lg:text-lg';
+  const experienceStyle = endDate
+    ? 'opacity-60 text-sm lg:text-base line-through'
+    : 'text-base lg:text-lg';
 
   return (
     <li className="mb-4 lg:mb-7 ms-4 last:mb-0">
@@ -22,9 +29,8 @@ const ExperienceItem = ({ jobTitle, company, startDate, endDate }: Readonly<Expe
           {startDate} - {endDate ?? t('experience.present')}
         </time>
       </div>
-
     </li>
   );
-}
+};
 
 export default ExperienceItem;

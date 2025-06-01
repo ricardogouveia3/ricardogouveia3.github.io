@@ -1,18 +1,18 @@
-import Marquee from "react-fast-marquee";
-import MarqueeItem from "./MarqueeItem";
-import { useBreakpoint } from "@hooks/useBreakpoint.ts";
-import { memo, useMemo } from "react";
-import { MarqueeContentProps, MarqueeItemData } from "../../types/Marquee.type.ts";
+import Marquee from 'react-fast-marquee';
+import MarqueeItem from './MarqueeItem';
+import { useBreakpoint } from '@hooks/useBreakpoint.ts';
+import { memo, useMemo } from 'react';
+import { MarqueeContentProps, MarqueeItemData } from '../../types/Marquee.type.ts';
 
 const MarqueeContent = ({
-                          darkMode = true,
-                          isHoveredOrFocused = false,
-                          stack,
-                          loading,
-                        }: Readonly<MarqueeContentProps>) => {
-  const { isAboveSm } = useBreakpoint("sm");
+  darkMode = true,
+  isHoveredOrFocused = false,
+  stack,
+  loading,
+}: Readonly<MarqueeContentProps>) => {
+  const { isAboveSm } = useBreakpoint('sm');
   const marqueeGradientWidth = isAboveSm ? 100 : 20;
-  const marqueeGradientColor = darkMode ? "#242424" : "#ffffff";
+  const marqueeGradientColor = darkMode ? '#242424' : '#ffffff';
 
   const [marqueeItemsLeft, marqueeItemsRight] = useMemo(() => {
     const half = Math.ceil(stack.length / 2);
@@ -32,7 +32,7 @@ const MarqueeContent = ({
           {label}
         </MarqueeItem>
       )),
-    [isHoveredOrFocused, darkMode]
+    [isHoveredOrFocused, darkMode],
   );
 
   if (loading) {
@@ -43,9 +43,9 @@ const MarqueeContent = ({
     );
   }
 
-  const marquees: { items: MarqueeItemData[]; direction: "left" | "right"; speed: number }[] = [
-    { items: marqueeItemsLeft, direction: "left", speed: 10 },
-    { items: marqueeItemsRight, direction: "right", speed: 20 },
+  const marquees: { items: MarqueeItemData[]; direction: 'left' | 'right'; speed: number }[] = [
+    { items: marqueeItemsLeft, direction: 'left', speed: 10 },
+    { items: marqueeItemsRight, direction: 'right', speed: 20 },
   ];
 
   return (

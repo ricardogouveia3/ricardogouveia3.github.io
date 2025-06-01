@@ -1,5 +1,5 @@
-import { createContext, useState, useEffect, ReactNode } from "react";
-import i18n from "@utils/i18n";
+import { createContext, useState, useEffect, ReactNode } from 'react';
+import i18n from '@utils/i18n';
 
 interface AppContextProps {
   darkMode: boolean;
@@ -12,7 +12,7 @@ export const AppContext = createContext<AppContextProps | undefined>(undefined);
 
 export const AppProvider = ({ children }: { children: ReactNode }) => {
   const [darkMode, setDarkMode] = useState(true);
-  const [language, setLanguage] = useState("en");
+  const [language, setLanguage] = useState('en');
 
   useEffect(() => {
     i18n.changeLanguage(language).then();
@@ -24,7 +24,7 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
         darkMode,
         toggleDarkMode: () => setDarkMode(!darkMode),
         language,
-        toggleLanguage: () => setLanguage(language === "en" ? "pt-br" : "en"),
+        toggleLanguage: () => setLanguage(language === 'en' ? 'pt-br' : 'en'),
       }}
     >
       {children}

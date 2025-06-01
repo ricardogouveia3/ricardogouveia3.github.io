@@ -1,10 +1,10 @@
-import {collection, getDocs} from "firebase/firestore";
-import {db} from "@apis/firebase.ts";
-import { TechItem } from "src/types/Marquee.type";
+import { collection, getDocs } from 'firebase/firestore';
+import { db } from '@apis/firebase.ts';
+import { TechItem } from 'src/types/Marquee.type';
 
 export const getTech = async () => {
   try {
-    const querySnapshot = await getDocs(collection(db, "website-tech-stack"));
+    const querySnapshot = await getDocs(collection(db, 'website-tech-stack'));
     const techData: TechItem[] = querySnapshot.docs.map((doc, index) => {
       const data = doc.data();
       return {
@@ -14,9 +14,9 @@ export const getTech = async () => {
         label: data.label,
       };
     });
-    return(techData);
+    return techData;
   } catch (error) {
-    console.error("Error while fetching tech stack data: ", error);
+    console.error('Error while fetching tech stack data: ', error);
     return [];
   }
 };
