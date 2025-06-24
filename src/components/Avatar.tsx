@@ -10,7 +10,7 @@ export default function Avatar({
   isHoveredOrFocused = false,
   onHoverStart,
   onHoverEnd,
-}: AvatarAnimatedBorderProps) {
+}: Readonly<AvatarAnimatedBorderProps>) {
   return (
     <div
       className={`relative inline-block rounded-full p-[2px] ${className}`}
@@ -37,7 +37,7 @@ export default function Avatar({
         width={size}
         height={size}
         className={`relative rounded-full border-4 border-black transition-all dark:border-white ${
-          isHoveredOrFocused ? 'rotate-6 scale-110 border-none p-2' : 'p-2'
+          isHoveredOrFocused ? 'scale-110 rotate-6 border-none p-2' : 'p-2'
         }`}
         style={{ position: 'relative', zIndex: 10 }}
       />

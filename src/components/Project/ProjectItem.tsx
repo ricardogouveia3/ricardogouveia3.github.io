@@ -27,7 +27,7 @@ export default function ProjectItem({
         onBlur={() => setShowBorder(false)}
         target="_blank"
         rel="noopener noreferrer"
-        className={`default-border h-${height} relative flex overflow-hidden rounded-lg p-[1px]`}
+        className={`default-border h-${height} relative flex overflow-hidden rounded-lg p-px`}
       >
         {showBorder && (
           <motion.div

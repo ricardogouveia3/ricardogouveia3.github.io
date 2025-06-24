@@ -21,7 +21,7 @@ export default function PostsItem({
         onHoverEnd={() => setShowBorder(false)}
         onFocus={() => setShowBorder(true)}
         onBlur={() => setShowBorder(false)}
-        className="border-box default-border hover-background relative flex w-full flex-col items-center overflow-hidden rounded-lg p-[1px] md:flex-row"
+        className="border-box default-border hover-background relative flex w-full flex-col items-center overflow-hidden rounded-lg p-px md:flex-row"
       >
         {showBorder && (
           <motion.div

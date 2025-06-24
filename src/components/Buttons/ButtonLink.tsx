@@ -25,7 +25,7 @@ export default function ButtonLink({
       roundClassName = 'rounded-md';
       break;
     case 'sm':
-      roundClassName = 'rounded';
+      roundClassName = 'rounded-sm';
       break;
     case 'full':
       roundClassName = 'rounded-full';

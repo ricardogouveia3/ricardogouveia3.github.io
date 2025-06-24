@@ -9,7 +9,7 @@ const CardSpinner = ({ isLoading }: CardSpinnerProps) => {
       <div>
         <svg
           aria-hidden="true"
-          className="smooth-text-color inline h-8 w-8 animate-spin fill-quartz-600 dark:fill-quartz-800"
+          className="smooth-text-color fill-quartz-600 dark:fill-quartz-800 inline h-8 w-8 animate-spin"
           viewBox="0 0 100 101"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"

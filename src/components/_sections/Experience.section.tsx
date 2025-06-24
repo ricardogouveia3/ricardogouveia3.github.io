@@ -28,7 +28,7 @@ export default function ExperienceSection() {
       <h3 className="mb-4 text-lg/7 font-medium text-gray-950 dark:text-white">
         {t('experience.title')}
       </h3>
-      <ol className="relative flex flex-col items-stretch border-s border-quartz-900 dark:border-quartz-400">
+      <ol className="border-quartz-900 dark:border-quartz-400 relative flex flex-col items-stretch border-s">
         {itemsToRender.map((experience: Experience) => (
           <ExperienceItem
             key={experience.id}

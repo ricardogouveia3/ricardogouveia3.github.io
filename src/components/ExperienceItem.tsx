@@ -13,11 +13,11 @@ const ExperienceItem = ({
     : 'text-base lg:text-lg';
 
   return (
-    <li className="mb-4 ms-4 last:mb-0 lg:mb-7">
-      <div className="absolute -start-1.5 mt-1.5 h-3 w-3 rounded-full border border-white bg-quartz-700 dark:border-quartz-100 dark:bg-quartz-400" />
+    <li className="ms-4 mb-4 last:mb-0 lg:mb-7">
+      <div className="bg-quartz-700 dark:border-quartz-100 dark:bg-quartz-400 absolute -start-1.5 mt-1.5 h-3 w-3 rounded-full border border-white" />
 
       <div>
-        <h4 className={`default-text-color text-wrap font-medium ${experienceStyle}`}>
+        <h4 className={`default-text-color font-medium text-wrap ${experienceStyle}`}>
           {jobTitle}
           <div>
             <span className="smooth-text-color font-normal">&nbsp;@&nbsp;</span>
@@ -25,7 +25,7 @@ const ExperienceItem = ({
           </div>
         </h4>
 
-        <time className="smooth-text-color mb-1 text-sm font-normal italic leading-none">
+        <time className="smooth-text-color mb-1 text-sm leading-none font-normal italic">
           {startDate} - {endDate ?? t('experience.present')}
         </time>
       </div>
