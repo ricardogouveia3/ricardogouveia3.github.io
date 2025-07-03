@@ -17,7 +17,9 @@ export default function LocationMap({
     >
       <a href={map.link} target="_blank" className="relative block h-full max-h-full w-full">
         <div className={`absolute h-full max-h-full w-full bg-black opacity-0 dark:opacity-40`} />
-        <picture>
+        <picture
+          className={`absolute top-[50%] left-[50%] h-full max-h-full w-full -translate-x-[50%] -translate-y-[50%]`}
+        >
           <source srcSet={darkMode ? map.imgSrcDark : map.imgSrcLight} type="image/webp" />
           <img
             src={darkMode ? map.imgSrcDark : map.imgSrcLight}
