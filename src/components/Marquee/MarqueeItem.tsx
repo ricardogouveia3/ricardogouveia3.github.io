@@ -2,14 +2,16 @@ import { getContrastColor } from '@utils/color';
 import { MarqueeItemProps } from '../../types/Marquee.type';
 import { Icon } from 'barro-ui';
 import { logos } from '@assets/images';
+import { useContext } from 'react';
+import { ThemeContext } from '@context/ThemeContext.tsx';
 
 export default function MarqueeItem({
   children,
   iconName,
   hoverColor = '#000000',
   isHoveredOrFocused = false,
-  darkMode = true,
 }: Readonly<MarqueeItemProps>) {
+  const { darkMode } = useContext(ThemeContext) ?? { darkMode: true };
   const defaultTextColor = darkMode ? '#FFFFFF' : '#1A202C';
   const bgColor = isHoveredOrFocused ? hoverColor : 'unset';
   const textColor = isHoveredOrFocused ? getContrastColor(hoverColor) : defaultTextColor;

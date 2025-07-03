@@ -28,12 +28,11 @@ const MarqueeContent = ({
           key={label}
           hoverColor={hoverColor}
           isHoveredOrFocused={isHoveredOrFocused}
-          darkMode={darkMode}
         >
           {label}
         </MarqueeItem>
       )),
-    [isHoveredOrFocused, darkMode],
+    [isHoveredOrFocused],
   );
 
   if (loading) {
