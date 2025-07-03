@@ -13,7 +13,7 @@ export default function LocationMap({
 
   return (
     <div
-      className={`h-full w-full ${mapStyleIfInfoLoaded} max-h-full overflow-hidden transition-all`}
+      className={`h-full w-full ${mapStyleIfInfoLoaded} max-h-full min-h-36 overflow-hidden transition-all`}
     >
       <a href={map.link} target="_blank" className="relative block h-full max-h-full w-full">
         <div className={`absolute h-full max-h-full w-full bg-black opacity-0 dark:opacity-40`} />
