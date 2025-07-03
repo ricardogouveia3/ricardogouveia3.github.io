@@ -3,6 +3,7 @@
   "license": "MIT",
   "version": "5.4.1",
   "type": "module",
+  "workspaces": ["packages/*"],
   "scripts": {
     "prepare": "husky",
     "dev": "vite",
@@ -10,7 +11,8 @@
     "preview": "vite preview",
     "format": "prettier --write .",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix",
+    "postinstall": "rm -f pnpm-workspace.yaml"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
