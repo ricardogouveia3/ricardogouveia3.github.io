@@ -2,7 +2,8 @@ import { WeatherInfoType } from './WeatherInfo.type.ts';
 
 export type LocationMapProps = {
   map: {
-    imgSrc: string;
+    imgSrcDark: string;
+    imgSrcLight: string;
     alt: string;
     link: string;
   };

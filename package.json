@@ -1,7 +1,7 @@
 {
   "name": "rcrd",
   "license": "MIT",
-  "version": "5.4.1",
+  "version": "5.5.0",
   "type": "module",
   "workspaces": ["packages/*"],
   "scripts": {

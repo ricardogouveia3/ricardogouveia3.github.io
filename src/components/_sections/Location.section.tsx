@@ -12,7 +12,6 @@ export default function LocationSection() {
   const [weatherInfo, setWeatherInfo] = useState<WeatherInfoType | null>(null);
   const [isHoveredOrFocused, setIsHoveredOrFocused] = useState(false);
   const [loading, setLoading] = useState(true);
-
   const map = { ...MAP_SP_BR };
   const coordinates = COORDINATES.SAO_PAULO;
   const timezones = TIMEZONES.SAO_PAULO;

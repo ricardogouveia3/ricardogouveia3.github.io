@@ -26,7 +26,6 @@ export type SocialLinkProps = {
   iconName?: IconName;
   link: string;
   hoverColor?: string;
-  darkMode?: boolean;
 };
 
 export type HeaderToggleButtonProps = {

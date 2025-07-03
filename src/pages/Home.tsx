@@ -3,7 +3,6 @@ import i18n from '@utils/i18n';
 import MainWrapper from '../containers/SectionContainer';
 import Header from '@components/_sections/Header';
 import AboutMe from '@components/_sections/AboutMe.section';
-import { useTheme } from '@hooks/useTheme.ts';
 
 const LocationSection = lazy(() => import('@components/_sections/Location.section'));
 const SocialSection = lazy(() => import('@components/_sections/Social.section'));
@@ -16,7 +15,6 @@ const Contact = lazy(() => import('@components/_sections/Contact.section'));
 const Footer = lazy(() => import('@components/_sections/Footer'));
 
 export default function Home() {
-  const { darkMode } = useTheme();
   const [language, setLanguage] = useState<string>(() => {
     return localStorage.getItem('language') ?? 'en';
   });
@@ -44,11 +42,11 @@ export default function Home() {
         </Suspense>
 
         <Suspense fallback={null}>
-          <SocialSection darkMode={darkMode} />
+          <SocialSection />
         </Suspense>
 
         <Suspense fallback={null}>
-          <MarqueeSection darkMode={darkMode} />
+          <MarqueeSection />
         </Suspense>
 
         <Suspense fallback={null}>

@@ -3,10 +3,10 @@ import SocialLink from '../Buttons/SocialLink.tsx';
 import { useTranslation } from 'react-i18next';
 import { GridClassNames } from '@constants/layout.ts';
 import { fetchSocialItems } from '@apis/social.ts';
-import { SocialItem, SocialSectionProps } from '../../types/Social.type.ts';
+import { SocialItem } from '../../types/Social.type.ts';
 import { Card } from 'barro-ui';
 
-export default function SocialSection({ darkMode = true }: Readonly<SocialSectionProps>) {
+export default function SocialSection() {
   const { t } = useTranslation();
   const [loading, setLoading] = useState(true);
   const [socialItems, setSocialItems] = useState<SocialItem[]>([]);
@@ -20,13 +20,7 @@ export default function SocialSection({ darkMode = true }: Readonly<SocialSectio
 
   const renderSocialItems = (items: SocialItem[]) => {
     return items.map(({ iconName, label, hoverColor, link = '' }) => (
-      <SocialLink
-        iconName={iconName}
-        key={label}
-        hoverColor={hoverColor}
-        link={link}
-        darkMode={darkMode}
-      >
+      <SocialLink iconName={iconName} key={label} hoverColor={hoverColor} link={link}>
         {label}
       </SocialLink>
     ));

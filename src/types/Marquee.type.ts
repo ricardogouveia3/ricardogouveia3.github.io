@@ -1,16 +1,11 @@
 import { ReactNode } from 'react';
 import { IconName } from './Icon.type.ts';
 
-export type MarqueeSectionProps = {
-  darkMode?: boolean;
-};
-
 export type MarqueeItemProps = {
   children: ReactNode;
   iconName: IconName;
   hoverColor?: string;
   isHoveredOrFocused?: boolean;
-  darkMode?: boolean;
 };
 
 export type MarqueeItemData = {
@@ -20,7 +15,6 @@ export type MarqueeItemData = {
 };
 
 export type MarqueeContentProps = {
-  darkMode?: boolean;
   isHoveredOrFocused?: boolean;
   stack: TechItem[];
   loading: boolean;

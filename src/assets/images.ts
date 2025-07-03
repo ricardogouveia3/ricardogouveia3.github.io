@@ -44,7 +44,8 @@ import pe from '@flags/pe-br.webp';
 import pa from '@flags/pa-br.webp';
 import br2 from '@flags/br.webp';
 
-import spbr from '@maps/sao-paulo.webp';
+import spbrDark from '@maps/sao-paulo-dark.webp';
+import spbrLight from '@maps/sao-paulo-light.webp';
 
 export const icons = {
   sun: sun,
@@ -91,5 +92,6 @@ export const logos = {
 
 export const images = {
   avatar: avatar1,
-  map_spbr: spbr,
+  map_spbr_dark: spbrDark,
+  map_spbr_light: spbrLight,
 };

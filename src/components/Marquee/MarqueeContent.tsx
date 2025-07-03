@@ -1,15 +1,16 @@
 import Marquee from 'react-fast-marquee';
 import MarqueeItem from './MarqueeItem';
 import { useBreakpoint } from '@hooks/useBreakpoint.ts';
-import { memo, useMemo } from 'react';
+import { memo, useContext, useMemo } from 'react';
 import { MarqueeContentProps, MarqueeItemData } from '../../types/Marquee.type.ts';
+import { ThemeContext } from '@context/ThemeContext.tsx';
 
 const MarqueeContent = ({
-  darkMode = true,
   isHoveredOrFocused = false,
   stack,
   loading,
 }: Readonly<MarqueeContentProps>) => {
+  const { darkMode } = useContext(ThemeContext) ?? { darkMode: true };
   const { isAboveSm } = useBreakpoint('sm');
   const marqueeGradientWidth = isAboveSm ? 100 : 20;
   const marqueeGradientColor = darkMode ? '#242424' : '#ffffff';

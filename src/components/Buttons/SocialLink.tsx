@@ -1,16 +1,17 @@
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import ButtonLink from './ButtonLink';
 import Icon from '@components/Icon';
 import { getContrastColor } from '@utils/color';
 import { SocialLinkProps } from '../../types/Button.type.ts';
+import { ThemeContext } from '@context/ThemeContext.tsx';
 
 export default function SocialLink({
   children,
   iconName,
   link,
   hoverColor = '#000000',
-  darkMode = true,
 }: Readonly<SocialLinkProps>) {
+  const { darkMode } = useContext(ThemeContext) ?? { darkMode: true };
   const defaultTextColor = darkMode ? '#FFFFFF' : '#1A202C';
 
   const [bgColor, setBgColor] = useState('transparent');
