@@ -1,18 +1,20 @@
 import { GridClassNames } from '@constants/layout.ts';
-import Card from '../Card/Card.tsx';
 import { currentYear } from '@utils/date.ts';
 import { useTranslation } from 'react-i18next';
-import { flags } from '@assets/images.ts';
-import Icon from '@components/Icon.tsx';
+import { flags, logos } from '@assets/images.ts';
+import { Card, Icon } from 'barro-ui';
 
 export default function Footer() {
   const { t } = useTranslation();
 
   return (
-    <Card classNames={`${GridClassNames.footer} rounded-lg text-sm default-text-color text-center`}>
+    <Card
+      classNames={`${GridClassNames.footer} rounded-lg text-sm default-text-color text-center`}
+      animatedBorder={false}
+    >
       <div className="mb-3 flex items-center justify-center gap-4">
         <a href="/">
-          <Icon name="rcrd" className="max-h-10 max-w-10" />
+          <Icon icon={logos.rcrd} className="max-h-10 max-w-10" />
         </a>
         <p>•</p>
         <img

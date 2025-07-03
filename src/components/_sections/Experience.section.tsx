@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react';
 import { useBreakpoint } from '@hooks/useBreakpoint.ts';
-import Card from '../Card/Card.tsx';
 import ExperienceItem from '../ExperienceItem.tsx';
 import { Experience } from '../../types/Experience.type.ts';
 import { GridClassNames } from '@constants/layout.ts';
 import { useTranslation } from 'react-i18next';
 import { fetchExperiences } from '@apis/experiences.ts';
+import { Card } from 'barro-ui';
 
 export default function ExperienceSection() {
   const { t } = useTranslation();

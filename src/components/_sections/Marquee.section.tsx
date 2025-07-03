@@ -1,10 +1,10 @@
 import { useState, useCallback, memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import MarqueeContent from '../Marquee/MarqueeContent.tsx';
-import Card from '../Card/Card.tsx';
 import { GridClassNames } from '@constants/layout.ts';
 import { MarqueeSectionProps } from '../../types/Marquee.type.ts';
 import { useStack } from '@hooks/useStack.ts';
+import { Card } from 'barro-ui';
 
 const MarqueeSection = ({ darkMode = true }: Readonly<MarqueeSectionProps>) => {
   const { t } = useTranslation();

@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react';
 import { getWeather } from '@apis/weather.ts';
-import Card from '../Card/Card.tsx';
 import { WeatherInfoType } from '../../types/WeatherInfo.type.ts';
 import { getCurrentTime } from '@utils/time.ts';
 import LocationMap from '../Location/LocationMap.tsx';
 import LocationInfo from '../Location/LocationInfo.tsx';
 import { COORDINATES, MAP_SP_BR, TIMEZONES } from '@constants/location.ts';
 import { GridClassNames } from '@constants/layout.ts';
+import { Card } from 'barro-ui';
 
 export default function LocationSection() {
   const [weatherInfo, setWeatherInfo] = useState<WeatherInfoType | null>(null);

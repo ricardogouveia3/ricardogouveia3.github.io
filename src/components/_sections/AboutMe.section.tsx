@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import Card from '../Card/Card.tsx';
 import { useTranslation } from 'react-i18next';
 import { GridClassNames } from '@constants/layout.ts';
 import { images } from '@assets/images.ts';
@@ -7,7 +6,7 @@ import ButtonLink from '@components/Buttons/ButtonLink.tsx';
 import { useRemoteConfig } from '@hooks/useRemoteConfig.ts';
 import { fetchCV } from '@apis/curriculum.ts';
 import Avatar from '@components/Avatar.tsx';
-import TextUnderline from '@components/TextUnderline.tsx';
+import { Card, TextUnderline } from 'barro-ui';
 
 export default function AboutMe() {
   const { t } = useTranslation();

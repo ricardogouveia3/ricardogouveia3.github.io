@@ -1,13 +1,12 @@
 import { useState, useEffect } from 'react';
 import { blogAPI } from '@apis/posts.ts';
-import Card from '../Card/Card.tsx';
-import PostsItem from '../PostItem.tsx';
 import { ParsedPost } from '../../types/Post.type.ts';
 import { useBreakpoint } from '@hooks/useBreakpoint.ts';
 import ButtonLink from '../Buttons/ButtonLink.tsx';
 import { GridClassNames } from '@constants/layout.ts';
 import { useTranslation } from 'react-i18next';
 import { parsePosts } from '@utils/posts.ts';
+import { Card, PostItem } from 'barro-ui';
 
 export default function PostsSection() {
   const { t, i18n } = useTranslation();
@@ -45,12 +44,13 @@ export default function PostsSection() {
       {!loading && (
         <div className="flex flex-col gap-4">
           {posts.map((post: ParsedPost) => (
-            <PostsItem
+            <PostItem
               title={post.title}
               key={post.id}
               description={post.description}
               link={post.url}
               imgSrc={post.cover_image}
+              animatedBorder={true}
             />
           ))}
         </div>

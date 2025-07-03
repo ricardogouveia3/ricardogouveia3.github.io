@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
-import Card from '../Card/Card.tsx';
 import { GridClassNames } from '@constants/layout.ts';
+import { Card } from 'barro-ui';
 
 export default function PhraseSection() {
   const { t } = useTranslation();

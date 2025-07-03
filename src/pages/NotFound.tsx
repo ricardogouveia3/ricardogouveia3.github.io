@@ -1,8 +1,8 @@
 import PageContainer from '../containers/PageContainer.tsx';
-import Card from '@components/Card/Card.tsx';
 import { useTranslation } from 'react-i18next';
 import ButtonLink from '@components/Buttons/ButtonLink.tsx';
-import Icon from '@components/Icon';
+import { Card, Icon } from 'barro-ui';
+import { logos } from '@assets/images.ts';
 
 export default function NotFound() {
   const { t } = useTranslation();
@@ -13,7 +13,7 @@ export default function NotFound() {
         <div className={'px-16 lg:px-32'}>
           <a className={'mb-4 flex w-full items-center justify-center lg:mb-6'} href={'/'}>
             <Icon
-              name="rcrd"
+              icon={logos.rcrd}
               className="max-h-20 max-w-24 transition-all lg:max-h-24 lg:max-w-32"
             />
           </a>

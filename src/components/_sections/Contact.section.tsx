@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import Card from '../Card/Card.tsx';
 import ContactForm from '../Form/ContactForm.tsx';
 import { GridClassNames } from '@constants/layout.ts';
 import { useTranslation } from 'react-i18next';
+import { Card } from 'barro-ui';
 
 export default function Contact() {
   const { t } = useTranslation();
@@ -23,6 +23,7 @@ export default function Contact() {
     <Card
       classNames={GridClassNames.contact}
       contentClassnames="flex flex-col p-4 lg:p-6 h-full justify-between"
+      animatedBorder={false}
     >
       <h3 className="mb-4 text-lg/7 font-medium text-gray-950 dark:text-white">
         {t('contact.title')}

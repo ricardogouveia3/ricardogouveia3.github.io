@@ -2,13 +2,13 @@ import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { GridClassNames } from '@constants/layout.ts';
-import Card from '../Card/Card.tsx';
 import ProjectItem from '@components/Project/ProjectItem.tsx';
 import { Project } from '../../types/Project.type.ts';
 import { useBreakpoint } from '@hooks/useBreakpoint.ts';
 import { fetchProjects } from '@apis/projects.ts';
 import ButtonLink from '@components/Buttons/ButtonLink.tsx';
 import { useRemoteConfig } from '@hooks/useRemoteConfig.ts';
+import { Card } from 'barro-ui';
 
 const MAX_PROJECTS = 12;
 
