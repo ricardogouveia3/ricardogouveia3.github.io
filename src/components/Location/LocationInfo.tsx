@@ -12,9 +12,9 @@ export default function LocationInfo({
   return (
     <div>
       {!loading && weatherInfo && (
-        <div className="smooth-text-color flex h-full flex-col p-4 font-medium tracking-tight lg:p-6">
+        <div className="smooth-text-color flex h-full min-w-[200px] flex-col p-4 font-medium tracking-tight lg:p-6">
           <span className="text-sm">{t('location.based')}</span>
-          <div className="flex h-full justify-between lg:flex-col">
+          <div className="flex h-full justify-between md:flex-col">
             <div>
               <p className="default-text-color text-lg font-bold">{t('location.city')}</p>
               <span className="text-sm">

@@ -29,7 +29,9 @@ export default function LocationSection() {
     async function fetchWeather() {
       try {
         const weatherData = await getWeather(coordinates.LATITUDE, coordinates.LONGITUDE);
-        if (weatherData) setWeatherInfo(weatherData);
+        if (weatherData) {
+          setWeatherInfo(weatherData);
+        }
       } catch (error) {
         console.error('Error fetching weather data: ', error);
       } finally {
@@ -44,11 +46,12 @@ export default function LocationSection() {
     <Card
       classNames={`${GridClassNames.location}`}
       contentClassnames="w-full h-full"
+      containerClassnames="flex flex-row"
       loading={loading}
       animatedBorder={false}
     >
       <div
-        className="flex h-full flex-col lg:flex-row"
+        className="flex h-full flex-col md:flex-row"
         onMouseOver={handleInteraction}
         onFocus={handleInteraction}
         onMouseLeave={handleLeaveOrBlur}

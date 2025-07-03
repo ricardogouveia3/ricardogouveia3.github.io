@@ -17,7 +17,7 @@ export default function LocationMap({
           <img
             src={map.imgSrc}
             alt={map.alt}
-            className={`h-full max-h-40 w-full object-cover object-center transition-all lg:max-h-full ${hoverMapClassnames}`}
+            className={`h-full w-full object-cover object-center transition-all ${hoverMapClassnames}`}
             decoding="async"
           />
         </picture>

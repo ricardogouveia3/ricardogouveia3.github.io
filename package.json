@@ -1,7 +1,7 @@
 {
   "name": "rcrd",
   "license": "MIT",
-  "version": "5.4.0",
+  "version": "5.4.1",
   "type": "module",
   "scripts": {
     "prepare": "husky",
@@ -19,7 +19,7 @@
     ]
   },
   "dependencies": {
-    "barro-ui": "^0.4.0",
+    "barro-ui": "^0.4.2",
     "firebase": "^11.6.0",
     "framer-motion": "^12.15.0",
     "i18next": "^23.16.2",
