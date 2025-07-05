@@ -1,5 +1,0 @@
-onlyBuiltDependencies:
-  - '@swc/core'
-  - esbuild
-packages:
-  - '*'

@@ -5,8 +5,8 @@
 
 @theme {
   --font-sans:
-    'Inter', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
-    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    'Inter', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol', 'Noto Color Emoji';
 
   --background-image-noise-dark: url('./assets/noise-dark.webp');
   --background-image-noise-light: url('./assets/noise-light.webp');
@@ -59,21 +59,21 @@
 }
 
 @utility default-border {
-  @apply border border-quartz-800 dark:border-quartz-450;
+  @apply border-quartz-800 dark:border-quartz-450 border;
 }
 
 @utility default-background {
-  @apply bg-white dark:bg-quartz-200;
+  @apply dark:bg-quartz-200 bg-white;
 }
 
 @utility smooth-noisy-background {
-  @apply bg-white dark:bg-quartz-200 bg-noise-light dark:bg-noise-dark bg-repeat h-full w-full;
+  @apply dark:bg-quartz-200 bg-noise-light dark:bg-noise-dark h-full w-full bg-white bg-repeat;
 }
 
 @utility above-noise-content-background {
-  @apply bg-white/60 dark:bg-quartz-200/70 h-full w-full;
+  @apply dark:bg-quartz-200/70 h-full w-full bg-white/60;
 }
 
 @utility hover-background {
-  @apply transition-colors hover:bg-quartz-950 dark:hover:bg-quartz-200;
+  @apply hover:bg-quartz-950 dark:hover:bg-quartz-200 transition-colors;
 }

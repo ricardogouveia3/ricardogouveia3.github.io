@@ -1,4 +1,5 @@
 import { images } from '@assets/images.ts';
+import { WeatherInfoType } from '../types/WeatherInfo.type.ts';
 
 export const MAP_SP_BR = {
   imgSrcLight: images.map_spbr_light,
@@ -16,4 +17,14 @@ export const COORDINATES = {
     LATITUDE: -23.5506507,
     LONGITUDE: -46.6333824,
   },
+};
+
+export const MOCK_WEATHER_DATA: WeatherInfoType = {
+  coordinates: {
+    latitude: COORDINATES.SAO_PAULO.LATITUDE,
+    longitude: COORDINATES.SAO_PAULO.LONGITUDE,
+  },
+  location: 'São Paulo, Brazil',
+  temperature: 20,
+  weather: 'Clear',
 };
