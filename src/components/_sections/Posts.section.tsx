@@ -2,11 +2,10 @@ import { useState, useEffect } from 'react';
 import { blogAPI } from '@apis/posts.ts';
 import { ParsedPost } from '../../types/Post.type.ts';
 import { useBreakpoint } from '@hooks/useBreakpoint.ts';
-import ButtonLink from '../Buttons/ButtonLink.tsx';
 import { GridClassNames } from '@constants/layout.ts';
 import { useTranslation } from 'react-i18next';
 import { parsePosts } from '@utils/posts.ts';
-import { Card, PostItem } from 'barro-ui';
+import { Card, PostItem, Button } from 'barro-ui';
 
 export default function PostsSection() {
   const { t, i18n } = useTranslation();
@@ -36,9 +35,17 @@ export default function PostsSection() {
         <h3 className="mb-0 text-lg/7 font-medium text-gray-950 dark:text-white">
           {t('posts.title')}
         </h3>
-        <ButtonLink round="lg" link={t('posts.link')} icon={'externalArrow'} iconPosition={'right'}>
+        <Button
+          type={'link'}
+          rounded="medium"
+          link={t('posts.link')}
+          icon={{
+            name: 'ArrowUpRightIcon',
+            position: 'right',
+          }}
+        >
           {t('posts.seeAll')}
-        </ButtonLink>
+        </Button>
       </header>
 
       {!loading && (

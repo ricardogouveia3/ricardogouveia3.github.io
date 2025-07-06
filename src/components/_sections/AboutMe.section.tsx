@@ -2,11 +2,10 @@ import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { GridClassNames } from '@constants/layout.ts';
 import { images } from '@assets/images.ts';
-import ButtonLink from '@components/Buttons/ButtonLink.tsx';
 import { useRemoteConfig } from '@hooks/useRemoteConfig.ts';
 import { fetchCV } from '@apis/curriculum.ts';
 import Avatar from '@components/Avatar.tsx';
-import { Card, TextUnderline } from 'barro-ui';
+import { Card, TextUnderline, Button } from 'barro-ui';
 
 export default function AboutMe() {
   const { t } = useTranslation();
@@ -55,15 +54,18 @@ export default function AboutMe() {
             />
           )}
           {!!showCVdownloadButton && cvLink && (
-            <ButtonLink
-              round="lg"
+            <Button
+              type="link"
+              rounded="medium"
               link={cvLink}
-              icon={'arrowDown'}
-              iconPosition={'right'}
-              iconClassnames={'max-h-4'}
+              icon={{
+                name: 'ArrowDownTrayIcon',
+                variant: 'solid',
+                position: 'right',
+              }}
             >
               CV
-            </ButtonLink>
+            </Button>
           )}
         </div>
         <h1 className="mb-1 text-2xl font-bold tracking-tight lg:mb-3 lg:text-4xl">

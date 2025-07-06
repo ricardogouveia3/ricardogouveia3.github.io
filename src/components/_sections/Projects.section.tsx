@@ -6,9 +6,8 @@ import ProjectItem from '@components/Project/ProjectItem.tsx';
 import { Project } from '../../types/Project.type.ts';
 import { useBreakpoint } from '@hooks/useBreakpoint.ts';
 import { fetchProjects } from '@apis/projects.ts';
-import ButtonLink from '@components/Buttons/ButtonLink.tsx';
 import { useRemoteConfig } from '@hooks/useRemoteConfig.ts';
-import { Card } from 'barro-ui';
+import { Card, Button } from 'barro-ui';
 
 const MAX_PROJECTS = 12;
 
@@ -83,9 +82,10 @@ const ProjectSection = () => {
       <header className="mb-4 flex flex-row items-center justify-between">
         <h3 className="default-text-color mb-4 text-lg/7 font-medium">{t('projects.title')}</h3>
         {!!showAllProjectsButton && projects.length >= 12 && (
-          <ButtonLink round="lg" link={'/projects'}>
+          // @ts-expect-error - links is defined
+          <Button round="lg" type={'link'} link="/projects">
             {t('projects.seeAll')}
-          </ButtonLink>
+          </Button>
         )}
       </header>
 

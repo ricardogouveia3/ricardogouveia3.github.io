@@ -1,7 +1,6 @@
 import PageContainer from '../containers/PageContainer.tsx';
 import { useTranslation } from 'react-i18next';
-import ButtonLink from '@components/Buttons/ButtonLink.tsx';
-import { Card, Icon } from 'barro-ui';
+import { Card, Icon, Button } from 'barro-ui';
 import { logos } from '@assets/images.ts';
 
 export default function NotFound() {
@@ -25,10 +24,10 @@ export default function NotFound() {
             {t('notFound.description')}
           </h2>
         </div>
-
-        <ButtonLink className={'hover-background w-full py-2.5'} round="lg" link={'/'}>
+        {/* @ts-expect-error - links is defined */}
+        <Button type={'link'} className={'hover-background w-full py-2.5'} round="lg" link="/">
           {t('notFound.backHome')}
-        </ButtonLink>
+        </Button>
       </Card>
     </PageContainer>
   );

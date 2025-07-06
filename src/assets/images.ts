@@ -32,8 +32,6 @@ import github from '@logos/github.svg?react';
 import linkedin from '@logos/linkedin.svg?react';
 import instagram from '@logos/instagram.svg?react';
 
-import sun from '@icons/sun.svg?react';
-import moon from '@icons/moon.svg?react';
 import externalArrow from '@icons/arrow-up-right.svg?react';
 import arrowDown from '@icons/arrow-down.svg?react';
 
@@ -48,8 +46,6 @@ import spbrDark from '@maps/sao-paulo-dark.webp';
 import spbrLight from '@maps/sao-paulo-light.webp';
 
 export const icons = {
-  sun: sun,
-  moon: moon,
   externalArrow: externalArrow,
   arrowDown: arrowDown,
 };

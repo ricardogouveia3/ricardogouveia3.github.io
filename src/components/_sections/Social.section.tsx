@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
-import SocialLink from '../Buttons/SocialLink.tsx';
 import { useTranslation } from 'react-i18next';
 import { GridClassNames } from '@constants/layout.ts';
 import { fetchSocialItems } from '@apis/social.ts';
 import { SocialItem } from '../../types/Social.type.ts';
-import { Card } from 'barro-ui';
+import { IconAdapter } from '@components/adapters/IconAdapter.tsx';
+import { Button, Card } from 'barro-ui';
 
 export default function SocialSection() {
   const { t } = useTranslation();
@@ -12,17 +12,27 @@ export default function SocialSection() {
   const [socialItems, setSocialItems] = useState<SocialItem[]>([]);
 
   useEffect(() => {
-    fetchSocialItems().then(socialItems => {
-      setSocialItems(socialItems);
+    fetchSocialItems().then(items => {
+      setSocialItems(items);
       setLoading(false);
     });
   }, []);
 
   const renderSocialItems = (items: SocialItem[]) => {
     return items.map(({ iconName, label, hoverColor, link = '' }) => (
-      <SocialLink iconName={iconName} key={label} hoverColor={hoverColor} link={link}>
+      <Button
+        key={label}
+        rounded="full"
+        type="link"
+        link={link}
+        hoverColor={hoverColor}
+        icon={{
+          name: () => <IconAdapter name={iconName} className="mr-2 h-4 w-4" />,
+          position: 'left',
+        }}
+      >
         {label}
-      </SocialLink>
+      </Button>
     ));
   };
 

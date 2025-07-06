@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useMemo } from 'react';
 import ReCAPTCHA from 'react-google-recaptcha';
 import InputField from './Input';
 import TextArea from './TextArea';
-import Button from '../Buttons/Button';
 import { useBreakpoint } from '@hooks/useBreakpoint.ts';
 import { useTranslation } from 'react-i18next';
 import { ContactFormProps } from '../../types/Contact.type.ts';
@@ -21,6 +20,12 @@ const ContactForm = ({
   const [buttonText, setButtonText] = useState(t('contact.button.send'));
   const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
 
+  const [isDisabled, setIsDisabled] = useState(true);
+
+  useEffect(() => {
+    setIsDisabled(!isFormValid || isSubmitting || !recaptchaToken);
+  }, [isFormValid, isSubmitting, recaptchaToken]);
+
   useEffect(() => {
     setButtonText(t('contact.button.send'));
   }, [t]);
@@ -28,7 +33,7 @@ const ContactForm = ({
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    if (!isFormValid || !recaptchaToken) return;
+    if (isDisabled) return;
 
     setIsSubmitting(true);
     setButtonText(t('contact.button.sending'));
@@ -61,6 +66,20 @@ const ContactForm = ({
       setIsSubmitting(false);
     }
   };
+
+  const buttonClasses = useMemo(() => {
+    const baseClasses = `
+      overflow-hidden default-text-color
+      flex items-center justify-center
+      text-center font-medium rounded-lg
+      hover-background default-border border w-full
+      px-4 py-2 max-h-12
+    `;
+
+    return isDisabled
+      ? `${baseClasses} cursor-not-allowed opacity-60`
+      : `${baseClasses} cursor-pointer hover:hover-background  `;
+  }, [isDisabled]);
 
   return (
     <form onSubmit={handleSubmit} className="flex h-full flex-col justify-between gap-4">
@@ -95,13 +114,13 @@ const ContactForm = ({
       <div className="flex w-full scale-90 justify-center md:scale-100">
         <ReCAPTCHA
           sitekey="6Lfeev0qAAAAAOxvaQ7TikINLNisNWtEudEnR4Ia"
-          onChange={setRecaptchaToken}
+          onChange={token => {
+            setRecaptchaToken(token);
+          }}
         />
       </div>
 
-      <Button type="submit" disabled={!isFormValid || isSubmitting || !recaptchaToken}>
-        {buttonText}
-      </Button>
+      <input type="submit" value={buttonText} disabled={isDisabled} className={buttonClasses} />
     </form>
   );
 };
