@@ -20,7 +20,7 @@
     "types": [
       "node",
       "vite/client",
-      "vitest/globals"
+      "vitest"
     ],
     "resolveJsonModule": true,
     "baseUrl": ".",

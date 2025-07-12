@@ -1,7 +1,7 @@
 {
   "name": "rcrd",
   "license": "MIT",
-  "version": "5.7.0",
+  "version": "5.7.1",
   "type": "module",
   "workspaces": [
     "packages/*"
@@ -74,7 +74,8 @@
     "vite-plugin-linter": "^3.0.1",
     "vite-plugin-minify": "^2.1.0",
     "vite-plugin-node-polyfills": "^0.23.0",
-    "vite-plugin-svgr": "^4.3.0"
+    "vite-plugin-svgr": "^4.3.0",
+    "vitest": "^3.2.4"
   },
   "packageManager": "pnpm@10.11.0"
 }
