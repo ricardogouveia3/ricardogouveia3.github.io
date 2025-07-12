@@ -36,7 +36,7 @@ export default function ProjectItem({
       onBlur={() => setShowBorder(false)}
       target="_blank"
       rel="noopener noreferrer"
-      className={`default-border ${expanded ? 'min-h-60' : 'h-full'} relative flex overflow-hidden rounded-lg p-px`}
+      className={`default-border ${expanded ? 'min-h-60' : 'h-full'} cursor-custom-pointer relative flex overflow-hidden rounded-lg p-px`}
     >
       {showBorder && <AnimatedBorder />}
       <div className="smooth-noisy-background relative z-10 flex h-full w-full flex-col justify-between overflow-hidden rounded-lg">
@@ -61,7 +61,7 @@ export default function ProjectItem({
   );
 
   const renderSoon = () => (
-    <div className="default-border flex h-full cursor-not-allowed flex-col justify-center overflow-hidden rounded-lg text-center align-middle">
+    <div className="default-border cursor-custom-not-allowed flex h-full flex-col justify-center overflow-hidden rounded-lg text-center align-middle">
       <h3 className="smooth-text-color p-8 text-lg font-medium lg:p-12">{t('projects.soon')}</h3>
     </div>
   );

@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useMemo } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import ReCAPTCHA from 'react-google-recaptcha';
 import InputField from './Input';
 import TextArea from './TextArea';
@@ -77,8 +77,8 @@ const ContactForm = ({
     `;
 
     return isDisabled
-      ? `${baseClasses} cursor-not-allowed opacity-60`
-      : `${baseClasses} cursor-pointer hover:hover-background  `;
+      ? `${baseClasses} cursor-custom-not-allowed opacity-60`
+      : `${baseClasses} cursor-custom-pointer hover:hover-background  `;
   }, [isDisabled]);
 
   return (

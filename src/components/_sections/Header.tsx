@@ -6,7 +6,7 @@ import { Button } from 'barro-ui';
 const Header: FC<HeaderProps> = ({ language, handleLanguageToggle }) => {
   return (
     <header className="flex justify-center gap-3">
-      <div className="flex flex-row gap-2">
+      <div className="cursor-custom-pointer flex flex-row gap-2">
         <Button
           type="toggle"
           onClick={handleLanguageToggle}

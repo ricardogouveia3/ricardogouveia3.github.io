@@ -11,6 +11,10 @@
   --background-image-noise-dark: url('./assets/noise-dark.webp');
   --background-image-noise-light: url('./assets/noise-light.webp');
 
+  --cursor-custom-pointer: url('./assets/cursors/hand.cur'), pointer;
+  --cursor-custom-normal: url('./assets/cursors/arrow.cur'), default;
+  --cursor-custom-not-allowed: url('./assets/cursors/no.cur'), not-allowed;
+
   --color-quartz-50: #070707;
   --color-quartz-100: #0f0f0f;
   --color-quartz-150: #161616;
@@ -50,6 +54,24 @@
   }
 }
 
+@layer utilities {
+  .cursor-custom-pointer {
+    cursor: var(--cursor-custom-pointer);
+  }
+
+  .cursor-custom-normal {
+    cursor: var(--cursor-custom-normal);
+  }
+
+  .cursor-custom-not-allowed {
+    cursor: var(--cursor-custom-not-allowed);
+  }
+}
+
+body {
+  @apply cursor-custom-normal;
+}
+
 @utility default-text-color {
   @apply text-black dark:text-white;
 }
@@ -76,4 +98,26 @@
 
 @utility hover-background {
   @apply hover:bg-quartz-950 dark:hover:bg-quartz-200 transition-colors;
+}
+
+@layer utilities {
+  button,
+  a,
+  button[class*="cursor-pointer"],
+  a[class*="cursor-pointer"],
+  .btn[class*="cursor-pointer"],
+  .button[class*="cursor-pointer"],
+  .link[class*="cursor-pointer"] {
+    cursor: var(--cursor-custom-pointer) !important;
+  }
+
+  button[class*="cursor-not-allowed"],
+  a[class*="cursor-not-allowed"],
+  button:disabled,
+  a:disabled,
+  .btn[class*="cursor-not-allowed"],
+  .button[class*="cursor-not-allowed"],
+  .link[class*="cursor-not-allowed"] {
+    cursor: var(--cursor-custom-not-allowed) !important;
+  }
 }
