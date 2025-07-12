@@ -17,7 +17,11 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
     "incremental": false,
-    "types": ["node"],
+    "types": [
+      "node",
+      "vite/client",
+      "vitest/globals"
+    ],
     "resolveJsonModule": true,
     "baseUrl": ".",
     "paths": {

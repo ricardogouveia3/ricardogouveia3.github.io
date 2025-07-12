@@ -5,14 +5,15 @@ export default function LocationInfo({
   loading = false,
   weatherInfo,
   currentTime,
+  mockInfo = false,
 }: Readonly<LocationInfoProps>) {
   const { t } = useTranslation();
   const weatherKey = `weatherNames.${weatherInfo?.weather ?? 'Unknown'}`;
 
   return (
-    <div>
+    <div className={`relative`}>
       {!loading && weatherInfo && (
-        <div className="smooth-text-color flex h-full min-w-[200px] flex-col p-4 font-medium tracking-tight lg:p-6">
+        <div className="smooth-text-color relative flex h-full min-w-[200px] flex-col p-4 font-medium tracking-tight lg:p-6">
           <span className="text-sm">{t('location.based')}</span>
           <div className="flex h-full justify-between md:flex-col">
             <div>
@@ -38,6 +39,11 @@ export default function LocationInfo({
               </div>
             </div>
           </div>
+        </div>
+      )}
+      {mockInfo && (
+        <div className="absolute bottom-0 flex w-full items-center justify-between bg-amber-500 text-center">
+          <span className="w-full text-center text-xs font-bold">USING MOCK DATA</span>
         </div>
       )}
     </div>

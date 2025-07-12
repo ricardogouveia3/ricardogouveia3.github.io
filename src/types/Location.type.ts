@@ -15,4 +15,5 @@ export type LocationInfoProps = {
   loading: boolean;
   weatherInfo: WeatherInfoType | null;
   currentTime: string;
+  mockInfo?: boolean;
 };

@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { getWeather } from '@apis/weather.ts';
-import { WeatherInfoType } from '../../types/WeatherInfo.type.ts';
+import type { WeatherInfoType } from '../../types/WeatherInfo.type.ts';
 import { getCurrentTime } from '@utils/time.ts';
 import LocationMap from '../Location/LocationMap.tsx';
 import LocationInfo from '../Location/LocationInfo.tsx';
@@ -11,43 +11,61 @@ import { Card } from 'barro-ui';
 export default function LocationSection() {
   const [weatherInfo, setWeatherInfo] = useState<WeatherInfoType | null>(null);
   const [isHoveredOrFocused, setIsHoveredOrFocused] = useState(false);
+  const [isUsingMockedData, setIsUsingMockedData] = useState(false);
+
   const [loading, setLoading] = useState(true);
+
+  const { LATITUDE, LONGITUDE } = COORDINATES.SAO_PAULO;
   const map = { ...MAP_SP_BR };
-  const coordinates = COORDINATES.SAO_PAULO;
   const timezones = TIMEZONES.SAO_PAULO;
 
-  const handleInteraction = () => {
-    setIsHoveredOrFocused(true);
-  };
-
-  const handleLeaveOrBlur = () => {
-    setIsHoveredOrFocused(false);
-  };
+  const handleInteraction = useCallback(() => setIsHoveredOrFocused(true), []);
+  const handleLeaveOrBlur = useCallback(() => setIsHoveredOrFocused(false), []);
 
   useEffect(() => {
-    async function fetchWeather() {
+    let isMounted = true;
+
+    const fetchWeather = async () => {
       try {
-        const weatherData = await getWeather(coordinates.LATITUDE, coordinates.LONGITUDE);
+        setLoading(true);
+
+        const weatherData = await getWeather(LATITUDE, LONGITUDE);
+
+        if (!isMounted) return;
+
         if (weatherData) {
           setWeatherInfo(weatherData);
         } else if (import.meta.env.MODE !== 'production') {
           setWeatherInfo(MOCK_WEATHER_DATA);
+          setIsUsingMockedData(true);
         } else {
           setWeatherInfo(null);
         }
-      } catch (error) {
-        console.error('Error fetching weather data: ', error);
+      } catch (err) {
+        if (!isMounted) return;
+
+        console.error('Error fetching weather data:', err);
+
+        if (import.meta.env.MODE !== 'production') {
+          setWeatherInfo(MOCK_WEATHER_DATA);
+        }
       } finally {
-        setLoading(false);
+        if (isMounted) {
+          setLoading(false);
+        }
       }
-    }
+    };
 
     fetchWeather().then();
-  }, [coordinates]);
+
+    return () => {
+      isMounted = false;
+    };
+  }, [LATITUDE, LONGITUDE]);
 
   return (
     <Card
-      classNames={`${GridClassNames.location}`}
+      classNames={GridClassNames.location}
       contentClassnames="w-full h-full"
       containerClassnames="flex flex-row"
       loading={loading}
@@ -55,17 +73,19 @@ export default function LocationSection() {
     >
       <div
         className="flex h-full flex-col md:flex-row"
-        onMouseOver={handleInteraction}
+        onMouseEnter={handleInteraction}
         onFocus={handleInteraction}
         onMouseLeave={handleLeaveOrBlur}
         onBlur={handleLeaveOrBlur}
       >
         <LocationMap map={map} info={!!weatherInfo} hover={isHoveredOrFocused} />
+
         {weatherInfo && (
           <LocationInfo
             loading={loading}
             weatherInfo={weatherInfo}
             currentTime={getCurrentTime(timezones)}
+            mockInfo={isUsingMockedData}
           />
         )}
       </div>
