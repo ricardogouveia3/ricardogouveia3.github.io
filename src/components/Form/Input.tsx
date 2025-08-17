@@ -1,7 +1,7 @@
 import { InputProps } from '../../types/Contact.type.ts';
 
 const inputDefaultStyles =
-  'block w-full text-sm smooth-text-color rounded-lg p-2.5 dark:placeholder-quartz-750  bg-transparent border default-border';
+  'block w-full text-sm smooth-text-color rounded-lg p-2.5 placeholder-quartz-750  bg-transparent border default-border';
 
 const labelDefaultStyles = 'block mb-2 text-sm font-medium default-text-color';
 

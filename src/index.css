@@ -4,9 +4,17 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-  --font-sans:
-    'Inter', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-    'Segoe UI Symbol', 'Noto Color Emoji';
+  --color-quartz-50: #070707;
+  --color-quartz-100: #0f0f0f;
+  --color-quartz-200: #1e1e1e;
+  --color-quartz-300: #2c2c2c;
+  --color-quartz-400: #3b3b3b;
+  --color-quartz-500: #4a4a4a;
+  --color-quartz-600: #6e6e6e;
+  --color-quartz-700: #929292;
+  --color-quartz-800: #b7b7b7;
+  --color-quartz-900: #dbdbdb;
+  --color-quartz-950: #ededed;
 
   --background-image-noise-dark: url('./assets/noise-dark.webp');
   --background-image-noise-light: url('./assets/noise-light.webp');
@@ -14,42 +22,10 @@
   --cursor-custom-pointer: url('./assets/cursors/hand.cur'), pointer;
   --cursor-custom-normal: url('./assets/cursors/arrow.cur'), default;
   --cursor-custom-not-allowed: url('./assets/cursors/no.cur'), not-allowed;
-
-  --color-quartz-50: #070707;
-  --color-quartz-100: #0f0f0f;
-  --color-quartz-150: #161616;
-  --color-quartz-200: #1e1e1e;
-  --color-quartz-250: #252525;
-  --color-quartz-300: #2c2c2c;
-  --color-quartz-350: #343434;
-  --color-quartz-400: #3b3b3b;
-  --color-quartz-450: #434343;
-  --color-quartz-500: #4a4a4a;
-  --color-quartz-550: #5c5c5c;
-  --color-quartz-600: #6e6e6e;
-  --color-quartz-650: #808080;
-  --color-quartz-700: #929292;
-  --color-quartz-750: #a5a5a5;
-  --color-quartz-800: #b7b7b7;
-  --color-quartz-850: #c9c9c9;
-  --color-quartz-900: #dbdbdb;
-  --color-quartz-950: #ededed;
 }
 
-/*
-  The default border color has changed to `currentcolor` in Tailwind CSS v4,
-  so we've added these compatibility styles to make sure everything still
-  looks the same as it did with Tailwind CSS v3.
-
-  If we ever want to remove these styles, we need to add an explicit border
-  color utility to any element that depends on these defaults.
-*/
 @layer base {
-  *,
-  ::after,
-  ::before,
-  ::backdrop,
-  ::file-selector-button {
+  * {
     border-color: var(--color-gray-200, currentcolor);
   }
 }
@@ -68,56 +44,30 @@
   }
 }
 
-body {
-  @apply cursor-custom-normal;
-}
-
 @utility default-text-color {
-  @apply text-black dark:text-white;
+  @apply text-white;
 }
 
 @utility smooth-text-color {
-  @apply text-quartz-650;
+  @apply text-quartz-600;
 }
 
 @utility default-border {
-  @apply border-quartz-800 dark:border-quartz-450 border;
+  @apply border-quartz-400 border;
 }
 
 @utility default-background {
-  @apply dark:bg-quartz-200 bg-white;
+  @apply bg-quartz-200;
 }
 
 @utility smooth-noisy-background {
-  @apply dark:bg-quartz-200 bg-noise-light dark:bg-noise-dark h-full w-full bg-white bg-repeat;
+  @apply bg-quartz-200 bg-noise-dark h-full w-full bg-repeat;
 }
 
 @utility above-noise-content-background {
-  @apply dark:bg-quartz-200/70 h-full w-full bg-white/60;
+  @apply bg-quartz-200/70 h-full w-full;
 }
 
 @utility hover-background {
-  @apply hover:bg-quartz-950 dark:hover:bg-quartz-200 transition-colors;
-}
-
-@layer utilities {
-  button,
-  a,
-  button[class*="cursor-pointer"],
-  a[class*="cursor-pointer"],
-  .btn[class*="cursor-pointer"],
-  .button[class*="cursor-pointer"],
-  .link[class*="cursor-pointer"] {
-    cursor: var(--cursor-custom-pointer) !important;
-  }
-
-  button[class*="cursor-not-allowed"],
-  a[class*="cursor-not-allowed"],
-  button:disabled,
-  a:disabled,
-  .btn[class*="cursor-not-allowed"],
-  .button[class*="cursor-not-allowed"],
-  .link[class*="cursor-not-allowed"] {
-    cursor: var(--cursor-custom-not-allowed) !important;
-  }
+  @apply hover:bg-quartz-200 transition-colors;
 }

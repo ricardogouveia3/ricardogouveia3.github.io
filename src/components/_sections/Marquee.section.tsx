@@ -1,4 +1,4 @@
-import { useState, useCallback, memo } from 'react';
+import { memo, useCallback, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import MarqueeContent from '../Marquee/MarqueeContent.tsx';
 import { GridClassNames } from '@constants/layout.ts';
@@ -23,10 +23,7 @@ const MarqueeSection = () => {
         onMouseLeave={handleLeaveOrBlur}
         onBlur={handleLeaveOrBlur}
       >
-        <p
-          id="marquee-header"
-          className="text-lg/7 font-medium tracking-tight text-gray-950 dark:text-white"
-        >
+        <p id="marquee-header" className="text-lg/7 font-medium tracking-tight text-white">
           {t('marquee.stack')}
         </p>
 

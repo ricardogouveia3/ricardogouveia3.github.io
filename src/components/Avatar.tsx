@@ -36,7 +36,7 @@ export default function Avatar({
         loading="lazy"
         width={size}
         height={size}
-        className={`relative rounded-full border-4 border-black transition-all dark:border-white ${
+        className={`relative rounded-full border-4 border-white transition-all ${
           isHoveredOrFocused ? 'scale-110 rotate-6 border-none p-2' : 'p-2'
         }`}
         style={{ position: 'relative', zIndex: 10 }}

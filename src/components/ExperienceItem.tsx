@@ -14,7 +14,7 @@ const ExperienceItem = ({
 
   return (
     <li className="ms-4 mb-4 last:mb-0 lg:mb-7">
-      <div className="bg-quartz-700 dark:border-quartz-100 dark:bg-quartz-400 absolute -start-1.5 mt-1.5 h-3 w-3 rounded-full border border-white" />
+      <div className="border-quartz-100 bg-quartz-400 absolute -start-1.5 mt-1.5 h-3 w-3 rounded-full border" />
 
       <div>
         <h4 className={`default-text-color font-medium text-wrap ${experienceStyle}`}>

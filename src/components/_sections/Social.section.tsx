@@ -42,9 +42,7 @@ export default function SocialSection() {
       classNames={`${GridClassNames.social}`}
       contentClassnames="p-4 lg:p-6 flex flex-col gap-4"
     >
-      <p className="text-lg/7 font-medium text-gray-950 dark:text-white">
-        {t('social.getInTouch')}
-      </p>
+      <p className="text-lg/7 font-medium text-white">{t('social.getInTouch')}</p>
       <div className="flex flex-wrap gap-2">{renderSocialItems(socialItems)}</div>
     </Card>
   );

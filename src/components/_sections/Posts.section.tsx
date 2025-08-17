@@ -1,11 +1,11 @@
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { blogAPI } from '@apis/posts.ts';
 import { ParsedPost } from '../../types/Post.type.ts';
 import { useBreakpoint } from '@hooks/useBreakpoint.ts';
 import { GridClassNames } from '@constants/layout.ts';
 import { useTranslation } from 'react-i18next';
 import { parsePosts } from '@utils/posts.ts';
-import { Card, PostItem, Button } from 'barro-ui';
+import { Button, Card, PostItem } from 'barro-ui';
 
 export default function PostsSection() {
   const { t, i18n } = useTranslation();
@@ -32,9 +32,7 @@ export default function PostsSection() {
   return (
     <Card classNames={`${GridClassNames.posts}`} loading={loading} animatedBorder={false}>
       <header className="mb-4 flex flex-row items-center justify-between">
-        <h3 className="mb-0 text-lg/7 font-medium text-gray-950 dark:text-white">
-          {t('posts.title')}
-        </h3>
+        <h3 className="mb-0 text-lg/7 font-medium text-white">{t('posts.title')}</h3>
         <Button
           type={'link'}
           rounded="medium"
