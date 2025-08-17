@@ -27,25 +27,6 @@ export default function Footer() {
           className={`default-border max-h-7`}
         />
         <img
-          src={flags.br_pa}
-          alt="Bandeira do Pará"
-          width="40"
-          height="27"
-          loading="lazy"
-          decoding="async"
-          className={`default-border max-h-7`}
-        />
-        <img
-          src={flags.br_sp}
-          alt="Bandeira de São Paulo"
-          width="40"
-          height="27"
-          loading="lazy"
-          decoding="async"
-          className={`default-border max-h-7`}
-        />
-        <p>•</p>
-        <img
           src={flags.brazil}
           alt="Bandeira do Brasil"
           width="40"
