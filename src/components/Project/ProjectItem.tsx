@@ -27,9 +27,9 @@ export default function ProjectItem({
       <Card
         animatedBorder={true}
         className="cursor-custom-pointer h-full"
-        contentClassName="smooth-noisy-background above-noise-content-background hover-background h-full"
+        contentClassName="smooth-noisy-background h-full p-0"
       >
-        <div className="flex h-full flex-col justify-between">
+        <div className="above-noise-content-background hover-background flex h-full flex-col justify-between">
           <div className="flex flex-col gap-4 p-4 lg:p-6">
             <h3 className="default-text-color text-lg font-medium">{project.title}</h3>
             {expanded && <p className="smooth-text-color line-clamp-3">{description}</p>}
