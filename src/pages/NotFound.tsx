@@ -8,7 +8,7 @@ export default function NotFound() {
 
   return (
     <PageContainer>
-      <Card contentClassnames="text-center justify-center items-center default-text-color p-6 lg:p-8">
+      <Card contentClassName="text-center justify-center items-center default-text-color p-6 lg:p-8">
         <div className={'px-16 lg:px-32'}>
           <a className={'mb-4 flex w-full items-center justify-center lg:mb-6'} href={'/'}>
             <Icon

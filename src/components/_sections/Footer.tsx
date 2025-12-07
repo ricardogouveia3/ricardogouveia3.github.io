@@ -9,7 +9,7 @@ export default function Footer() {
 
   return (
     <Card
-      classNames={`${GridClassNames.footer} rounded-lg text-sm default-text-color text-center`}
+      className={`${GridClassNames.footer} default-text-color rounded-lg text-center text-sm`}
       animatedBorder={false}
     >
       <div className="mb-3 flex items-center justify-center gap-4">

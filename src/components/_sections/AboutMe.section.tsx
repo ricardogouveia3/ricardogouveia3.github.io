@@ -35,7 +35,7 @@ export default function AboutMe() {
   }, []);
 
   return (
-    <Card classNames={GridClassNames.aboutMe} contentClassnames="">
+    <Card className={GridClassNames.aboutMe} contentClassName="">
       <div
         className="default-text-color p-4 lg:p-6"
         onMouseOver={handleInteraction}

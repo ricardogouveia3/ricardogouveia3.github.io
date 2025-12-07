@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       barro-ui:
-        specifier: ^0.6.2
-        version: 0.6.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: ^0.7.0
+        version: 0.7.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       firebase:
         specifier: ^11.6.0
         version: 11.6.0
@@ -1522,8 +1522,8 @@ packages:
   balanced-match@1.0.2:
     resolution: {integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==}
 
-  barro-ui@0.6.2:
-    resolution: {integrity: sha512-Aec2fNEAzA8A8szJkddUbiG8Je6p6B1m2ji0dRig00IBIuMD4wC1XErDMoIGG2SxcOM8Rq5+OaSGaZ86VJ0hqw==}
+  barro-ui@0.7.0:
+    resolution: {integrity: sha512-eG5UlvuegKWimrLeUPL8Ga1SW5I49DAUaHrW+axIrYG8YxRqjmPLC40B5J7ml9ldooe1TFv4zW1X0eRE9jywqw==}
     peerDependencies:
       react: ^19.0.0
       react-dom: ^19.0.0
@@ -5515,7 +5515,7 @@ snapshots:
 
   balanced-match@1.0.2: {}
 
-  barro-ui@0.6.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
+  barro-ui@0.7.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
     dependencies:
       '@heroicons/react': 2.2.0(react@18.3.1)
       framer-motion: 5.6.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)

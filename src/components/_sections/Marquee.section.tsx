@@ -14,7 +14,7 @@ const MarqueeSection = () => {
   const handleLeaveOrBlur = useCallback(() => setIsHoveredOrFocused(false), []);
 
   return (
-    <Card classNames={GridClassNames.marquee} contentClassnames="p-0" loading={loading}>
+    <Card className={GridClassNames.marquee} contentClassName="p-0" loading={loading}>
       <section
         className="h-full p-4 lg:p-6"
         aria-labelledby="marquee-header"

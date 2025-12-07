@@ -30,7 +30,7 @@ export default function PostsSection() {
   }, [i18n.language, maxRendered]);
 
   return (
-    <Card classNames={`${GridClassNames.posts}`} loading={loading} animatedBorder={false}>
+    <Card className={`${GridClassNames.posts}`} loading={loading} animatedBorder={false}>
       <header className="mb-4 flex flex-row items-center justify-between">
         <h3 className="mb-0 text-lg/7 font-medium text-white">{t('posts.title')}</h3>
         <Button

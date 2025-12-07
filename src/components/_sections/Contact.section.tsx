@@ -21,8 +21,8 @@ export default function Contact() {
 
   return (
     <Card
-      classNames={GridClassNames.contact}
-      contentClassnames="flex flex-col p-4 lg:p-6 h-full justify-between"
+      className={GridClassNames.contact}
+      contentClassName="flex flex-col p-4 lg:p-6 h-full justify-between"
       animatedBorder={false}
     >
       <h3 className="mb-4 text-lg/7 font-medium text-white">{t('contact.title')}</h3>

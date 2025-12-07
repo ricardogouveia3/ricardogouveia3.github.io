@@ -24,7 +24,7 @@ export default function ExperienceSection() {
   const itemsToRender = experiences.slice(0, maxRendered);
 
   return (
-    <Card loading={loading} classNames={`${GridClassNames.experience} flex flex-col`}>
+    <Card loading={loading} className={`${GridClassNames.experience} flex flex-col`}>
       <h3 className="mb-4 text-lg/7 font-medium text-white">{t('experience.title')}</h3>
       <ol className="border-quartz-400 relative flex flex-col items-stretch border-s">
         {itemsToRender.map((experience: Experience) => (

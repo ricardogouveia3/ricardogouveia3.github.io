@@ -65,9 +65,9 @@ export default function LocationSection() {
 
   return (
     <Card
-      classNames={GridClassNames.location}
-      contentClassnames="w-full h-full"
-      containerClassnames="flex flex-row"
+      className={GridClassNames.location}
+      contentClassName="p-0"
+      containerClassName="h-full"
       loading={loading}
       animatedBorder={false}
     >

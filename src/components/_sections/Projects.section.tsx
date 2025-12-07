@@ -74,9 +74,9 @@ const ProjectSection = () => {
 
   return (
     <Card
-      classNames={GridClassNames.projects}
+      className={GridClassNames.projects}
       loading={loading}
-      contentClassnames="p-4 lg:p-6 flex flex-col gap-4"
+      contentClassName="flex flex-col p-4 lg:p-6"
       animatedBorder={false}
     >
       <header className="mb-4 flex flex-row items-center justify-between">
