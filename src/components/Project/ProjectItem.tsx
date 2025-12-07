@@ -1,24 +1,14 @@
-import { useMemo, useState } from 'react';
+import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import i18n from 'i18next';
-import { motion } from 'framer-motion';
-import { cardBorderMotionProps } from '@layout/Animation.tsx';
+import { Card } from 'barro-ui';
 import { Project } from '../../types/Project.type.ts';
-
-const AnimatedBorder = () => (
-  <motion.div
-    className="pointer-events-none absolute inset-0"
-    animate="animate"
-    {...cardBorderMotionProps}
-  />
-);
 
 export default function ProjectItem({
   project,
   expanded = false,
 }: Readonly<{ project: Project; expanded?: boolean }>) {
   const { t } = useTranslation();
-  const [showBorder, setShowBorder] = useState(false);
 
   const description = useMemo(
     () => (i18n.language === 'pt-br' ? project.descriptionBr : project.descriptionEn),
@@ -28,19 +18,18 @@ export default function ProjectItem({
   const tagsToRender = project.tags.slice(0, 4);
 
   const renderProject = () => (
-    <motion.a
+    <a
       href={project.link}
-      onHoverStart={() => setShowBorder(true)}
-      onHoverEnd={() => setShowBorder(false)}
-      onFocus={() => setShowBorder(true)}
-      onBlur={() => setShowBorder(false)}
       target="_blank"
       rel="noopener noreferrer"
-      className={`default-border ${expanded ? 'min-h-60' : 'h-full'} cursor-custom-pointer relative flex overflow-hidden rounded-lg p-px`}
+      className={`block ${expanded ? 'min-h-60' : 'h-full'}`}
     >
-      {showBorder && <AnimatedBorder />}
-      <div className="smooth-noisy-background relative z-10 flex h-full w-full flex-col justify-between overflow-hidden rounded-lg">
-        <div className="above-noise-content-background hover-background">
+      <Card
+        animatedBorder={true}
+        className="cursor-custom-pointer h-full"
+        contentClassName="smooth-noisy-background above-noise-content-background hover-background h-full"
+      >
+        <div className="flex h-full flex-col justify-between">
           <div className="flex flex-col gap-4 p-4 lg:p-6">
             <h3 className="default-text-color text-lg font-medium">{project.title}</h3>
             {expanded && <p className="smooth-text-color line-clamp-3">{description}</p>}
@@ -56,14 +45,18 @@ export default function ProjectItem({
             ))}
           </div>
         </div>
-      </div>
-    </motion.a>
+      </Card>
+    </a>
   );
 
   const renderSoon = () => (
-    <div className="default-border cursor-custom-not-allowed flex h-full flex-col justify-center overflow-hidden rounded-lg text-center align-middle">
+    <Card
+      animatedBorder={false}
+      className="cursor-custom-not-allowed h-full"
+      contentClassName="flex h-full flex-col justify-center text-center"
+    >
       <h3 className="smooth-text-color p-8 text-lg font-medium lg:p-12">{t('projects.soon')}</h3>
-    </div>
+    </Card>
   );
 
   return project.soon ? renderSoon() : renderProject();

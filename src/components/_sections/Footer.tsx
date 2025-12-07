@@ -1,8 +1,9 @@
 import { GridClassNames } from '@constants/layout.ts';
 import { currentYear } from '@utils/date.ts';
 import { useTranslation } from 'react-i18next';
-import { flags, logos } from '@assets/images.ts';
-import { Card, Icon } from 'barro-ui';
+import { flags } from '@assets/images.ts';
+import { Card } from 'barro-ui';
+import CustomIcon from '@components/CustomIcon.tsx';
 
 export default function Footer() {
   const { t } = useTranslation();
@@ -14,7 +15,7 @@ export default function Footer() {
     >
       <div className="mb-3 flex items-center justify-center gap-4">
         <a href="/">
-          <Icon icon={logos.rcrd} className="max-h-10 max-w-10" />
+          <CustomIcon name="rcrd" className="max-h-10 max-w-10" />
         </a>
         <p>•</p>
         <img

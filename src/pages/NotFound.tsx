@@ -1,7 +1,7 @@
 import PageContainer from '../containers/PageContainer.tsx';
 import { useTranslation } from 'react-i18next';
-import { Card, Icon, Button } from 'barro-ui';
-import { logos } from '@assets/images.ts';
+import { Card, Button } from 'barro-ui';
+import CustomIcon from '@components/CustomIcon.tsx';
 
 export default function NotFound() {
   const { t } = useTranslation();
@@ -11,8 +11,8 @@ export default function NotFound() {
       <Card contentClassName="text-center justify-center items-center default-text-color p-6 lg:p-8">
         <div className={'px-16 lg:px-32'}>
           <a className={'mb-4 flex w-full items-center justify-center lg:mb-6'} href={'/'}>
-            <Icon
-              icon={logos.rcrd}
+            <CustomIcon
+              name="rcrd"
               className="max-h-20 max-w-24 transition-all lg:max-h-24 lg:max-w-32"
             />
           </a>
@@ -24,8 +24,7 @@ export default function NotFound() {
             {t('notFound.description')}
           </h2>
         </div>
-        {/* @ts-expect-error - links is defined */}
-        <Button type={'link'} className={'hover-background w-full py-2.5'} round="lg" link="/">
+        <Button type="link" className="hover-background w-full py-2.5" rounded="medium" link="/">
           {t('notFound.backHome')}
         </Button>
       </Card>

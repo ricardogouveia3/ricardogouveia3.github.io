@@ -82,8 +82,7 @@ const ProjectSection = () => {
       <header className="mb-4 flex flex-row items-center justify-between">
         <h3 className="default-text-color mb-4 text-lg/7 font-medium">{t('projects.title')}</h3>
         {!!showAllProjectsButton && projects.length >= 12 && (
-          // @ts-expect-error - links is defined
-          <Button round="lg" type={'link'} link="/projects">
+          <Button rounded="medium" type="link" link="/projects">
             {t('projects.seeAll')}
           </Button>
         )}

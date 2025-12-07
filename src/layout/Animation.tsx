@@ -31,19 +31,6 @@ export const buttonLikeComponentMotionProps = {
   },
 };
 
-export const cardBorderMotionProps = {
-  initial: 'initial',
-  variants: {
-    initial: {
-      ...initialAnimatedBorderState,
-      scale: 10,
-    },
-    animate: {
-      ...linearInfiniteRotation,
-    },
-  },
-};
-
 export const avatarBorderMotionProps = {
   initial: 'initial',
   whileHover: 'hover',
