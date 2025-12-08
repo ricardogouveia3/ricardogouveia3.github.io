@@ -34,11 +34,7 @@ export default function SocialSection() {
         style={{ color: textColor }}
         icon={{
           name: () => (
-            <IconAdapter
-              name={iconName}
-              className="mr-2 h-4 w-4"
-              style={{ color: textColor }}
-            />
+            <IconAdapter name={iconName} className="mr-2 h-4 w-4" style={{ color: textColor }} />
           ),
           position: 'left',
         }}
