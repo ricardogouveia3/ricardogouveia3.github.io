@@ -7,6 +7,7 @@ const config: Config = {
     './src/**/*.{js,ts,jsx,tsx}',
     './node_modules/barro-ui/**/*.{js,ts,jsx,tsx}',
   ],
+  darkMode: 'class',
   theme: {
     screens: {
       sm: '640px',

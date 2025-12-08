@@ -45,29 +45,29 @@
 }
 
 @utility default-text-color {
-  @apply text-white;
+  @apply text-slate-800 dark:text-white transition-colors;
 }
 
 @utility smooth-text-color {
-  @apply text-quartz-600;
+  @apply text-slate-500 dark:text-quartz-600 transition-colors;
 }
 
 @utility default-border {
-  @apply border-quartz-400 border;
+  @apply border-slate-300 dark:border-quartz-400 border transition-colors;
 }
 
 @utility default-background {
-  @apply bg-quartz-200;
+  @apply bg-slate-100 dark:bg-quartz-200 transition-colors;
 }
 
 @utility smooth-noisy-background {
-  @apply bg-quartz-200 bg-noise-dark h-full w-full bg-repeat;
+  @apply bg-slate-100 dark:bg-quartz-200 bg-noise-light dark:bg-noise-dark h-full w-full bg-repeat transition-colors;
 }
 
 @utility above-noise-content-background {
-  @apply bg-quartz-200/70 h-full w-full;
+  @apply bg-slate-100/70 dark:bg-quartz-200/70 h-full w-full transition-colors;
 }
 
 @utility hover-background {
-  @apply hover:bg-quartz-200 transition-colors;
+  @apply hover:bg-slate-200 dark:hover:bg-quartz-200 transition-colors;
 }

@@ -4,12 +4,7 @@ import { ThemeContextType } from '../types/Theme.type.ts';
 export const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export const ThemeProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
-  const [darkMode, setDarkMode] = useState<boolean>(() => {
-    const storedValue = localStorage.getItem('darkMode');
-    return storedValue !== null
-      ? storedValue === 'true'
-      : window.matchMedia('(prefers-color-scheme: dark)').matches;
-  });
+  const [darkMode, setDarkMode] = useState<boolean>(true);
 
   useEffect(() => {
     localStorage.setItem('darkMode', String(darkMode));

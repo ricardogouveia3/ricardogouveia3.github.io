@@ -23,7 +23,7 @@ const MarqueeSection = () => {
         onMouseLeave={handleLeaveOrBlur}
         onBlur={handleLeaveOrBlur}
       >
-        <p id="marquee-header" className="text-lg/7 font-medium tracking-tight text-white">
+        <p id="marquee-header" className="default-text-color text-lg/7 font-medium tracking-tight">
           {t('marquee.stack')}
         </p>
 

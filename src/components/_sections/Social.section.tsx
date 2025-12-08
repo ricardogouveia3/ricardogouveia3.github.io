@@ -6,10 +6,15 @@ import { SocialItem } from '../../types/Social.type.ts';
 import { IconAdapter } from '@components/adapters/IconAdapter.tsx';
 import { Button, Card } from 'barro-ui';
 
+import { ThemeContext } from '@context/ThemeContext.tsx';
+import { useContext } from 'react';
+
 export default function SocialSection() {
   const { t } = useTranslation();
   const [loading, setLoading] = useState(true);
   const [socialItems, setSocialItems] = useState<SocialItem[]>([]);
+  const { darkMode } = useContext(ThemeContext) ?? { darkMode: true };
+  const textColor = darkMode ? '#FFFFFF' : '#1A202C';
 
   useEffect(() => {
     fetchSocialItems().then(items => {
@@ -26,12 +31,19 @@ export default function SocialSection() {
         type="link"
         link={link}
         hoverColor={hoverColor}
+        style={{ color: textColor }}
         icon={{
-          name: () => <IconAdapter name={iconName} className="mr-2 h-4 w-4" />,
+          name: () => (
+            <IconAdapter
+              name={iconName}
+              className="mr-2 h-4 w-4"
+              style={{ color: textColor }}
+            />
+          ),
           position: 'left',
         }}
       >
-        {label}
+        <span style={{ color: textColor }}>{label}</span>
       </Button>
     ));
   };
@@ -42,7 +54,7 @@ export default function SocialSection() {
       className={`${GridClassNames.social}`}
       contentClassName="flex flex-col p-4 lg:p-6 gap-4"
     >
-      <p className="text-lg/7 font-medium text-white">{t('social.getInTouch')}</p>
+      <p className="default-text-color text-lg/7 font-medium">{t('social.getInTouch')}</p>
       <div className="flex flex-wrap gap-2">{renderSocialItems(socialItems)}</div>
     </Card>
   );
