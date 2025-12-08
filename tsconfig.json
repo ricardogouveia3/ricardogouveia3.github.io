@@ -3,10 +3,14 @@
     "allowSyntheticDefaultImports": true,
     "target": "ES2022",
     "useDefineForClassFields": true,
-    "lib": ["ES2023", "DOM", "DOM.Iterable"],
+    "lib": [
+      "ES2023",
+      "DOM",
+      "DOM.Iterable"
+    ],
     "module": "ESNext",
     "skipLibCheck": true,
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
     "isolatedModules": true,
     "moduleDetection": "force",
@@ -25,25 +29,66 @@
     "resolveJsonModule": true,
     "baseUrl": ".",
     "paths": {
-      "@components/*": ["src/components/*"],
-      "@sections/*": ["src/components/_sections/*"],
-      "@hooks/*": ["src/hooks/*"],
-      "@apis/*": ["src/api/*"],
-      "@constants/*": ["src/constants/*"],
-      "@context/*": ["src/context/*"],
-      "@utils/*": ["src/utils/*"],
-      "@data/*": ["src/data/*"],
-      "@locales/*": ["src/locales/*"],
-      "@assets/*": ["src/assets/*"],
-      "@layout/*": ["src/layout/*"],
-      "@avatar/*": ["src/assets/avatar/*"],
-      "@logos/*": ["src/assets/logos/*"],
-      "@icons/*": ["src/assets/icons/*"],
-      "@flags/*": ["src/assets/flags/*"],
-      "@maps/*": ["src/assets/maps/*"],
-      "@pages/*": ["src/pages/*"]
+      "@components/*": [
+        "src/components/*"
+      ],
+      "@sections/*": [
+        "src/components/_sections/*"
+      ],
+      "@hooks/*": [
+        "src/hooks/*"
+      ],
+      "@apis/*": [
+        "src/api/*"
+      ],
+      "@constants/*": [
+        "src/constants/*"
+      ],
+      "@context/*": [
+        "src/context/*"
+      ],
+      "@utils/*": [
+        "src/utils/*"
+      ],
+      "@data/*": [
+        "src/data/*"
+      ],
+      "@locales/*": [
+        "src/locales/*"
+      ],
+      "@assets/*": [
+        "src/assets/*"
+      ],
+      "@layout/*": [
+        "src/layout/*"
+      ],
+      "@avatar/*": [
+        "src/assets/avatar/*"
+      ],
+      "@logos/*": [
+        "src/assets/logos/*"
+      ],
+      "@icons/*": [
+        "src/assets/icons/*"
+      ],
+      "@flags/*": [
+        "src/assets/flags/*"
+      ],
+      "@maps/*": [
+        "src/assets/maps/*"
+      ],
+      "@pages/*": [
+        "src/pages/*"
+      ]
     }
   },
-  "include": ["src/**/*", "types/**/*", "vite.config.ts", "tailwind.config.js"],
-  "exclude": ["node_modules"]
+  "include": [
+    "src/**/*",
+    "types/**/*",
+    "vite.config.ts",
+    "tailwind.config.js"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }

@@ -26,7 +26,7 @@
     ]
   },
   "dependencies": {
-    "barro-ui": "^0.7.0",
+    "barro-ui": "^0.8.0-rc.0",
     "firebase": "^11.6.0",
     "framer-motion": "^12.15.0",
     "i18next": "^23.16.2",

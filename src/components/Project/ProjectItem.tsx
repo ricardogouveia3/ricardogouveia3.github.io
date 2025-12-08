@@ -1,7 +1,7 @@
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import i18n from 'i18next';
-import { Card } from 'barro-ui';
+import { Badge, Card } from 'barro-ui';
 import { Project } from '../../types/Project.type.ts';
 
 export default function ProjectItem({
@@ -36,12 +36,13 @@ export default function ProjectItem({
           </div>
           <div className="flex flex-wrap gap-2 p-4 lg:p-6">
             {tagsToRender.map(tag => (
-              <span
+              <Badge
                 key={tag}
-                className="smooth-text-color default-border rounded-full px-2 py-1 text-xs font-medium"
+                className="default-border"
+                variant="default" // or 'outline', check available variants if needed
               >
                 {tag}
-              </span>
+              </Badge>
             ))}
           </div>
         </div>

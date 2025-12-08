@@ -7,7 +7,7 @@ import { Project } from '../../types/Project.type.ts';
 import { useBreakpoint } from '@hooks/useBreakpoint.ts';
 import { fetchProjects } from '@apis/projects.ts';
 import { useRemoteConfig } from '@hooks/useRemoteConfig.ts';
-import { Card, Button } from 'barro-ui';
+import { Card, Button, Skeleton } from 'barro-ui';
 
 const MAX_PROJECTS = 12;
 
@@ -75,7 +75,7 @@ const ProjectSection = () => {
   return (
     <Card
       className={GridClassNames.projects}
-      loading={loading}
+      loading={false} // Disable Card loading to use Skeleton
       contentClassName="flex flex-col p-4 lg:p-6"
       animatedBorder={false}
     >
@@ -89,13 +89,17 @@ const ProjectSection = () => {
       </header>
 
       <div className={`grid ${gridCols} gap-4`}>
-        {itemsToRender.map(project => (
-          <ProjectItem
-            key={project.id ?? project.title}
-            project={project}
-            expanded={project.expanded}
-          />
-        ))}
+        {loading
+          ? Array.from({ length: maxRendered }).map((_, i) => (
+              <Skeleton key={i} className="h-60 w-full rounded-xl" />
+            ))
+          : itemsToRender.map(project => (
+              <ProjectItem
+                key={project.id ?? project.title}
+                project={project}
+                expanded={project.expanded}
+              />
+            ))}
       </div>
     </Card>
   );

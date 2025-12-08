@@ -25,7 +25,7 @@ export default function Contact() {
       contentClassName="flex flex-col p-4 lg:p-6 h-full justify-between"
       animatedBorder={false}
     >
-      <h3 className="default-text-color mb-4 text-lg/7 font-medium">{t('contact.title')}</h3>
+      <h3 className="default-text-color mb-6 text-lg/7 font-medium">{t('contact.title')}</h3>
       <ContactForm
         email={email}
         subject={subject}

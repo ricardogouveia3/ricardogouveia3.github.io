@@ -1,4 +1,5 @@
 import { flags, icons, logos } from '@assets/images';
+import { Icon } from 'barro-ui';
 import { FlagKey, IconKey, IconProps, LogoKey } from '../types/Icon.type.ts';
 
 export default function CustomIcon({
@@ -14,5 +15,5 @@ export default function CustomIcon({
   }
 
   const IconComponent = icon;
-  return <IconComponent className={className} style={{ color }} />;
+  return <Icon icon={IconComponent} className={className} color={color} />;
 }

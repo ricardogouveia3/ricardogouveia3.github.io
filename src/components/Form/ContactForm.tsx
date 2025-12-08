@@ -1,8 +1,7 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import ReCAPTCHA from 'react-google-recaptcha';
-import InputField from './Input';
-import TextArea from './TextArea';
-import { useBreakpoint } from '@hooks/useBreakpoint.ts';
+import { Input, TextArea, useToast } from 'barro-ui';
+
 import { useTranslation } from 'react-i18next';
 import { ContactFormProps } from '../../types/Contact.type.ts';
 
@@ -14,11 +13,11 @@ const ContactForm = ({
   isFormValid,
 }: ContactFormProps) => {
   const { t } = useTranslation();
-  const { isAboveLg } = useBreakpoint('lg');
-  const [textAreaLines] = useState(isAboveLg ? 10 : 5);
+
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [buttonText, setButtonText] = useState(t('contact.button.send'));
   const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
+  const { toast } = useToast();
 
   const [isDisabled, setIsDisabled] = useState(true);
 
@@ -53,15 +52,25 @@ const ContactForm = ({
       });
 
       if (response.ok) {
-        setButtonText(t('contact.button.sendSuccess'));
-        setTimeout(() => setButtonText(t('contact.button.send')), 3000);
+        setButtonText(t('contact.button.send')); // Reset button text immediately or keep generic
+        toast({
+          type: 'success',
+          message: t('contact.button.sendSuccess'),
+        });
       } else {
         console.error('Failed to send message');
+        toast({
+          type: 'error',
+          message: t('contact.button.sendError'),
+        });
       }
     } catch (error) {
       console.error(error);
-      setButtonText(t('contact.button.sendError'));
-      setTimeout(() => setButtonText(t('contact.button.send')), 3000);
+      setButtonText(t('contact.button.send'));
+      toast({
+        type: 'error',
+        message: t('contact.button.sendError'),
+      });
     } finally {
       setIsSubmitting(false);
     }
@@ -82,8 +91,8 @@ const ContactForm = ({
   }, [isDisabled]);
 
   return (
-    <form onSubmit={handleSubmit} className="flex h-full flex-col justify-between gap-4">
-      <InputField
+    <form onSubmit={handleSubmit} className="flex h-full flex-col justify-between gap-6">
+      <Input
         type="email"
         id="email"
         label={t('contact.email')}
@@ -91,8 +100,9 @@ const ContactForm = ({
         value={email}
         onChange={handleInputChange}
         required
+        className="default-text-color"
       />
-      <InputField
+      <Input
         type="text"
         id="subject"
         label={t('contact.subject')}
@@ -100,12 +110,14 @@ const ContactForm = ({
         value={subject}
         onChange={handleInputChange}
         required
+        className="default-text-color"
       />
       <TextArea
         id="message"
         label={t('contact.message')}
         name="message"
-        rows={textAreaLines}
+        className="default-text-color min-h-[120px] flex-1 resize-none"
+        containerClassName="flex-1 flex flex-col"
         value={message}
         onChange={handleInputChange}
         required
