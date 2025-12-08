@@ -2,7 +2,7 @@
 
 # rcrd - my personal website & portfolio
 
-**Version:** 5.0.0  
+**Version:** 5.8.0  
 **Package Manager:** pnpm  
 **Build Tool:** Vite + TypeScript
 
@@ -18,6 +18,7 @@ You can run the following commands with `pnpm`:
 - `pnpm build` — Build the project using TypeScript and Vite.
 - `pnpm preview` — Preview the production build locally.
 - `pnpm lint` — Run ESLint to check code quality.
+- `pnpm test` — Run unit tests with Vitest.
 
 ---
 
@@ -25,7 +26,7 @@ You can run the following commands with `pnpm`:
 
 ### Core
 
-- **React 18** with **React DOM**
+- **React 19** with **React DOM**
 - **TypeScript**
 - **Vite**
 - **Tailwind CSS**
