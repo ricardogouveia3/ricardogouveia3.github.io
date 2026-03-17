@@ -45,29 +45,29 @@
 }
 
 @utility default-text-color {
-  @apply text-slate-800 dark:text-white transition-colors;
+  @apply text-slate-800 transition-colors dark:text-white;
 }
 
 @utility smooth-text-color {
-  @apply text-slate-500 dark:text-quartz-600 transition-colors;
+  @apply dark:text-quartz-600 text-slate-500 transition-colors;
 }
 
 @utility default-border {
-  @apply border-slate-300 dark:border-quartz-400 border transition-colors;
+  @apply dark:border-quartz-400 border border-slate-300 transition-colors;
 }
 
 @utility default-background {
-  @apply bg-slate-100 dark:bg-quartz-200 transition-colors;
+  @apply dark:bg-quartz-200 bg-slate-100 transition-colors;
 }
 
 @utility smooth-noisy-background {
-  @apply bg-slate-100 dark:bg-quartz-200 bg-noise-light dark:bg-noise-dark h-full w-full bg-repeat transition-colors;
+  @apply dark:bg-quartz-200 bg-noise-light dark:bg-noise-dark h-full w-full bg-slate-100 bg-repeat transition-colors;
 }
 
 @utility above-noise-content-background {
-  @apply bg-slate-100/70 dark:bg-quartz-200/70 h-full w-full transition-colors;
+  @apply dark:bg-quartz-200/70 h-full w-full bg-slate-100/70 transition-colors;
 }
 
 @utility hover-background {
-  @apply hover:bg-slate-200 dark:hover:bg-quartz-200 transition-colors;
+  @apply dark:hover:bg-quartz-200 transition-colors hover:bg-slate-200;
 }
