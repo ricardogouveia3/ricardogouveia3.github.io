@@ -58,7 +58,7 @@ export default function Footer() {
           {t('footer.source')}
         </a>{' '}
         - {t('footer.madeWith')} - {t('footer.inspired')}&nbsp;
-        <a className="underline" href="https://www.joshuabrigati.com/" target="_blank">
+        <a className="underline" href="https://2024-portfolio-public.vercel.app/" target="_blank">
           Joshua Brigati
         </a>
       </p>
