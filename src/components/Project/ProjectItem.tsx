@@ -62,8 +62,9 @@ export default function ProjectItem({
             </div>
           )}
           <div
-            className={`flex h-full flex-col justify-between ${highlighted ? 'lg:h-auto lg:min-h-0 lg:flex-1' : ''
-              }`}
+            className={`flex h-full flex-col justify-between ${
+              highlighted ? 'lg:h-auto lg:min-h-0 lg:flex-1' : ''
+            }`}
           >
             <div className={`flex flex-col gap-4 ${highlighted ? 'p-4 lg:p-4' : 'p-4 lg:p-6'}`}>
               <h3 className="default-text-color text-lg font-medium">{project.title}</h3>
