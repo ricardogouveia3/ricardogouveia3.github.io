@@ -22,7 +22,7 @@ export default function ProjectItem({
       href={project.link}
       target="_blank"
       rel="noopener noreferrer"
-      className={`block ${expanded ? 'min-h-60' : 'h-full'}`}
+      className={`block h-full ${expanded ? 'min-h-60' : ''}`}
     >
       <Card
         animatedBorder={true}

@@ -34,12 +34,12 @@ const ProjectSection = () => {
     if (isAbove2xl)
       return {
         gridCols: count >= 12 ? 'grid-cols-4' : 'grid-cols-3',
-        maxRendered: count,
+        maxRendered: 7,
       };
     if (isAboveLg)
       return {
         gridCols: count >= 9 ? 'grid-cols-3' : 'grid-cols-2',
-        maxRendered: 9,
+        maxRendered: 7,
       };
     if (isAboveMd)
       return {
@@ -71,6 +71,11 @@ const ProjectSection = () => {
 
   const { gridCols, maxRendered } = getGridSettings(projectsToRender.length);
   const itemsToRender = projectsToRender.slice(0, maxRendered);
+  const getGridItemClassName = (index: number) => {
+    if (index === 0) return 'lg:col-span-2 lg:row-span-2';
+    if (index === 1 || index === 2) return 'lg:row-span-2';
+    return undefined;
+  };
 
   return (
     <Card
@@ -88,18 +93,18 @@ const ProjectSection = () => {
         )}
       </header>
 
-      <div className={`grid ${gridCols} gap-4`}>
+      <div className={`grid ${gridCols} gap-4 lg:auto-rows-[minmax(15rem,auto)]`}>
         {loading
           ? Array.from({ length: maxRendered }).map((_, i) => (
-              <Skeleton key={i} className="h-60 w-full rounded-xl" />
-            ))
-          : itemsToRender.map(project => (
-              <ProjectItem
-                key={project.id ?? project.title}
-                project={project}
-                expanded={project.expanded}
-              />
-            ))}
+            <div key={i} className={getGridItemClassName(i)}>
+              <Skeleton className="h-full min-h-60 w-full rounded-xl" />
+            </div>
+          ))
+          : itemsToRender.map((project, i) => (
+            <div key={project.id ?? project.title} className={getGridItemClassName(i)}>
+              <ProjectItem project={project} expanded={project.expanded} />
+            </div>
+          ))}
       </div>
     </Card>
   );
