@@ -96,15 +96,20 @@ const ProjectSection = () => {
       <div className={`grid ${gridCols} gap-4 lg:auto-rows-[minmax(15rem,auto)]`}>
         {loading
           ? Array.from({ length: maxRendered }).map((_, i) => (
-            <div key={i} className={getGridItemClassName(i)}>
-              <Skeleton className="h-full min-h-60 w-full rounded-xl" />
-            </div>
-          ))
+              <div key={i} className={getGridItemClassName(i)}>
+                <Skeleton className="h-full min-h-60 w-full rounded-xl" />
+              </div>
+            ))
           : itemsToRender.map((project, i) => (
-            <div key={project.id ?? project.title} className={getGridItemClassName(i)}>
-              <ProjectItem project={project} expanded={project.expanded} />
-            </div>
-          ))}
+              <div key={project.id ?? project.title} className={getGridItemClassName(i)}>
+                <ProjectItem
+                  project={project}
+                  expanded={project.expanded}
+                  highlighted={i < 3}
+                  featured={i === 0}
+                />
+              </div>
+            ))}
       </div>
     </Card>
   );
