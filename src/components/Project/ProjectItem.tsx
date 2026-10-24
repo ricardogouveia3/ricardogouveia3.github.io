@@ -38,7 +38,7 @@ export default function ProjectItem({
       href={project.link}
       target="_blank"
       rel="noopener noreferrer"
-      className={`block h-full ${expanded ? 'min-h-60' : ''}`}
+      className={`group block h-full ${expanded ? 'min-h-60' : ''}`}
     >
       <Card
         animatedBorder={true}
@@ -48,7 +48,7 @@ export default function ProjectItem({
         <div className="above-noise-content-background hover-background flex h-full flex-col justify-between">
           {highlighted && (
             <div
-              className={`relative block min-h-0 flex-1 overflow-hidden max-lg:hidden ${mediaFallbackColor}`}
+              className={`relative block min-h-0 flex-1 overflow-hidden grayscale transition-[filter] duration-300 group-hover:grayscale-0 max-lg:hidden ${mediaFallbackColor}`}
               style={featured ? { flexGrow: 2 } : undefined}
             >
               {project.imgSrc && (
